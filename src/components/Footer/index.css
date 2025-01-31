@@ -1,0 +1,22 @@
+@media screen and (min-width: 992px) {
+  .footer__media-link,
+  .footer__link,
+  .footer__media-block path,
+  .footer__media-block rect {
+    transition: all 0.3s ease;
+  }
+
+  .footer__media-link:hover,
+  .footer__link:hover {
+    color: #2461e2;
+  }
+
+  .footer__media-block:not(.footer__media-block_path):hover path {
+    fill: #2461e2;
+  }
+
+  .footer__media-block.footer__media-block_path:hover path,
+  .footer__media-block:hover rect {
+    stroke: #2461e2;
+  }
+}
