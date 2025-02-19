@@ -1,4 +1,4 @@
-export function debounce<F extends (...args: any[]) => any>(
+export function debounce<F extends (...args: string[]) => any>(
   func: F,
   waitFor: number
 ) {

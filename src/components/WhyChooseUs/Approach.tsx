@@ -17,7 +17,7 @@ function Approach() {
                           color: "#4285F46B",
                         }}
                       >
-                        OUR&nbsp;FIRM'S&nbsp;APPROACH
+                        {"OUR FIRM'S APPROACH"}
                       </div>
                     </div>
                     <div className="margin-bottom margin-small">

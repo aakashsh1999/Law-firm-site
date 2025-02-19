@@ -37,8 +37,8 @@ export default function HaveACase() {
                 }}
               >
                 To speak with an attorney immediately call (212) <br /> 869-3500
-                or fill out the form below and we'll get back to <br />
-                you within 24 hours. Your inquiry is always confidential.
+                or fill out the form below and {`we'll`} get back to <br />
+                you within 24 hours. Your inquiry is always confidential
               </p>
               <dl className="mt-10 space-y-4 text-base/7 text-gray-300">
                 <div className="flex gap-x-4">

@@ -272,9 +272,9 @@ function Investigation() {
                     />
                     <div className="timeline_quote-text-wrapper">
                       <p>
-                        "At our firm, we are here to provide you and your family
+                        {`"At our firm, we are here to provide you and your family
                         the support you deserve, and we promise we will put up a
-                        valiant fight for your rights."
+                        valiant fight for your rights."`}
                       </p>
                       <p className="text-size-regular text-weight-medium text-color-primary">
                         Alan Fuchsberg, Managing Partner

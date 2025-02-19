@@ -54,8 +54,8 @@ function Why() {
           <p className="why__info">
             Empathy and resilience are trademark characteristics of the Jacob D.
             Fuchsberg attorneys. For more than 40 years, our firm has been
-            fighting for victims' rights, helping your voice be heard against
-            large corporations, hospitals, or even the government.
+            fighting for {`victims'`} rights, helping your voice be heard
+            against large corporations, hospitals, or even the government.
           </p>
           <p className="why__info why__info_hide">
             We approach personal injury lawsuits with individualized support and

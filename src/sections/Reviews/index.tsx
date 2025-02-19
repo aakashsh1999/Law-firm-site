@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     content:
-      "Exceptional service from start to finish. The team's expertise and professionalism made a complex process feel straightforward and manageable. Their attention to detail and constant communication gave us complete peace of mind.",
+      "Exceptional service from start to finish. The teams expertise and professionalism made a complex process feel straightforward and manageable. Their attention to detail and constant communication gave us complete peace of mind.",
     author: "MICHAEL ANDERSON",
     role: "Business Owner",
     rating: 5,
@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     content:
-      "Working with this team has been transformative for our business. Their strategic approach and dedication to client success sets them apart. They're not just service providers, they're trusted partners in our growth journey.",
+      "Working with this team has been transformative for our business. Their strategic approach and dedication to client success sets them apart. Theyre not just service providers, they're trusted partners in our growth journey.",
     author: "SARAH JENKINS",
     role: "CEO",
     rating: 5,
@@ -69,7 +69,7 @@ export default function Reviews() {
         <div className="content-section">
           <div className="cases__title">
             <h2 className="section-title section-title_509">
-              Our Client's Reviews
+              {`Our Client's Reviews`}
             </h2>
           </div>
 

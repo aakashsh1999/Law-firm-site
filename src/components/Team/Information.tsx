@@ -1,9 +1,6 @@
 import React from "react";
 import Form from "../Footer/Form";
 import Image from "next/image";
-import telephone from "../../assets/telephone.png";
-import location from "../../assets/location.png";
-import { Mail } from "lucide-react";
 
 import advSunilImg from "../../assets/advSunil.jpg";
 import advVedent from "../../assets/advVedant.jpg";

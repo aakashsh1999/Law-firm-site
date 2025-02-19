@@ -73,7 +73,7 @@ export default function AttorneysSection() {
             Alan Fuchsberg is a skilled New York personal injury lawyer who is
             part of a family of esteemed judges and attorneys and a son of the
             founding partner of the legal firm. Alan is a nationally recognized
-            lawyer who collaborates on the firm's mass tort and class-action
+            lawyer who collaborates on the {`firm's`} mass tort and class-action
             lawsuits and advocates for individual plaintiffs.
           </p>
           <Link

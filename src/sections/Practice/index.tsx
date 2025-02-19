@@ -60,35 +60,35 @@ function Practice() {
                               <li className="practice__list-item"><a href="/birth-injuries"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Birth Injuries</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a
                                       href="https://www.fuchsberg.com/medical-malpractice/medical-misdiagnosis"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Medical Misdiagnosis</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/medical-malpractice/hospital-negligence"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Hospital Negligence</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/medical-malpractice/medical-errors"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Medical Errors</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                           </ul><a href="/medical-malpractice"
                               className="new-btn new-btn_transparent new-btn_top w-button local">View All Medical
@@ -109,53 +109,53 @@ function Practice() {
                                       href="/civil-rights/prison-medical-malpractice-attorney"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Medical Malpractice in Prisons</h4><img
                                           loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/sexual-abuse-lawyer/sexual-assault-prison"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Sexual Abuse in Prisons</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/civil-rights/injury-in-prison"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Prison Injuries</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/civil-rights/police-misconduct"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Police Misconduct</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/civil-rights/sexual-assault-in-police-custody"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Sexual Assault in Police Custody</h4><img
                                           loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/civil-rights/sexual-assault-in-police-custody"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Medical Malpractice in Police Custody</h4><img
                                           loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                           </ul><a href="/civil-rights"
                               className="new-btn new-btn_transparent new-btn_top w-button local">View All Civil Rights
@@ -176,46 +176,46 @@ function Practice() {
                               <li className="practice__list-item"><a href="/className-action-product-liability"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">className Actions</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/new-york-mass-tort-lawyer"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Mass Torts</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a
                                       href="/className-action-product-liability/dangerous-drugs"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Dangerous Drugs</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a
                                       href="/className-action-product-liability/new-york-medical-device-lawyer"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Defective Medical Devices</h4><img
                                           loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a
                                       href="/className-action-product-liability/exactech-lawsuits"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Exactech Lawsuits</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                           </ul><a href="/new-york-product-liability-lawyer"
                               className="new-btn new-btn_transparent new-btn_top w-button local">View All Product
@@ -235,34 +235,34 @@ function Practice() {
                               <li className="practice__list-item"><a href="/accidents/auto-accidents"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Car Accidents</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/accidents/slip-trip-fall-lawyer"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Slip and Fall Accidents</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/construction-accidents"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Construction Accidents</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/accidents/pedestrian-accidents-lawyer"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Pedestrian Accidents</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                           </ul><a href="/accidents"
                               className="new-btn new-btn_transparent new-btn_top w-button local">View All Accidents
@@ -281,34 +281,34 @@ function Practice() {
                               <li className="practice__list-item"><a href="/medical-malpractice/brain-injury"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Brain Injury</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/medical-malpractice/eye-injury-lawyer"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Eye Injury</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/medical-malpractice/paralysis-injury-attorney"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Paralysis Injury</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/accidents/burn-injury-lawyer-nyc"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Burn Injuries</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                           </ul><a href="/common-injuries"
                               className="new-btn new-btn_transparent new-btn_t  op w-button local">View All Common Injuries
@@ -328,34 +328,34 @@ function Practice() {
                               <li className="practice__list-item"><a href="/nursing-home-neglect"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Nursing Home Abuse</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/sexual-abuse-lawyer"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Sexual Abuse</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/wrongful-death"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">Wrongful Death</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                               <li className="practice__list-item"><a href="/wtc-lawyers"
                                       className="practice__list-link w-inline-block local"><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                                          alt="Arrow icon" className="practice__list-before">
+                                          alt="Arrow icon" className="practice__list-before"/>
                                       <h4 className="practice__list-title">9/11 Victims</h4><img loading="lazy"
                                           src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0d6cf05b4ac4e489c5_material-symbols_arrow-back.svg"
-                                          alt="Arrow icon" className="practice__list-after">
+                                          alt="Arrow icon" className="practice__list-after"/>
                                   </a></li>
                           </ul>
                       </div>
