@@ -1,0 +1,204 @@
+{
+  "administrative-law": {
+    "title": "Administrative Law Attorneys in [Your City/State]",
+    "intro": "Our administrative law attorneys represent clients in disputes with government agencies. We handle licensing issues, regulatory compliance, and appeals of agency decisions.",
+    "cta": {
+      "text": "Schedule a Consultation",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "alternative-dispute-resolution": {
+    "title": "Alternative Dispute Resolution (ADR) Attorneys",
+    "intro": "We help clients resolve disputes outside of court through mediation, arbitration, and negotiation. Our ADR attorneys are skilled negotiators and facilitators.",
+    "cta": {
+      "text": "Discuss Your ADR Options",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "aviation-law": {
+    "title": "Aviation Law Attorneys",
+    "intro": "Our aviation law attorneys represent pilots, airlines, aircraft owners, and passengers in a wide range of aviation-related legal matters, including accidents, regulatory compliance, and aircraft transactions.",
+    "cta": {
+      "text": "Get Legal Help with Aviation Matters",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "banking-and-finance-law": {
+    "title": "Banking and Finance Law Attorneys",
+    "intro": "We advise banks, lenders, borrowers, and investors on complex financial transactions, regulatory compliance, and other banking and finance law matters.",
+    "cta": {
+      "text": "Consult with a Finance Law Expert",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "competition-law": {
+    "title": "Competition Law (Antitrust) Attorneys",
+    "intro": "Our competition law attorneys represent clients in antitrust matters, including price fixing, monopolization, mergers, and unfair competition.",
+    "cta": {
+      "text": "Protect Your Business Interests",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "constitutional-law": {
+    "title": "Constitutional Law Attorneys",
+    "intro": "We defend individual rights guaranteed by the Constitution, including freedom of speech, due process, and equal protection.",
+    "cta": {
+      "text": "Protect Your Constitutional Rights",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "contract-law": {
+    "title": "Contract Law Attorneys",
+    "intro": "Our contract law attorneys draft, review, and enforce contracts for individuals and businesses. We handle breach of contract disputes and other contract-related matters.",
+    "cta": {
+      "text": "Get Help with Your Contracts",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "corporate-law": {
+    "title": "Corporate Law Attorneys",
+    "intro": "We advise businesses on all aspects of corporate law, including formation, governance, mergers and acquisitions, and securities law.",
+    "cta": {
+      "text": "Consult with a Corporate Law Expert",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "criminal-law": {
+    "title": "Criminal Law Attorneys",
+    "intro": "Our criminal defense attorneys represent individuals accused of crimes, protecting their rights and fighting for the best possible outcome.",
+    "cta": {
+      "text": "Get a Free Criminal Defense Consultation",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "criminal-litigation": {
+    "title": "Criminal Litigation Attorneys",
+    "intro": "We represent clients in all stages of criminal litigation, from pre-trial motions to trials and appeals.",
+    "cta": {
+      "text": "Defend Your Rights in Court",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "civil-litigation": {
+    "title": "Civil Litigation Attorneys",
+    "intro": "We represent individuals and businesses in civil lawsuits, including contract disputes, personal injury claims, and business litigation.",
+    "cta": {
+      "text": "Get Help with Your Civil Case",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "environmental-law": {
+    "title": "Environmental Law Attorneys",
+    "intro": "We advise clients on environmental regulations, permitting, and litigation related to air, water, and land pollution.",
+    "cta": {
+      "text": "Protect Your Environmental Interests",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "family-law": {
+    "title": "Family Law Attorneys",
+    "intro": "Our family law attorneys handle divorce, child custody, child support, adoption, and other family-related legal matters. We provide compassionate and effective legal representation.",
+    "cta": {
+      "text": "Get Compassionate Family Law Help",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "human-rights": {
+    "title": "Human Rights Attorneys",
+    "intro": "We advocate for human rights and represent individuals and organizations in cases involving discrimination, civil rights violations, and other human rights abuses.",
+    "cta": {
+      "text": "Protect Your Human Rights",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "international-commercial-law": {
+    "title": "International Commercial Law Attorneys",
+    "intro": "We advise businesses on international trade, contracts, dispute resolution, and other international commercial law matters.",
+    "cta": {
+      "text": "Navigate International Business Law",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "intellectual-property-rights": {
+    "title": "Intellectual Property Rights Attorneys",
+    "intro": "We help clients protect their inventions, trademarks, copyrights, and trade secrets. Our IP attorneys handle patent and trademark applications, licensing agreements, and infringement litigation.",
+    "cta": {
+      "text": "Protect Your Intellectual Property",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "labour-law": {
+    "title": "Labour Law Attorneys",
+    "intro": "We represent employers and employees in a wide range of labour law matters, including employment contracts, wage and hour disputes, and wrongful termination.",
+    "cta": {
+      "text": "Get Labour Law Advice",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "maritime-law": {
+    "title": "Maritime Law Attorneys",
+    "intro": "Our maritime law attorneys represent seamen, longshoremen, shipowners, and other maritime entities in personal injury claims, cargo damage cases, and other maritime disputes.",
+    "cta": {
+      "text": "Get Help with Maritime Law",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "mergers-and-acquisitions": {
+    "title": "Mergers and Acquisitions (M&A) Attorneys",
+    "intro": "We advise companies on all aspects of M&A transactions, including due diligence, negotiation, deal structuring, and post-acquisition integration.",
+    "cta": {
+      "text": "Navigate M&A Transactions",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "public-international-law": {
+    "title": "Public International Law Attorneys",
+    "intro": "We advise governments, international organizations, and individuals on public international law issues, including treaty law, human rights, and international criminal law.",
+    "cta": {
+      "text": "Consult with an International Law Expert",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "real-estate-and-real-property-law": {
+    "title": "Real Estate and Real Property Law Attorneys",
+    "intro": "We handle all aspects of real estate law, from residential and commercial transactions to land use and zoning disputes.",
+    "cta": {
+      "text": "Get Help with Real Estate Law",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "sports-law": {
+    "title": "Sports Law Attorneys",
+    "intro": "We represent athletes, teams, and sports organizations in contract negotiations, disciplinary proceedings, intellectual property matters, and other sports-related legal issues.",
+    "cta": {
+      "text": "Get Legal Representation in Sports",
+      "link": "/contact"
+    },
+    "reviews": []
+  },
+  "technology-law": {
+    "title": "Technology Law Attorneys",
+    "intro": "We advise tech companies, startups, and individuals on software licensing, data privacy, cybersecurity, e-commerce, and other technology law matters"
+  }
+}

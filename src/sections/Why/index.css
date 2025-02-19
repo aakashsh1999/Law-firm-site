@@ -1,0 +1,16 @@
+.why__item {
+  background-color: #0b284c !important;
+}
+
+.why__item p,
+.why__item h3 {
+  color: white;
+}
+
+.why__expand p {
+  color: #2461e2 !important;
+}
+
+.why__item-block {
+  background-color: transparent !important;
+}

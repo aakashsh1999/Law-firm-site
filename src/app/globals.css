@@ -17,6 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -4785,8 +4786,8 @@ figure {
 }
 
 .section-us-matters {
-  background-color: var(--grey);
-  background-image: url(https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a371190065_bg-waves.svg);
+  background-color: #0b284c;
+  /* background-image: url(https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a371190065_bg-waves.svg); */
   background-position: 50%;
   background-repeat: repeat;
   background-size: contain;
@@ -4938,9 +4939,9 @@ figure {
 
 .timeline_text {
   margin-bottom: 1rem;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1;
 }
 
 .section-home-quote {
@@ -7206,7 +7207,7 @@ figure {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   padding-left: 0;
   display: grid;
@@ -7214,13 +7215,15 @@ figure {
 
 .article__cases-item {
   margin-bottom: 0;
+  background-color: #0b284c !important;
   list-style-type: none;
+  color: white !important;
 }
 
 .article__cases-link {
   grid-row-gap: 16px;
   color: var(--dark-blue);
-  background-color: #f5f6f8;
+  /* background-color: #0b284c; */
   flex-direction: column;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
@@ -7232,9 +7235,14 @@ figure {
   display: flex;
 }
 
+.article__cases-link .upper-text,
+.article__cases-link .card-title {
+  color: white;
+}
 .article__cases-text {
   margin-bottom: 0;
   font-size: 20px;
+  color: white !important;
   line-height: 32px;
 }
 
@@ -9449,7 +9457,7 @@ figure {
   }
 
   .timeline_text {
-    font-size: 20px;
+    font-size: 31px;
   }
 
   .section-header {
@@ -10267,4 +10275,43 @@ figure {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline_text {
+    margin-bottom: 1rem;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .about-hero .new-btn.new-btn_transparent,
+  .contact-hero .new-btn.new-btn_transparent {
+    color: #2461e2;
+    background-color: #0000;
+    border: 1px solid #d0d0d0;
+    max-width: 200px;
+    padding: 8px 20px;
+    flex: none;
+  }
+  .header-image {
+    z-index: 1;
+    object-fit: cover;
+    height: 200px;
+    position: absolute;
+    width: 120%;
+    right: -20px;
+    display: block;
+  }
+  .contact-form {
+    border-radius: 16px;
+  }
+  .contact-content_component {
+    margin-top: 100px;
+  }
+  .contact-wrapper .header_bottom-spacer {
+    display: none !important;
+  }
+  #information .form-embed {
+    margin-top: 40px;
+  }
 }

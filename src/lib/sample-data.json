@@ -1,0 +1,144 @@
+{
+  "services": [
+    {
+      "title": "Sexual assault in prison",
+      "url": "/services/sexual-assault-in-prison",
+      "id": "sexual-assault-in-prison"
+    },
+    {
+      "title": "Sexual assault at FCI Dublin",
+      "url": "/services/sexual-assault-at-fci-dublin",
+      "id": "sexual-assault-at-fci-dublin"
+    },
+    {
+      "title": "Prison Medical Malpractice",
+      "url": "/services/prison-medical-malpractice",
+      "id": "prison-medical-malpractice"
+    },
+    {
+      "title": "Police misconduct",
+      "url": "/services/police-misconduct",
+      "id": "police-misconduct"
+    },
+    {
+      "title": "Sexual Assault in Police Custody",
+      "url": "/services/sexual-assault-in-police-custody",
+      "id": "sexual-assault-in-police-custody"
+    },
+    {
+      "title": "Medical Malpractice in Police Custody",
+      "url": "/services/medical-malpractice-in-police-custody",
+      "id": "medical-malpractice-in-police-custody"
+    },
+    {
+      "title": "Hypoxic Ischemic Encephalopathy (HIE)",
+      "url": "/services/hypoxic-ischemic-encephalopathy-hie",
+      "id": "hypoxic-ischemic-encephalopathy-hie"
+    },
+    {
+      "title": "Cerebral Palsy",
+      "url": "/services/cerebral-palsy",
+      "id": "cerebral-palsy"
+    },
+    {
+      "title": "Erb's Palsy",
+      "url": "/services/erbs-palsy",
+      "id": "erbs-palsy"
+    },
+    {
+      "title": "Maternal Death",
+      "url": "/services/maternal-death",
+      "id": "maternal-death"
+    },
+    {
+      "title": "Baby Opioid Addiction",
+      "url": "/services/baby-opioid-addiction",
+      "id": "baby-opioid-addiction"
+    },
+    {
+      "title": "Hospital Negligence",
+      "url": "/services/hospital-negligence",
+      "id": "hospital-negligence"
+    },
+    {
+      "title": "Emergency Room Malpractice",
+      "url": "/services/emergency-room-malpractice",
+      "id": "emergency-room-malpractice"
+    },
+    {
+      "title": "Surgical Errors",
+      "url": "/services/surgical-errors",
+      "id": "surgical-errors"
+    },
+    {
+      "title": "Nursing Malpractice",
+      "url": "/services/nursing-malpractice",
+      "id": "nursing-malpractice"
+    },
+    {
+      "title": "Pediatric Malpractice",
+      "url": "/services/pediatric-malpractice",
+      "id": "pediatric-malpractice"
+    },
+    {
+      "title": "Car accidents",
+      "url": "/services/car-accidents",
+      "id": "car-accidents"
+    },
+    {
+      "title": "Premises liability",
+      "url": "/services/premises-liability",
+      "id": "premises-liability"
+    },
+    {
+      "title": "Construction accidents",
+      "url": "/services/construction-accidents",
+      "id": "construction-accidents"
+    },
+    {
+      "title": "Pedestrian accidents",
+      "url": "/services/pedestrian-accidents",
+      "id": "pedestrian-accidents"
+    },
+    {
+      "title": "Workplace Accident",
+      "url": "/services/workplace-accident",
+      "id": "workplace-accident"
+    },
+    {
+      "title": "Sexual Assault",
+      "url": "/services/sexual-assault",
+      "id": "sexual-assault"
+    },
+    {
+      "title": "Doctor Sexual Abuse",
+      "url": "/services/doctor-sexual-abuse",
+      "id": "doctor-sexual-abuse"
+    },
+    {
+      "title": "Product Liability",
+      "url": "/services/product-liability",
+      "id": "product-liability"
+    },
+    {
+      "title": "Dangerous drugs",
+      "url": "/services/dangerous-drugs",
+      "id": "dangerous-drugs"
+    },
+    {
+      "title": "Defective medical devices",
+      "url": "/services/defective-medical-devices",
+      "id": "defective-medical-devices"
+    },
+    {
+      "title": "Mass torts",
+      "url": "/services/mass-torts",
+      "id": "mass-torts"
+    },
+    {
+      "title": "Wrongful death",
+      "url": "/services/wrongful-death",
+      "id": "wrongful-death"
+    }
+  ]
+}

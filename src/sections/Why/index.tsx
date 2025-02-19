@@ -1,23 +1,23 @@
 import React from "react";
+import "./index.css";
 function Why() {
   return (
-    <div>
-      <div className="cases__title">
+    <div className="max-w-7xl mx-auto px-4 md:px-0">
+      <div className="cases__title ">
         <h2 className="section-title section-title_818">
           Empathy, Compassion, &amp; Resilience: Here When You Need Us Most
         </h2>
-        <a
-          href="/why-choose-us"
-          className="new-btn new-btn_transparent new-btn_desktop w-button local"
-        >
-          Why Choose Us
-        </a>
       </div>
       <div
         data-w-id="c00903e3-9cc2-c76e-aec5-e7476749a3af"
         className="why__content"
       >
-        <div className="why__item">
+        <div
+          className="why__item"
+          style={{
+            backgroundColor: "#0B284C",
+          }}
+        >
           <div className="why__item-block">
             <img
               src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6449363d9d52ab1276ea04ef_Group%2038.svg"
@@ -101,12 +101,6 @@ function Why() {
           />
         </div>
       </div>
-      <a
-        href="/success-stories"
-        className="new-btn new-btn_transparent new-btn_mobile w-button local"
-      >
-        View All Success Stories
-      </a>
     </div>
   );
 }

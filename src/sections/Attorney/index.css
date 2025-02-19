@@ -1,0 +1,15 @@
+.attorneys__wrap {
+  width: 100% !important;
+  padding-left: 120px !important;
+}
+
+.attorneys__item {
+  /* margin: 0px 20px; */
+  width: 320px !important;
+}
+
+@media screen and (max-width: 800px) {
+  .attorneys__wrap {
+    padding: 0px 20px !important;
+  }
+}

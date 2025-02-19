@@ -5,6 +5,9 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import Form from "./Form";
+import telephone from "../../assets/telephone.png";
+import location from "../../assets/location.png";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -29,43 +32,91 @@ export default function Footer() {
                 <div className="flex gap-x-4">
                   <dt className="flex-none">
                     <span className="sr-only">Address</span>
-                    <PhoneIcon
-                      aria-hidden="true"
-                      className="h-7 w-6 text-gray-400"
+                    <Image
+                      src={location}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
                     />
                   </dt>
                   <dd>
-                    <a className="hover:text-white">
-                      A-12, Ansa Plaza, RBSS Sahay Road, Bhagalpur- 812001
+                    <a className="text-white hover:text-white">
+                      A-13, Ansa Plaza, RBSS Sahay Road, Bhagalpur- 812001
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">Address</span>
+                    <Image
+                      src={location}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
+                    />
+                  </dt>
+                  <dd>
+                    <a className="text-white hover:text-white">
+                      C/o ABDICO LLP, 1st Floor, Anand Tower, Exhibition Road,
+                      Patna-800001
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">Address</span>
+                    <Image
+                      src={location}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
+                    />
+                  </dt>
+                  <dd>
+                    <a className="text-white hover:text-white">
+                      C/o B/147,Part 1,Lajpat Nagar,New Delhi
                     </a>
                   </dd>
                 </div>
                 <div className="flex gap-x-4">
                   <dt className="flex-none">
                     <span className="sr-only">Telephone</span>
-                    <EnvelopeIcon
-                      aria-hidden="true"
-                      className="h-7 w-6 text-gray-400"
+                    <Image
+                      src={telephone}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
                     />
                   </dt>
                   <dd>
-                    <a
-                      href="mailto:hello@example.com"
-                      className="hover:text-white"
-                    >
-                      91-8541814401
+                    <a className="text-white hover:text-white">
+                      +91-8541814401
                     </a>
                   </dd>
                 </div>
               </dl>
-              <ul className="text-2xl my-4 font font-medium list-disc ml-6">
-                <li>We are available to you 24/7</li>
-                <li>Compassionate in our approach</li>
-                <li>Accessible & available</li>
+              <ul className="text-2xl my-4 font font-medium ml-6 text-white">
+                <li
+                  style={{
+                    listStyleType: "disc",
+                  }}
+                >
+                  We are available to you 24/7
+                </li>
+                <li
+                  style={{
+                    listStyleType: "disc",
+                  }}
+                >
+                  Compassionate in our approach
+                </li>
+                <li
+                  style={{
+                    listStyleType: "disc",
+                  }}
+                >
+                  Accessible & available
+                </li>
               </ul>
             </div>
           </div>
-          <Form />
+          <Form classes="" />
         </div>
       </div>
     </footer>

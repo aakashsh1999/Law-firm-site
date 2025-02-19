@@ -1,0 +1,43 @@
+.practice {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin: 0px !important;
+}
+
+.section-container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.section-subtitle {
+  padding-top: 20px !important;
+}
+.section-subtitle-text {
+  font-family: Mallory, Arial, sans-serif !important;
+}
+.section-container_left {
+  left: 0px !important;
+}
+
+.practice__list-item:hover {
+  color: #2461e2 !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@media screen and (max-width: 800px) {
+  .section-container_left {
+    left: 0px !important;
+  }
+  .section-subtitle-text {
+    font-family: Mallory, Arial, sans-serif !important;
+    padding-left: 20px !important;
+  }
+}

@@ -1,0 +1,37 @@
+.cta {
+}
+.cta .picture-item {
+  position: absolute !important;
+  top: 65px;
+  height: 550px;
+}
+
+.cta__info {
+  margin-left: 40px;
+  text-align: left !important;
+}
+
+@media screen and (max-width: 700px) {
+  .cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .cta__info {
+    margin-left: 0px !important;
+  }
+  .cta .picture-item {
+    /* left: 10px; */
+    position: relative !important;
+    top: -20px;
+    /* width: 600px !important; */
+    /* height: 550px; */
+  }
+
+  .cta .new-btn {
+    display: none;
+  }
+  .cta__info {
+    margin-left: 40px;
+    text-align: left !important;
+  }
+}
