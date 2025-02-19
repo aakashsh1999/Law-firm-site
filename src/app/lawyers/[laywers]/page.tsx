@@ -7,14 +7,14 @@ import { ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-function page() {
+function Page() {
   const pathname = usePathname();
   const pathkey = pathname.split("/").pop();
   const [lawyers, setLawyers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const fetchPeopleByCity = async (city) => {
+    const fetchPeopleByCity = async (city: string) => {
       if (!city) return; // Don't fetch if no city is selected
 
       setIsLoading(true);
@@ -111,4 +111,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
