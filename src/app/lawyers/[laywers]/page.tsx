@@ -22,33 +22,33 @@ interface Lawyer {
 function Page() {
   const pathname = usePathname();
   const pathkey = pathname.split("/").pop();
-  const [lawyers, setLawyers] = useState([]);
+  const [lawyers, setLawyers] = useState<Lawyer[]>([]); // Correct type: Lawyer[]
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const fetchPeopleByCity = async (city: string) => {
-      if (!city) return; // Don't fetch if no city is selected
+    const fetchLawyersByCity = async (city: string) => {
+      if (!city) return;
 
       setIsLoading(true);
       try {
-        const lawyersRef = collection(db, "lawyers_details"); // Correct collection reference
+        const lawyersRef = collection(db, "lawyers_details");
+        const q = query(lawyersRef, where("city", "==", city));
+        const querySnapshot = await getDocs(q);
 
-        const q = query(lawyersRef, where("city", "==", city)); // Create the query
-
-        const querySnapshot = await getDocs(q); // Use getDocs with the query
-
-        const lawyersData = querySnapshot.docs.map((doc) => doc.data());
+        const lawyersData = querySnapshot.docs.map(
+          (doc) => doc.data() as Lawyer
+        ); // Type assertion here
 
         setLawyers(lawyersData);
       } catch (error) {
-        console.error("Error fetching people:", error);
+        console.error("Error fetching lawyers:", error);
         setLawyers([]);
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchPeopleByCity(pathkey); // Fetch when selectedCity changes
+    fetchLawyersByCity(pathkey);
   }, [pathkey]);
 
   console.log(lawyers, "adsfdsf");
