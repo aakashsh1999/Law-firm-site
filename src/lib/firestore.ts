@@ -1,7 +1,20 @@
 import { collection, doc, getDocs, writeBatch } from "firebase/firestore";
 import { db } from "../config";
 
-export const lawerList = [
+interface Lawyer {
+  // Define a TypeScript interface for your lawyer data
+  address: string;
+  certificates: string[];
+  city: string;
+  degrees: string[];
+  email: string;
+  mobile: string;
+  name: string;
+  state: string;
+}
+
+export const lawerList: Lawyer[] = [
+  // Use the interface for type checking
   {
     address: "House No. 123, Street A",
     certificates: ["Certificate 1", "Certificate 2"],
@@ -204,46 +217,46 @@ export const lawerList = [
     state: "Maharashtra",
   },
 ];
-
-export async function searchFirestore(searchTerm: string) {
+export async function searchFirestore(searchTerm: string): Promise<Lawyer[]> {
+  // Specify return type
   try {
-    const postsRef = collection(db, "lawyers_details");
+    const lawyersRef = collection(db, "lawyers_details");
 
-    // Fetch all documents in the collection
-    const querySnapshot = await getDocs(postsRef);
-    const results = [];
+    const querySnapshot = await getDocs(lawyersRef);
+    const results: Lawyer[] = []; // Type the results array
 
-    // Iterate over each document and check if the title includes the search term
     querySnapshot.forEach((doc) => {
-      const postData = doc.data();
-      console.log(postData, "adffds");
-      const postText = postData.city.toLowerCase(); // Assuming we're searching the "title" field
+      const lawyerData = doc.data() as Lawyer; // Type the document data
+      const city = lawyerData.city.toLowerCase();
 
-      // Check if the title contains the searchTerm (case-sensitive match)
-      if (postText && postText.includes(searchTerm)) {
-        results.push({ id: doc.id, ...postData });
+      if (city && city.includes(searchTerm.toLowerCase())) {
+        // Case-insensitive search
+        results.push({ id: doc.id, ...lawyerData }); // Add id and spread lawyerData
       }
     });
 
-    // Return the matched results
     return results;
   } catch (error) {
     console.error("Error getting documents: ", error);
-    return []; // Return an empty array in case of an error
+    return [];
   }
 }
 
-export async function addPeopleToFirestore(peopleData) {
+export async function addPeopleToFirestore(
+  peopleData: Lawyer[]
+): Promise<void> {
+  // Type the parameter
   try {
-    const batch = writeBatch(db); // Create a batch for efficient writes
-    const collectionRef = collection(db, "lawyers_details"); // Reference to Firestore collection
+    const batch = writeBatch(db);
+    const collectionRef = collection(db, "lawyers_details");
 
-    peopleData.forEach((person) => {
-      const personRef = doc(collectionRef); // Create a new document with auto-generated ID
-      batch.set(personRef, person); // Add person data to the batch
+    peopleData.forEach((person: Lawyer) => {
+      // Type the person variable
+      const personRef = doc(collectionRef);
+      batch.set(personRef, person);
     });
 
-    await batch.commit(); // Commit the batch write
+    await batch.commit();
     console.log("People data added to Firestore successfully!");
   } catch (error) {
     console.error("Error adding people data to Firestore:", error);
