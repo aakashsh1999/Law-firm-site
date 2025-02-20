@@ -7,6 +7,18 @@ import { ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
+interface Lawyer {
+  // Define a TypeScript interface for your lawyer data
+  address: string;
+  certificates: string[];
+  city: string;
+  degrees: string[];
+  email: string;
+  mobile: string;
+  name: string;
+  state: string;
+}
+
 function Page() {
   const pathname = usePathname();
   const pathkey = pathname.split("/").pop();
