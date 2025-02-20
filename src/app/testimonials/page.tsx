@@ -19,7 +19,7 @@ function Testimonials() {
 
   return (
     <div>
-      <NavBar pathname={pathname} />
+      <NavBar />
       <div
         className="section-header bottom-padding-0 bg-white"
         style={{

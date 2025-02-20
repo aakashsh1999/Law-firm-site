@@ -80,7 +80,7 @@ export default function HaveACase() {
               </ul>
             </div>
           </div>
-          <Form />
+          <Form classes="" />
         </div>
       </div>
     </footer>

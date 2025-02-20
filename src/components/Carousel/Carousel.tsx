@@ -3,13 +3,15 @@ import React from "react";
 import { PrevButton, NextButton, usePrevNextButtons } from "./CarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import "./index.css";
+import { EmblaOptionsType } from "embla-carousel";
+type PropType = {
+  slides: number[];
+  options?: EmblaOptionsType;
+};
 
-const EmblaCarousel = (props) => {
+const EmblaCarousel = (props: PropType) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-
-  //   const { selectedIndex, scrollSnaps, onDotButtonClick } =
-  //     useDotButton(emblaApi);
 
   const {
     prevBtnDisabled,

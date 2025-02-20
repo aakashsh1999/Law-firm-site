@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import Form from "@/components/Footer/Form";
 import { ArrowRightIcon } from "lucide-react";

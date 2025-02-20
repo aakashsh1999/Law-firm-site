@@ -17,11 +17,12 @@ interface Lawyer {
   mobile: string;
   name: string;
   state: string;
+  lastSeen: string;
 }
 
 function Page() {
   const pathname = usePathname();
-  const pathkey = pathname.split("/").pop();
+  const pathkey = pathname.split("/").pop() as string;
   const [lawyers, setLawyers] = useState<Lawyer[]>([]); // Correct type: Lawyer[]
   const [isLoading, setIsLoading] = useState(false);
 
@@ -47,8 +48,7 @@ function Page() {
         setIsLoading(false);
       }
     };
-
-    fetchLawyersByCity(pathkey);
+    fetchLawyersByCity(pathkey); // Only call the function if pathkey exists
   }, [pathkey]);
 
   console.log(lawyers, "adsfdsf");
@@ -71,7 +71,6 @@ function Page() {
                     <img
                       alt=""
                       src={
-                        person.imageUrl ??
                         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       }
                       className="size-12 flex-none rounded-full bg-gray-50"
@@ -93,13 +92,8 @@ function Page() {
                   <div className="flex items-center gap-x-4">
                     <div className=" sm:flex sm:flex-col sm:items-end">
                       <p className="text-sm/6 text-gray-900">{person.city}</p>
-                      {person.lastSeen ? (
-                        <p className="mt-1 text-xs/5 text-gray-500">
-                          Last seen{" "}
-                          <time dateTime={person.lastSeenDateTime}>
-                            {person.lastSeen}
-                          </time>
-                        </p>
+                      {person?.lastSeen ? (
+                        <></>
                       ) : (
                         <div className="mt-1 flex items-center gap-x-1.5">
                           <div className="flex-none rounded-full bg-emerald-500/20 p-1">

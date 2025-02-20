@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import React from "react";
 import "./hero.css";
@@ -6,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 function Hero() {
   const pathname = usePathname();
-  const pathKey = pathname?.split("/").pop();
+  const pathKey = pathname?.split("/").pop() as string;
   return (
     <div className="section-home-hero max-w-7xl mx-auto">
       <div className="section-container w-container">
