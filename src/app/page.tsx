@@ -17,7 +17,6 @@ export default function Home() {
       <Hero />
       <BrandMaqrquee />
       <PracticeAreasSection />
-      <CasesSection />
       <CTASection />
       <AttorneysSection />
       <Why />
