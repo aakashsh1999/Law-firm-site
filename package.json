@@ -11,16 +11,27 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@radix-ui/react-select": "^2.1.6",
     "@tawk.to/tawk-messenger-react": "^2.0.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
     "firebase": "^11.2.0",
     "firebase-tools": "^13.29.3",
+    "i18next": "^24.2.2",
+    "i18next-browser-languagedetector": "^8.0.4",
+    "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^0.474.0",
     "next": "15.1.6",
+    "next-i18next": "^15.4.2",
+    "next-intl": "^3.26.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
-    "swiper": "^11.2.2"
+    "react-i18next": "^15.4.1",
+    "swiper": "^11.2.2",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

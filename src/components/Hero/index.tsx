@@ -4,10 +4,13 @@ import React from "react";
 import "./hero.css";
 import heroData from "../../sections/Service/hero.json";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 function Hero() {
   const pathname = usePathname();
   const pathKey = pathname?.split("/").pop() as string;
+  const t = useTranslations("Hero");
+
   return (
     <div className="section-home-hero max-w-7xl mx-auto">
       <div className="section-container w-container">
@@ -15,19 +18,14 @@ function Hero() {
           <div className="hero__table md:w-2/3">
             <div className="hero__info ">
               <h1 className="hero__title">
-                {pathKey
+                {pathKey && heroData[pathKey]?.title
                   ? heroData[pathKey]?.title
-                  : `New York Personal Injury & Civil Rights Lawyers Who Help When
-                the Unimaginable Happens`}
+                  : t("title")}
               </h1>
               <p className="hero__intro hero__intro_dark">
-                {pathKey
+                {pathKey && heroData[pathKey]?.intro
                   ? heroData[pathKey]?.intro
-                  : `The Jacob D. Fuchsberg Law Firm team fights for the rights of
-                victims of civil rights violations, medical malpractice, or
-                those injured in a catastrophic accident. Our New York personal
-                injury attorneys are on your side to seek justice and help you
-                get the compensation you deserve.`}
+                  : t("intro")}
               </p>
               <div className="section-button">
                 <a
@@ -39,7 +37,7 @@ function Hero() {
                     paddingBottom: "22px",
                   }}
                 >
-                  Get a Free Case Review
+                  {t("cta")}
                 </a>
               </div>
               <div className="hero__links hero__links_desktop">
@@ -64,7 +62,7 @@ function Hero() {
                     />
                     <p className="hero__stars-text">5.0</p>
                   </div>
-                  <p className="hero__stars-text">11 reviews</p>
+                  <p className="hero__stars-text">{t("martindale")}</p>
                 </a>
                 <a
                   rel="nofollow noopener noreferrer"
@@ -87,7 +85,7 @@ function Hero() {
                     />
                     <p className="hero__stars-text">4.8</p>
                   </div>
-                  <p className="hero__stars-text">34 reviews</p>
+                  <p className="hero__stars-text">{t("google")}</p>
                 </a>
               </div>
             </div>
@@ -99,7 +97,7 @@ function Hero() {
                 loading="eager"
                 sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 61vw, (max-width: 1279px) 400px, 526px"
                 srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited.webp 800w"
-                alt="The Jacob D. Fuchsberg Law Firm team"
+                alt={""}
                 className="picture-item"
                 style={{
                   borderRadius: "16px",
@@ -111,7 +109,7 @@ function Hero() {
                 <img
                   src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008bb5c190030_Rectangle%208.webp"
                   loading="eager"
-                  alt="The Jacob D. Fuchsberg Law Firm team"
+                  alt={""}
                   className="picture-item"
                   style={{
                     borderRadius: "16px",
@@ -124,7 +122,7 @@ function Hero() {
                   loading="eager"
                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 35vw, (max-width: 1279px) 188px, 251px"
                   srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter.webp 800w"
-                  alt="The Jacob D. Fuchsberg Law Firm team"
+                  alt={t("Hero:images.team")}
                   className="picture-item"
                   style={{
                     borderRadius: "16px",
@@ -158,10 +156,10 @@ function Hero() {
                       fontWeight: "bold",
                     }}
                   >
-                    5.0
+                    {t("Hero:stars.five")}
                   </p>
                 </div>
-                <p className="hero__stars-text">11 reviews</p>
+                <p className="hero__stars-text">{t("Hero:reviews.martindale")}</p>
               </a>
               <a
                 rel="nofollow noopener noreferrer"
@@ -182,9 +180,9 @@ function Hero() {
                     alt="Stars"
                     className="hero__stars-icon"
                   />
-                  <p className="hero__stars-text">4.8</p>
+                  <p className="hero__stars-text">{t("Hero:stars.fourPointEight")}</p>
                 </div>
-                <p className="hero__stars-text">29 reviews</p>
+                <p className="hero__stars-text">{t("Hero:reviews.google")}</p>
               </a>
             </div>
           </div>

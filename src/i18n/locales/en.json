@@ -1,0 +1,37 @@
+{
+  "Hero": {
+    "title": "New York Personal Injury & Civil Rights Lawyers Who Help When the Unimaginable Happens",
+    "intro": "The Jacob D. Fuchsberg Law Firm team fights for the rights of victims of civil rights violations, medical malpractice, or those injured in a catastrophic accident. Our New York personal injury attorneys are on your side to seek justice and help you get the compensation you deserve.",
+    "cta": "Get a Free Case Review",
+    "google": "11 Reviews",
+    "martindale": "11 Reviews"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Consultations are free and confidential",
+    "learnMore": "Learn About Us"
+  },
+  "footer": {
+    "title": "Do You Need to File a Personal Injury Lawsuit in New York?",
+    "subtitle": "To speak with an attorney immediately call (212) 869-3500 or fill out the form below and we'll get back to you within 24 hours. Your inquiry is always confidential.",
+    "features": [
+      "We are available to you 24/7",
+      "Compassionate in our approach",
+      "Accessible & available"
+    ]
+  },
+  "form": {
+    "title": "Free Case Review",
+    "fullName": "Full Name*",
+    "email": "Email*",
+    "phone": "Mobile Number*",
+    "lookingFor": "Looking for*",
+    "submit": "Book Appointment",
+    "welcome": "Welcome to our Law Firm"
+  },
+  "Hero2": {
+    "title": "Our Promise to You: No Fee Unless We Win!",
+    "content": "We offer an initial consultation with an experienced personal injury attorney at no cost to you. Our firm works on a contingency basis, which means we only assess legal fees if we successfully secure a compensation award for you. Contact our New York lawyers today!",
+    "cta": "Get A FREE Case Review"
+  }
+}

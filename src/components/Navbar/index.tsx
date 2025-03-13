@@ -26,6 +26,7 @@ import { usePathname } from "next/navigation";
 import LawyerRegistrationModal from "../Modals/AddLawyer";
 import logo from "../../assets/BP_LOGO.jpg";
 import Image from "next/image";
+import LocaleSwitcher from "../LocaleSwitcher";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -149,6 +150,7 @@ function NavBar() {
                 >
                   Contact Us
                 </a>
+                <LocaleSwitcher />
               </div>
             </div>
             <nav

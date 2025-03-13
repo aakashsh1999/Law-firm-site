@@ -2,30 +2,7 @@ import React from "react";
 import Form from "../Footer/Form";
 import Image from "next/image";
 
-import advSunilImg from "../../assets/advSunil.jpg";
-import advVedent from "../../assets/advVedant.jpg";
-import advBablu from "../../assets/advBablu.jpg";
-
 function Information() {
-  const people = [
-    {
-      name: "Adv. Sunil Kumar",
-      role: "(Patna High Court)",
-      imageUrl: advSunilImg, // No template literals needed
-    },
-    {
-      name: "Adv. S. J. Vedant",
-      role: "Managing Partner",
-      imageUrl: advVedent,
-    },
-    {
-      name: "Adv Bablu Kumar Singh",
-      role: "Designated Partner",
-      imageUrl: advBablu,
-    },
-    // More people...
-  ];
-
   const lawyers = [
     { name: "Adv Mani Sinha", court: "Supreme Court of India" },
     { name: "Adv Pranav Prakash", court: "Supreme Court of India" },
@@ -62,38 +39,7 @@ function Information() {
             <div className="padding-vertical padding-huge">
               <div className="w-layout-grid contact-content_component">
                 <div id="w-node-_8d9ddff1-129c-9c2b-dca2-a28b694bc4f1-4497f351">
-                  <ul
-                    role="list"
-                    style={{
-                      listStyle: "none",
-                    }}
-                    className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-3"
-                  >
-                    {people.map((person) => (
-                      <li
-                        key={person.name}
-                        style={{
-                          listStyleType: "none",
-                        }}
-                      >
-                        <Image
-                          alt="imagAlt"
-                          src={person.imageUrl}
-                          width={250}
-                          height={250}
-                          className="aspect-[14/13] w-full rounded-2xl object-cover"
-                        />
-                        <h3 className="mt-6 text-lg/6 font-semibold tracking-tight text-black">
-                          {person.name}
-                        </h3>
-                        <p className="text-base/7 text-gray-500">
-                          {person.role}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mx-auto p-4">
+                  <div className="mx-auto p-4 order-1">
                     <h2 className="text-2xl font-bold mb-4">Our Legal Team</h2>
                     <ul className="space-y-3 grid grid-cols-1 md:grid-cols-2 gap-x-3">
                       {lawyers.map((lawyer, index) => (
@@ -117,7 +63,7 @@ function Information() {
                     </ul>
                   </div>
                 </div>
-                <div className="bg-color-grey sticky tablet-no-sticky">
+                <div className="sticky tablet-no-sticky">
                   <div
                     id="cr-form-FOR8a92fc4c319343728fa1df06164b9f51"
                     className="form-embed w-embed w-iframe w-script"

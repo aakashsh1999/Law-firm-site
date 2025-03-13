@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import "./index.css";
 import React from "react";
 
 export default function CTASection() {
+  const t = useTranslations("Hero2");
+
   return (
     <div>
       <section className="cta ">
@@ -27,15 +30,9 @@ export default function CTASection() {
             </div>
             <div className="cta__info">
               <h2 className="section-title section-title_white">
-                Our Promise to You: No Fee Unless We Win!
+                {t("title")}
               </h2>
-              <p className="cta__text">
-                We offer an initial consultation with an experienced personal
-                injury attorney at no cost to you. Our firm works on a
-                contingency basis, which means we only assess legal fees if we
-                successfully secure a compensation award for you. Contact our
-                New York lawyers today!
-              </p>
+              <p className="cta__text">{t("content")}</p>
               <div className="section-button">
                 <a
                   href="/contact"
@@ -44,7 +41,7 @@ export default function CTASection() {
                     borderRadius: "16px",
                   }}
                 >
-                  Get A FREE Case Review{" "}
+                  {t("cta")}
                 </a>
               </div>
             </div>

@@ -1,6 +1,29 @@
 import React from "react";
+import advSunilImg from "../../assets/advSunil Background Removed.jpg";
+import advVedent from "../../assets/advVedant Background Removed.jpg";
+import advBablu from "../../assets/advBablu Background Removed.jpg";
+import Image from "next/image";
 
 function Hero() {
+  const people = [
+    {
+      name: "Adv. Sunil Kumar",
+      role: "(Patna High Court)",
+      imageUrl: advSunilImg, // No template literals needed
+    },
+    {
+      name: "Adv. S. J. Vedant",
+      role: "Managing Partner",
+      imageUrl: advVedent,
+    },
+    {
+      name: "Adv Bablu Kumar Singh",
+      role: "Designated Partner",
+      imageUrl: advBablu,
+    },
+    // More people...
+  ];
+
   return (
     <div className="contact-wrapper">
       <div
@@ -32,22 +55,40 @@ function Hero() {
                   <div> Learn About Us</div>
                 </a>
               </div>
-              <img
-                src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%20(1).webp"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 1439px) 90vw, 1280px"
-                srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%20(1).webp 1460w"
-                className="header-image"
+              <ul
+                role="list"
                 style={{
-                  borderRadius: "16px",
+                  listStyle: "none",
+                  paddingLeft: "0px",
                 }}
-              />
+                className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-3"
+              >
+                {people.map((person) => (
+                  <li
+                    key={person.name}
+                    style={{
+                      listStyleType: "none",
+                    }}
+                  >
+                    <Image
+                      alt="imagAlt"
+                      src={person.imageUrl}
+                      width={250}
+                      height={250}
+                      className="aspect-[14/13] w-full rounded-2xl object-cover "
+                    />
+                    <h3 className="mt-6 text-lg/6 font-semibold tracking-tight text-black">
+                      {person.name}
+                    </h3>
+                    <p className="text-base/7 text-gray-500">{person.role}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div className="header_bottom-spacer"></div>
+      <div className="md:hidden block header_bottom-spacer"></div>
     </div>
   );
 }
