@@ -23,7 +23,6 @@ import { usePathname } from "next/navigation";
 import LawyerRegistrationModal from "../Modals/AddLawyer";
 import logo from "../../assets/BP_LOGO.jpg";
 import Image from "next/image";
-import Joyride from "react-joyride";
 import LocaleSwitcher from "../LocaleSwitcher";
 import { useEffect } from "react";
 import {
@@ -31,6 +30,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+
+// const JoyRide = dynamic(() => import("react-joyride"), { ssr: false });
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -125,21 +126,34 @@ export const solutions = [
 function NavBar() {
   const pathname = usePathname();
   const [run, setRun] = useState(false); // Controls whether the tour runs
-  useEffect(() => {
-    const hasSeenTour = localStorage.getItem("hasSeenTour");
-    if (!hasSeenTour) {
-      setRun(true); // Run the tour only if not seen
-    }
-  }, []);
+  const [isClient, setIsClient] = useState(false);
 
-  const handleTourComplete = () => {
-    localStorage.setItem("hasSeenTour", "true"); // Store flag to prevent re-running
-    setRun(false);
-  };
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
+
+  // useEffect(() => {
+  //   if (isClient) {
+  //     const hasSeenTour =
+  //       typeof window !== "undefined" && localStorage.getItem("hasSeenTour");
+  //     if (!hasSeenTour) {
+  //       setRun(true); // Run the tour only if not seen
+  //     }
+  //   }
+  // }, [isClient]); //
+
+  // const handleTourComplete = () => {
+  //   if (typeof window !== "undefined") {
+  //     localStorage.setItem("hasSeenTour", "true"); // Store flag to prevent re-running
+  //   }
+  //   setRun(false);
+  // };
+
+  // if (!isClient) return null; // Prevent SSR rendering
 
   return (
     <>
-      <Joyride
+      {/* <JoyRide
         steps={joyRideSteps}
         run={run}
         continuous
@@ -153,7 +167,7 @@ function NavBar() {
             handleTourComplete();
           }
         }}
-      />
+      /> */}
       <Disclosure as="header" className="bg-[#0B284C] shadow">
         {({ open }) => (
           <>
