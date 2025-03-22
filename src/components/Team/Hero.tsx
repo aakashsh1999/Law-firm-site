@@ -1,8 +1,9 @@
 import React from "react";
-import advSunilImg from "../../assets/advSunil Background Removed.jpg";
-import advVedent from "../../assets/advVedant Background Removed.jpg";
-import advBablu from "../../assets/advBablu Background Removed.jpg";
+import advSunilImg from "../../assets/advSunil Background Removed(1).png";
+import advVedent from "../../assets/advVedant Background Removed.png";
+import advBablu from "../../assets/advBablu Background Removed.png";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function Hero() {
   const people = [
@@ -23,6 +24,8 @@ function Hero() {
     },
     // More people...
   ];
+  const t = useTranslations("teamHero");
+  const person = t.raw("people") as Array<{ name: string; court: string }>;
 
   return (
     <div className="contact-wrapper">
@@ -38,10 +41,10 @@ function Hero() {
               <div className="header_top-wrapper">
                 <div>
                   <div className="margin-bottom margin-xxsmall">
-                    <h1>Our Team</h1>
+                    <h1>{t("ourTeamTitle")}</h1>
                   </div>
                   <div className="text-size-large text-style-muted">
-                    Committed to justice, driven by results.
+                    {t("teamSubtitle")}
                   </div>
                 </div>
                 <a
@@ -52,7 +55,7 @@ function Hero() {
                     border: "3px solid #2461E2",
                   }}
                 >
-                  <div> Learn About Us</div>
+                  <div>{t("learnAboutUsButton")}</div>
                 </a>
               </div>
               <ul
@@ -61,9 +64,9 @@ function Hero() {
                   listStyle: "none",
                   paddingLeft: "0px",
                 }}
-                className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-3"
+                className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2  lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-3"
               >
-                {people.map((person) => (
+                {person.map((person, index) => (
                   <li
                     key={person.name}
                     style={{
@@ -72,15 +75,17 @@ function Hero() {
                   >
                     <Image
                       alt="imagAlt"
-                      src={person.imageUrl}
+                      src={people[index].imageUrl}
                       width={250}
                       height={250}
-                      className="aspect-[14/13] w-full rounded-2xl object-cover "
+                      className="aspect-[14/13] w-full rounded-2xl object-cover shadow-lg "
                     />
                     <h3 className="mt-6 text-lg/6 font-semibold tracking-tight text-black">
-                      {person.name}
+                      {t("lawyerPrefix")} {person.name}
                     </h3>
-                    <p className="text-base/7 text-gray-500">{person.role}</p>
+                    <p className="text-base/7 text-gray-500">
+                      {people[index].role}
+                    </p>
                   </li>
                 ))}
               </ul>

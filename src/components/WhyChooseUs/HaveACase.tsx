@@ -5,8 +5,10 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import Form from "../Footer/Form";
+import { useTranslations } from "next-intl";
 
 export default function HaveACase() {
+  const t = useTranslations("haveACase");
   return (
     <footer className="bg-[#2461E2]  mx-auto">
       <div className="relative isolate ">
@@ -22,12 +24,12 @@ export default function HaveACase() {
                       color: "#FFFFFF6B",
                     }}
                   >
-                    Attorneys
+                    {t("attorneysTitle")}
                   </div>
                 </div>
               </div>
               <h2 className="text-pretty text-5xl font-medium tracking-tight text-white sm:text-5xl">
-                Do I Have A Case?
+                {t("doIHaveACaseQuestion")}
               </h2>
               <p
                 className="mt-6 text-xl text-white"
@@ -36,9 +38,7 @@ export default function HaveACase() {
                   letterSpacing: "-2",
                 }}
               >
-                To speak with an attorney immediately call (212) <br /> 869-3500
-                or fill out the form below and {`we'll`} get back to <br />
-                you within 24 hours. Your inquiry is always confidential
+                {t("callToActionDescription")}
               </p>
               <dl className="mt-10 space-y-4 text-base/7 text-gray-300">
                 <div className="flex gap-x-4">
@@ -51,7 +51,7 @@ export default function HaveACase() {
                   </dt>
                   <dd>
                     <a className="text-white hover:text-white">
-                      A-12, Ansa Plaza, RBSS Sahay Road, Bhagalpur- 812001
+                      {t("address")}
                     </a>
                   </dd>
                 </div>
@@ -74,9 +74,9 @@ export default function HaveACase() {
                 </div>
               </dl>
               <ul className="text-2xl my-4 font font-medium ml-6 text-white list-decimal">
-                <li>We are available to you 24/7</li>
-                <li>Compassionate in our approach</li>
-                <li>Accessible & available</li>
+                {t.raw("contactPoints").map((el, index) => (
+                  <li key={index}>{el}</li>
+                ))}
               </ul>
             </div>
           </div>

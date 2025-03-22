@@ -4,10 +4,30 @@ import Form from "@/components/Footer/Form";
 import { ArrowRightIcon } from "lucide-react";
 import serviceDetailData from "./serviceDetails.json";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl"; // Import the hook
 
 function ServiceDetail() {
   const pathname = usePathname();
   const pathKey = pathname?.split("/").pop();
+  const t = useTranslations("services"); // Use the 'service' namespace
+
+  // Helper function to safely get translations with fallback
+  const getTranslation = (keys: string[], fallback?: string) => {
+    let currentKey = pathKey;
+    for (const key of keys) {
+      currentKey += `.${key}`;
+    }
+    try {
+      const translated = t(currentKey);
+      return translated;
+    } catch (error) {
+      console.warn(
+        `Translation key 'service.${currentKey}' not found. Falling back to: ${fallback}`
+      );
+      return fallback || "";
+    }
+  };
+
   return (
     <div>
       <section className="article">
@@ -21,7 +41,7 @@ function ServiceDetail() {
                     textTransform: "capitalize",
                   }}
                 >
-                  {pathKey.split("-").join(" ")}
+                  {getTranslation(["pageTitle"], pathKey?.split("-").join(" "))}
                 </h2>
                 <p className="article__intro w-dyn-bind-empty"></p>
                 <div className="article__cases-wrap w-dyn-list">
@@ -34,10 +54,26 @@ function ServiceDetail() {
                           className="article__cases-item w-dyn-item"
                         >
                           <div className="article__cases-link w-inline-block local">
-                            <p className="upper-text">{caseItem.category}</p>
-                            <div className="card-title">{caseItem.amount}</div>
+                            <p className="upper-text">
+                              {getTranslation([
+                                "notableCases",
+                                index,
+                                "category",
+                              ])}
+                            </p>
+                            <div className="card-title">
+                              {getTranslation([
+                                "notableCases",
+                                index,
+                                "amount",
+                              ])}
+                            </div>
                             <p className="article__cases-text">
-                              {caseItem.description}
+                              {getTranslation([
+                                "notableCases",
+                                index,
+                                "description",
+                              ])}
                             </p>
                             <a
                               href="/success-stories"
@@ -52,7 +88,7 @@ function ServiceDetail() {
                                 className="gap-x-2"
                               >
                                 <p className="section-link__text">
-                                  View All Success Stories
+                                  {t("common.viewAllStories")}
                                 </p>
                                 <ArrowRightIcon width={24} height={24} />
                               </div>
@@ -73,7 +109,7 @@ function ServiceDetail() {
                           .toLowerCase()
                           .replace(/\s+/g, "-")}`}
                       ></span>
-                      <h2>{section.title}</h2>
+                      <h2>{getTranslation(["mainContent", index, "title"])}</h2>
                       {section.image && (
                         <figure
                           style={{
@@ -83,69 +119,242 @@ function ServiceDetail() {
                         >
                           <div>
                             <img
-                              src={section.image.src || "/placeholder.svg"}
+                              src={getTranslation(
+                                ["mainContent", index, "image", "src"],
+                                section.image.src || "/placeholder.svg"
+                              )}
                               loading="lazy"
-                              alt={section.image.alt}
+                              alt={getTranslation(
+                                ["mainContent", index, "image", "alt"],
+                                section.image.alt
+                              )}
                             />
                           </div>
                         </figure>
                       )}
                       {section.paragraphs &&
                         section.paragraphs.map((paragraph, pIndex) => (
-                          <p key={pIndex}>{paragraph}</p>
+                          <p key={pIndex}>
+                            {getTranslation(
+                              ["mainContent", index, "paragraphs", pIndex],
+                              paragraph
+                            )}
+                          </p>
                         ))}
-                      {section.locations && (
-                        <ul role="list">
-                          {section.locations.map((location, lIndex) => (
-                            <li key={lIndex}>
-                              <a href={location.link} className="local">
-                                {location.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
+                      {section.areasOfExpertise && (
+                        <>
+                          <p>
+                            <strong>{t("common.areasOfExpertise")}</strong>
+                          </p>
+                          <ul role="list">
+                            {section.areasOfExpertise.map(
+                              (expertise, eIndex) => (
+                                <li key={eIndex}>
+                                  <a
+                                    href={getTranslation(
+                                      [
+                                        "mainContent",
+                                        index,
+                                        "areasOfExpertise",
+                                        eIndex,
+                                        "link",
+                                      ],
+                                      expertise.link
+                                    )}
+                                    className="local"
+                                  >
+                                    {getTranslation(
+                                      [
+                                        "mainContent",
+                                        index,
+                                        "areasOfExpertise",
+                                        eIndex,
+                                        "name",
+                                      ],
+                                      expertise.name
+                                    )}
+                                  </a>
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </>
                       )}
                       {section.quote && (
-                        <blockquote>{section.quote}</blockquote>
+                        <blockquote>
+                          {getTranslation(
+                            ["mainContent", index, "quote"],
+                            section.quote
+                          )}
+                        </blockquote>
                       )}
                       {section.services && (
                         <>
                           <p>
-                            <strong>
-                              While you focus on getting well, we handle every
-                              aspect of your personal injury claim, including:
-                            </strong>
+                            <strong>{t("common.services")}</strong>
                           </p>
                           <ul role="list">
                             {section.services.map((service, sIndex) => (
-                              <li key={sIndex}>{service}</li>
+                              <li key={sIndex}>
+                                {getTranslation(
+                                  ["mainContent", index, "services", sIndex],
+                                  service
+                                )}
+                              </li>
                             ))}
                           </ul>
                         </>
                       )}
-                      {section.hotspots && (
+                      {section.content && (
+                        <p>
+                          {getTranslation(
+                            ["mainContent", index, "content"],
+                            section.content
+                          )}
+                        </p>
+                      )}
+                      {section.keyAreas && (
                         <>
                           <p>
-                            <strong>
-                              Some of the NYC hot spots for crashes include:
-                            </strong>
+                            <strong>{t("common.keyAreas")}</strong>
                           </p>
-                          <ul role="list">
-                            {section.hotspots.map((hotspot, hIndex) => (
-                              <li key={hIndex}>{hotspot}</li>
+                          <ul>
+                            {section.keyAreas.map((keyArea, kaIndex) => (
+                              <li key={kaIndex}>
+                                {getTranslation(
+                                  ["mainContent", index, "keyAreas", kaIndex],
+                                  keyArea
+                                )}
+                              </li>
                             ))}
                           </ul>
                         </>
                       )}
-                      {section.accidentTypes && (
-                        <ul role="list">
-                          {section.accidentTypes.map((accidentType, aIndex) => (
-                            <li key={aIndex}>
-                              <strong>{accidentType.type}:</strong>{" "}
-                              {accidentType.description}
-                            </li>
-                          ))}
-                        </ul>
+                      {section.ipRights && (
+                        <>
+                          <p>
+                            <strong>{t("common.ipRights")}</strong>
+                          </p>
+                          <ul>
+                            {section.ipRights.map((ipRight, ipIndex) => (
+                              <li key={ipIndex}>
+                                {getTranslation(
+                                  ["mainContent", index, "ipRights", ipIndex],
+                                  ipRight
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                      {section.keyConsiderations && (
+                        <>
+                          <p>
+                            <strong>{t("common.keyConsiderations")}</strong>
+                          </p>
+                          <ul>
+                            {section.keyConsiderations.map(
+                              (consideration, kcIndex) => (
+                                <li key={kcIndex}>
+                                  {getTranslation(
+                                    [
+                                      "mainContent",
+                                      index,
+                                      "keyConsiderations",
+                                      kcIndex,
+                                    ],
+                                    consideration
+                                  )}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </>
+                      )}
+                      {section.keySources && (
+                        <>
+                          <p>
+                            <strong>{t("common.keySources")}</strong>
+                          </p>
+                          <ul>
+                            {section.keySources.map((source, ksIndex) => (
+                              <li key={ksIndex}>
+                                {getTranslation(
+                                  ["mainContent", index, "keySources", ksIndex],
+                                  source
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                      {section.keyAspects && (
+                        <>
+                          <p>
+                            <strong>{t("common.keyAspects")}</strong>
+                          </p>
+                          <ul>
+                            {section.keyAspects.map((aspect, kaIndex) => (
+                              <li key={kaIndex}>
+                                {getTranslation(
+                                  ["mainContent", index, "keyAspects", kaIndex],
+                                  aspect
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                      {section.keyIssues && (
+                        <>
+                          <p>
+                            <strong>{t("common.keyIssues")}</strong>
+                          </p>
+                          <ul>
+                            {section.keyIssues.map((issue, kiIndex) => (
+                              <li key={kiIndex}>
+                                {getTranslation(
+                                  ["mainContent", index, "keyIssues", kiIndex],
+                                  issue
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                      {section.caseExamples && (
+                        <>
+                          <h3>{t("common.ourExperience")}</h3>
+                          <ul role="list">
+                            {section.caseExamples.map((example, ceIndex) => (
+                              <li key={ceIndex}>
+                                <strong>
+                                  {getTranslation(
+                                    [
+                                      "mainContent",
+                                      index,
+                                      "caseExamples",
+                                      ceIndex,
+                                      "type",
+                                    ],
+                                    example.type
+                                  )}
+                                  :
+                                </strong>{" "}
+                                {getTranslation(
+                                  [
+                                    "mainContent",
+                                    index,
+                                    "caseExamples",
+                                    ceIndex,
+                                    "description",
+                                  ],
+                                  example.description
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </>
                       )}
                     </div>
                   )
@@ -153,16 +362,16 @@ function ServiceDetail() {
               </div>
               <div className="article__cta">
                 <h2 className="section-title section-title_white">
-                  {serviceDetailData[pathKey]?.callToAction.title}
+                  {getTranslation(["callToAction", "title"])}
                 </h2>
                 <p className="article__cta-text">
-                  {serviceDetailData[pathKey]?.callToAction.description}
+                  {getTranslation(["callToAction", "description"])}
                 </p>
                 <a
-                  href={serviceDetailData[pathKey]?.callToAction.buttonLink}
+                  href={getTranslation(["callToAction", "buttonLink"])}
                   className="new-btn new-btn_blue w-button local"
                 >
-                  {serviceDetailData[pathKey]?.callToAction.buttonText}
+                  {getTranslation(["callToAction", "buttonText"])}
                 </a>
               </div>
             </div>

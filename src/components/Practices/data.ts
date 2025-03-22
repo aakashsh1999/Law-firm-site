@@ -4,7 +4,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     title: "Medical Malpractice",
     description:
-      "Medical misdiagnosis or malpractice causes extensive pain and suffering, often leading to unnecessary procedures. Our New York City personal injury legal firm handles complex malpractice cases, including hospital negligence, birth injuries, and medical misdiagnoses.",
+      "Medical misdiagnosis or malpractice causes extensive pain and suffering, often leading to unnecessary procedures. Our India City personal injury legal firm handles complex malpractice cases, including hospital negligence, birth injuries, and medical misdiagnoses.",
     additionalInfo:
       "Our attorneys know the challenges of malpractice cases and have the resources to handle complex claims.",
     services: [
@@ -48,4 +48,5 @@ export const practiceAreas: PracticeArea[] = [
     viewAllLink: "/civil-rights",
   },
   // Add the rest of the practice areas here...
+  ,
 ];

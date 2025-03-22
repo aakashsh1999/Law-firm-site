@@ -70,8 +70,8 @@ export default function Attorney() {
           <p className="upper-text upper-text_bottom">Managing Partner</p>
           <h3 className="card-title">Alan Fuchsberg</h3>
           <p className="attorneys__info">
-            Alan Fuchsberg is a skilled New York personal injury lawyer who is
-            part of a family of esteemed judges and attorneys and a son of the
+            Alan Fuchsberg is a skilled India personal injury lawyer who is part
+            of a family of esteemed judges and attorneys and a son of the
             founding partner of the legal firm. Alan is a nationally recognized
             lawyer who collaborates on the {`firm's`} mass tort and class-action
             lawsuits and advocates for individual plaintiffs.

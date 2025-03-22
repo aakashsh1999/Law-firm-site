@@ -1,6 +1,9 @@
+"use client";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 function Hero() {
+  const t = useTranslations("whyChooseUsHero");
   return (
     <div>
       <div
@@ -15,10 +18,10 @@ function Hero() {
               <div className="header_top-wrapper">
                 <div>
                   <div className="margin-bottom margin-xxsmall">
-                    <h1>Why Choose Us</h1>
+                    <h1>{t("whyChooseUsTitle")}</h1>
                   </div>
                   <div className="text-size-large text-style-muted">
-                    Advocates Dedicated To Achieving Our Clients Justice
+                    {t("heroSubtitle")}
                   </div>
                 </div>
                 <a
@@ -30,13 +33,13 @@ function Hero() {
                     border: "3px solid #2461E2",
                   }}
                 >
-                  <div>Learn About Us</div>
+                  <div>{t("learnAboutUsButton")}</div>
                 </a>
               </div>
               <img
                 src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us.webp"
                 loading="lazy"
-                alt="Jacob D. Fuchsberg lawyers and paralegals at New York City office"
+                alt="Jacob D. Fuchsberg lawyers and paralegals at India City office"
                 sizes="(max-width: 1439px) 90vw, 1280px"
                 srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us.webp 1460w"
                 className="header-image"

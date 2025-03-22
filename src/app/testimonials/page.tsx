@@ -12,10 +12,11 @@ import { useParams, usePathname } from "next/navigation";
 import React from "react";
 import telephone from "../../assets/telephone.png";
 import location from "../../assets/location.png";
+import { useTranslations } from "next-intl"; // Import the translation hook
 
 function Testimonials() {
   const pathname = usePathname();
-  console.log(pathname, "wreofasfd");
+  const t = useTranslations("testimonialsPage"); // Use the "testimonialsPage" namespace
 
   return (
     <div>
@@ -32,17 +33,21 @@ function Testimonials() {
               <div className="header_top-wrapper">
                 <div>
                   <div className="margin-bottom margin-xxsmall">
-                    <h1>Testimonials</h1>
+                    <h1>{t("title")}</h1>
                   </div>
                   <div className="text-size-large text-style-muted">
-                    Consultations are free and confidential
+                    {t("consultationFree")}
                   </div>
                 </div>
                 <a
                   href="#information"
-                  className="page-button tablet-mt-24 w-inline-block local"
+                  className="new-btn new-btn_transparent new-btn_top w-button local"
+                  style={{
+                    borderRadius: "16px",
+                    border: "3px solid #2461E2",
+                  }}
                 >
-                  <div>Contact Information</div>
+                  <div>{t("contactInformationButton")}</div>
                 </a>
               </div>
             </div>
@@ -61,37 +66,25 @@ function Testimonials() {
                 <div id="w-node-_8d9ddff1-129c-9c2b-dca2-a28b694bc4f1-4497f351">
                   <div className="margin-bottom margin-small">
                     <div className="margin-bottom margin-xxsmall">
-                      <h2>Additional Information</h2>
+                      <h2>{t("additionalInformationTitle")}</h2>
                     </div>
                     <div className="text-size-large text-style-muted">
-                      The B P Law Firm has fought and won verdicts and
-                      settlements for clients in cases involving civil rights
-                      violations such as police brutality, protection of
-                      prisoners’ rights against cruel and inhumane treatment,
-                      and employment discrimination.
+                      {t("additionalInformationText1")}
                       <br />
                       <br />
-                      In addition, we work for justice on a broader scale
-                      through class-action and whistle-blower Qui Tam lawsuits.
+                      {t("additionalInformationText2")}
                     </div>
                   </div>
                   <div className="margin-bottom margin-large">
                     <div>
-                      This perspective arises from not only our many years of
-                      dedication and our breadth of casework, but also by
-                      working as a multi-faceted team—our attorneys ranging in
-                      legal focus and experiences.
+                      {t("dedicationPerspective")}
                       <br />
                       <br />
-                      We dedicate ourselves to each person’s case with
-                      creativity and persistence to achieve justice for clients
-                      faced with emotional, physical, and mental harm. We
-                      believe that your story deserves to be heard, and fought
-                      for.
+                      {t("achievingJustice")}
                     </div>
                   </div>
                   <div className="margin-bottom margin-xsmall">
-                    <div className="heading-small">B P Law Firm</div>
+                    <div className="heading-small">{t("firmName")}</div>
                   </div>
                   <dl className="mt-10 space-y-4 text-base/7 text-gray-300">
                     <div className="flex gap-x-4">
@@ -99,13 +92,13 @@ function Testimonials() {
                         <span className="sr-only">Address</span>
                         <Image
                           src={location}
-                          alt=""
+                          alt={t("address1")} // Added alt text translation
                           className="h-8 w-8 text-gray-400"
                         />
                       </dt>
                       <dd>
                         <a className="text-black hover:text-black">
-                          A-13, Ansa Plaza, RBSS Sahay Road, Bhagalpur- 812001
+                          {t("address1")}
                         </a>
                       </dd>
                     </div>
@@ -114,14 +107,13 @@ function Testimonials() {
                         <span className="sr-only">Address</span>
                         <Image
                           src={location}
-                          alt=""
+                          alt={t("address2")} // Added alt text translation
                           className="h-8 w-8 text-gray-400"
                         />
                       </dt>
                       <dd>
                         <a className="text-black hover:text-black">
-                          C/o ABDICO LLP, 1st Floor, Anand Tower, Exhibition
-                          Road, Patna-800001
+                          {t("address2")}
                         </a>
                       </dd>
                     </div>
@@ -130,13 +122,13 @@ function Testimonials() {
                         <span className="sr-only">Address</span>
                         <Image
                           src={location}
-                          alt=""
+                          alt={t("address3")} // Added alt text translation
                           className="h-8 w-8 text-gray-400"
                         />
                       </dt>
                       <dd>
                         <a className="text-black hover:text-black">
-                          C/o B/147,Part 1,Lajpat Nagar,New Delhi
+                          {t("address3")}
                         </a>
                       </dd>
                     </div>
@@ -150,7 +142,7 @@ function Testimonials() {
                           className="text-black hover:text-blue-600 underline"
                           href="mailto:bplaw@yahoo.com"
                         >
-                          bplaw@yahoo.com
+                          {t("email")}
                         </a>
                       </dd>
                     </div>
@@ -159,13 +151,13 @@ function Testimonials() {
                         <span className="sr-only">Telephone</span>
                         <Image
                           src={telephone}
-                          alt=""
+                          alt={t("telephone")} // Added alt text translation
                           className="h-8 w-8 text-gray-400"
                         />
                       </dt>
                       <dd>
                         <a className="text-black hover:text-black">
-                          +91-8541814401
+                          {t("telephone")}
                         </a>
                       </dd>
                     </div>
@@ -175,7 +167,7 @@ function Testimonials() {
                   <img
                     src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%20(1).webp"
                     loading="lazy"
-                    alt=""
+                    alt={t("consultationFree")} // Added alt text translation
                     sizes="(max-width: 1439px) 90vw, 1280px"
                     srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%20(1).webp 1460w"
                     className="header-image rounded-xl"

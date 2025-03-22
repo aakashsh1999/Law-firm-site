@@ -1,3 +1,4 @@
+"use client";
 import Map from "@/components/ Map";
 import BrandMaqrquee from "@/components/Brands/indext";
 import CasesSection from "@/components/Cases";

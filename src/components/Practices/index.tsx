@@ -2,19 +2,184 @@
 import React, { useState } from "react";
 import "./index.css";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 
 const PracticeAreasSection = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const t = useTranslations("practiceAreaSection");
+
+  // Example data for tabs
+  const tabs = [
+    {
+      title: t("medicalMalpractice.title"),
+      translationKey: "medicalMalpractice",
+      description: t("medicalMalpractice.description"),
+      additionalInfo: t("medicalMalpractice.additionalInfo"),
+      links: [
+        {
+          title: t("medicalMalpractice.services.birthInjuries"),
+          url: "/birth-injuries",
+          translationKey: "medicalMalpractice.services.birthInjuries",
+        },
+        {
+          title: t("medicalMalpractice.services.medicalMisdiagnosis"),
+          url: "https://www.fuchsberg.com/medical-malpractice/medical-misdiagnosis",
+          translationKey: "medicalMalpractice.services.medicalMisdiagnosis",
+        },
+        {
+          title: t("medicalMalpractice.services.hospitalNegligence"),
+          url: "/medical-malpractice/hospital-negligence",
+          translationKey: "medicalMalpractice.services.hospitalNegligence",
+        },
+        {
+          title: t("medicalMalpractice.services.medicalErrors"),
+          url: "/medical-malpractice/medical-errors",
+          translationKey: "medicalMalpractice.services.medicalErrors",
+        },
+      ],
+      viewAllLink: "/medical-malpractice",
+      viewAllTranslationKey: "medicalMalpractice",
+    },
+    {
+      title: t("civilRightsViolation.title"),
+      translationKey: "civilRightsViolation",
+      description: t("civilRightsViolation.description"),
+      additionalInfo: t("civilRightsViolation.additionalInfo"),
+      links: [
+        {
+          title: t("civilRightsViolation.services.policeMisconduct"),
+          url: "/civil-rights/police-misconduct",
+          translationKey: "civilRightsViolation.services.policeMisconduct",
+        },
+        {
+          title: t("civilRightsViolation.services.racialDiscrimination"),
+          url: "/civil-rights/racial-discrimination",
+          translationKey: "civilRightsViolation.services.racialDiscrimination",
+        },
+        {
+          title: t("civilRightsViolation.services.wrongfulArrest"),
+          url: "/civil-rights/wrongful-arrest",
+          translationKey: "civilRightsViolation.services.wrongfulArrest",
+        },
+      ],
+      viewAllLink: "/civil-rights",
+      viewAllTranslationKey: "civilRightsViolation",
+    },
+    {
+      title: t("productLiabilityCases.title"),
+      translationKey: "productLiabilityCases",
+      description: t("productLiabilityCases.description"),
+      additionalInfo: t("productLiabilityCases.additionalInfo"),
+      links: [
+        {
+          title: t("productLiabilityCases.services.defectiveMedicalDevices"),
+          url: "/product-liability/defective-medical-devices",
+          translationKey:
+            "productLiabilityCases.services.defectiveMedicalDevices",
+        },
+        {
+          title: t("productLiabilityCases.services.dangerousConsumerProducts"),
+          url: "/product-liability/dangerous-consumer-products",
+          translationKey:
+            "productLiabilityCases.services.dangerousConsumerProducts",
+        },
+        {
+          title: t("productLiabilityCases.services.automobileDefects"),
+          url: "/product-liability/automobile-defects",
+          translationKey: "productLiabilityCases.services.automobileDefects",
+        },
+      ],
+      viewAllLink: "/product-liability",
+      viewAllTranslationKey: "productLiabilityCases",
+    },
+    {
+      title: t("accidents.title"),
+      translationKey: "accidents",
+      description: t("accidents.description"),
+      additionalInfo: t("accidents.additionalInfo"),
+      links: [
+        {
+          title: t("accidents.services.carAccidents"),
+          url: "/accidents/car-accidents",
+          translationKey: "accidents.services.carAccidents",
+        },
+        {
+          title: t("accidents.services.workplaceAccidents"),
+          url: "/accidents/workplace-accidents",
+          translationKey: "accidents.services.workplaceAccidents",
+        },
+        {
+          title: t("accidents.services.slipAndFallAccidents"),
+          url: "/accidents/slip-and-fall",
+          translationKey: "accidents.services.slipAndFallAccidents",
+        },
+      ],
+      viewAllLink: "/accidents",
+      viewAllTranslationKey: "accidents",
+    },
+    {
+      title: t("commonInjuries.title"),
+      translationKey: "commonInjuries",
+      description: t("commonInjuries.description"),
+      additionalInfo: t("commonInjuries.additionalInfo"),
+      links: [
+        {
+          title: t("commonInjuries.services.spinalInjuries"),
+          url: "/injuries/spinal-injuries",
+          translationKey: "commonInjuries.services.spinalInjuries",
+        },
+        {
+          title: t("commonInjuries.services.traumaticBrainInjuries"),
+          url: "/injuries/traumatic-brain-injuries",
+          translationKey: "commonInjuries.services.traumaticBrainInjuries",
+        },
+        {
+          title: t("commonInjuries.services.fractures"),
+          url: "/injuries/fractures",
+          translationKey: "commonInjuries.services.fractures",
+        },
+      ],
+      viewAllLink: "/common-injuries",
+      viewAllTranslationKey: "commonInjuries",
+    },
+    {
+      title: t("otherPracticeAreas.title"),
+      translationKey: "otherPracticeAreas",
+      description: t("otherPracticeAreas.description"),
+      additionalInfo: t("otherPracticeAreas.additionalInfo"),
+      links: [
+        {
+          title: t("otherPracticeAreas.services.familyLaw"),
+          url: "/other-practice-areas/family-law",
+          translationKey: "otherPracticeAreas.services.familyLaw",
+        },
+        {
+          title: t("otherPracticeAreas.services.businessLaw"),
+          url: "/other-practice-areas/business-law",
+          translationKey: "otherPracticeAreas.services.businessLaw",
+        },
+        {
+          title: t("otherPracticeAreas.services.realEstateLaw"),
+          url: "/other-practice-areas/real-estate-law",
+          translationKey: "otherPracticeAreas.services.realEstateLaw",
+        },
+      ],
+      viewAllLink: "/other-practice-areas",
+      viewAllTranslationKey: "otherPracticeAreas",
+    },
+    // Add more tabs if necessary...
+  ];
+
   return (
     <section className="practice">
       <div className="section-container section-container_left w-container">
         <div className="practice__content">
           <div className="section-subtitle section-subtitle_absolute">
             <p className="section-subtitle-text section-subtitle-text_white">
-              Practice Areas
+              {t("practiceAreasTitle")}
             </p>
             <h2 className="section-title section-title_white section-title_abs">
-              Our Practice Areas
+              {t("ourPracticeAreas")}
             </h2>
           </div>
           <div className="practice__back"></div>
@@ -161,7 +326,11 @@ const PracticeAreasSection = () => {
                         border: "3px solid #2461E2",
                       }}
                     >
-                      View All {tab.title} Services
+                      {t("viewAllServices", {
+                        practiceArea: t(
+                          `${tabs[activeTab].translationKey}.title`
+                        ),
+                      })}
                     </a>
                   </div>
                 </div>
@@ -264,146 +433,5 @@ const PracticeAreasSection = () => {
     </section>
   );
 };
-
-// Example data for tabs
-const tabs = [
-  {
-    title: "Medical Malpractice",
-    description:
-      "Medical misdiagnosis or malpractice causes extensive pain and suffering, often leading to unnecessary procedures. Our New York City personal injury legal firm handles complex malpractice cases, including hospital negligence, birth injuries, and medical misdiagnoses.",
-    additionalInfo:
-      "Our attorneys know the challenges of malpractice cases and have the resources to handle complex claims.",
-    links: [
-      {
-        title: "Birth Injuries",
-        url: "/birth-injuries",
-      },
-      {
-        title: "Medical Misdiagnosis",
-        url: "https://www.fuchsberg.com/medical-malpractice/medical-misdiagnosis",
-      },
-      {
-        title: "Hospital Negligence",
-        url: "/medical-malpractice/hospital-negligence",
-      },
-      {
-        title: "Medical Errors",
-        url: "/medical-malpractice/medical-errors",
-      },
-    ],
-    viewAllLink: "/medical-malpractice",
-  },
-  {
-    title: "Civil Rights Violation",
-    description:
-      "Civil rights violations can take many forms, from police misconduct to discrimination. Our firm fights for justice and holds responsible parties accountable for violating individuals' civil rights.",
-    additionalInfo:
-      "Our attorneys are committed to defending your rights and ensuring justice in civil rights violation cases.",
-    links: [
-      {
-        title: "Police Misconduct",
-        url: "/civil-rights/police-misconduct",
-      },
-      {
-        title: "Racial Discrimination",
-        url: "/civil-rights/racial-discrimination",
-      },
-      {
-        title: "Wrongful Arrest",
-        url: "/civil-rights/wrongful-arrest",
-      },
-    ],
-    viewAllLink: "/civil-rights",
-  },
-  {
-    title: "Product Liability Cases",
-    description:
-      "Product liability cases involve holding manufacturers accountable for dangerous or defective products that cause harm to consumers. Our experienced attorneys fight for fair compensation in these cases.",
-    additionalInfo:
-      "We handle a wide range of product liability cases, from defective medical devices to dangerous consumer goods.",
-    links: [
-      {
-        title: "Defective Medical Devices",
-        url: "/product-liability/defective-medical-devices",
-      },
-      {
-        title: "Dangerous Consumer Products",
-        url: "/product-liability/dangerous-consumer-products",
-      },
-      {
-        title: "Automobile Defects",
-        url: "/product-liability/automobile-defects",
-      },
-    ],
-    viewAllLink: "/product-liability",
-  },
-  {
-    title: "Accidents",
-    description:
-      "Accidents can happen at any time and often result in serious injuries. Our firm helps victims of accidents seek justice and compensation for medical bills, lost wages, and pain and suffering.",
-    additionalInfo:
-      "Whether it's a car accident, slip-and-fall, or workplace accident, we are here to help you navigate your recovery process.",
-    links: [
-      {
-        title: "Car Accidents",
-        url: "/accidents/car-accidents",
-      },
-      {
-        title: "Workplace Accidents",
-        url: "/accidents/workplace-accidents",
-      },
-      {
-        title: "Slip-and-Fall Accidents",
-        url: "/accidents/slip-and-fall",
-      },
-    ],
-    viewAllLink: "/accidents",
-  },
-  {
-    title: "Common Injuries",
-    description:
-      "Injuries, whether caused by accidents, medical malpractice, or defective products, can leave individuals with long-lasting pain and suffering. Our firm works to ensure you receive the compensation you deserve.",
-    additionalInfo:
-      "We handle a variety of injury cases, including spinal injuries, traumatic brain injuries, and fractures.",
-    links: [
-      {
-        title: "Spinal Injuries",
-        url: "/injuries/spinal-injuries",
-      },
-      {
-        title: "Traumatic Brain Injuries",
-        url: "/injuries/traumatic-brain-injuries",
-      },
-      {
-        title: "Fractures",
-        url: "/injuries/fractures",
-      },
-    ],
-    viewAllLink: "/common-injuries",
-  },
-  {
-    title: "Other Practice Areas",
-    description:
-      "Our legal team handles various other practice areas outside of personal injury, ensuring you have the right representation for your specific legal needs.",
-    additionalInfo:
-      "Contact us to learn more about how we can assist you in other legal matters.",
-    links: [
-      {
-        title: "Family Law",
-        url: "/other-practice-areas/family-law",
-      },
-      {
-        title: "Business Law",
-        url: "/other-practice-areas/business-law",
-      },
-      {
-        title: "Real Estate Law",
-        url: "/other-practice-areas/real-estate-law",
-      },
-    ],
-    viewAllLink: "/other-practice-areas",
-  },
-  // Add more tabs if necessary...
-];
 
 export default PracticeAreasSection;

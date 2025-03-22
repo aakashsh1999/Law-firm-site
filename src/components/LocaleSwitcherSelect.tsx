@@ -17,16 +17,10 @@ import { useTranslations } from "next-intl";
 type Props = {
   defaultValue: string;
   items: Array<{ value: string; label: string }>;
-  label: string;
 };
 
-export default function LocaleSwitcherSelect({
-  defaultValue,
-  items,
-  label,
-}: Props) {
+export default function LocaleSwitcherSelect({ defaultValue, items }: Props) {
   const [isPending, startTransition] = useTransition();
-  const t = useTranslations("LocaleSwitcherSelect");
 
   function onChange(value: string) {
     const locale = value as Locale;
@@ -36,9 +30,9 @@ export default function LocaleSwitcherSelect({
   }
 
   return (
-    <div className="relative">
+    <div className="relative ml-1">
       <Select defaultValue={defaultValue} onValueChange={onChange}>
-        <SelectTrigger aria-label={t("placeholder")}>
+        <SelectTrigger>
           <LanguageIcon className="h-6 w-6 text-white transition-colors hover:text-slate-200" />
         </SelectTrigger>
         <SelectContent
@@ -49,7 +43,7 @@ export default function LocaleSwitcherSelect({
           {items.map((item) => (
             <SelectItem
               key={item.value}
-              className="flex cursor-default items-center px-3 py-2 text-base data-[highlighted]:bg-slate-100"
+              className="flex cursor-default items-center px-3 py-2 text-base"
               value={item.value}
             >
               {/* <div className="mr-2 w-[1rem]">
@@ -58,7 +52,7 @@ export default function LocaleSwitcherSelect({
                 )}
               </div> */}
               <span className="text-slate-900">
-                {item.label.includes("hi") ? "Hindi" : "English"}
+                {item.value.includes("hi") ? "Hindi" : "English"}
               </span>
             </SelectItem>
           ))}

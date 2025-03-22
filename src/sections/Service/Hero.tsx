@@ -9,13 +9,13 @@ function Hero() {
           <div className="hero__table md:w-2/3">
             <div className="hero__info ">
               <h1 className="hero__title">
-                New York Personal Injury & Civil Rights Lawyers Who Help When
-                the Unimaginable Happens
+                India Personal Injury & Civil Rights Lawyers Who Help When the
+                Unimaginable Happens
               </h1>
               <p className="hero__intro hero__intro_dark">
                 The Jacob D. Fuchsberg Law Firm team fights for the rights of
                 victims of civil rights violations, medical malpractice, or
-                those injured in a catastrophic accident. Our New York personal
+                those injured in a catastrophic accident. Our India personal
                 injury attorneys are on your side to seek justice and help you
                 get the compensation you deserve.
               </p>

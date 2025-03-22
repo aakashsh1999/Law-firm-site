@@ -9,9 +9,6 @@ import {
   MenuButton,
   MenuItem,
   MenuItems,
-  Popover,
-  PopoverButton,
-  PopoverPanel,
 } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import {
@@ -26,7 +23,14 @@ import { usePathname } from "next/navigation";
 import LawyerRegistrationModal from "../Modals/AddLawyer";
 import logo from "../../assets/BP_LOGO.jpg";
 import Image from "next/image";
+import Joyride from "react-joyride";
 import LocaleSwitcher from "../LocaleSwitcher";
+import { useEffect } from "react";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -40,6 +44,19 @@ const navigation = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
+const joyRideSteps = [
+  {
+    target: ".client-step",
+    content: "Need a lawyer? Find expert legal help here!",
+    placement: "bottom",
+  },
+  {
+    target: ".lawyer-step",
+    content: "If you are a Lawyer? Join Our Trusted Network!",
+    placement: "left",
+  },
+];
 
 export const solutions = [
   {
@@ -107,91 +124,120 @@ export const solutions = [
 ];
 function NavBar() {
   const pathname = usePathname();
+  const [run, setRun] = useState(false); // Controls whether the tour runs
+  useEffect(() => {
+    const hasSeenTour = localStorage.getItem("hasSeenTour");
+    if (!hasSeenTour) {
+      setRun(true); // Run the tour only if not seen
+    }
+  }, []);
+
+  const handleTourComplete = () => {
+    localStorage.setItem("hasSeenTour", "true"); // Store flag to prevent re-running
+    setRun(false);
+  };
 
   return (
-    <Disclosure as="header" className="bg-[#0B284C] shadow">
-      {({ open }) => (
-        <>
-          <div className="mx-auto ">
-            <div className="relative flex h-16 justify-between  px-2 sm:px-4  lg:px-24">
-              <div className="relative z-10 flex px-2 lg:px-0">
-                <div className="flex shrink-0 items-center">
-                  {/* <Logo /> */}
-                  <Image src={logo} width={50} alt="" height={50} />
+    <>
+      <Joyride
+        steps={joyRideSteps}
+        run={run}
+        continuous
+        showProgress
+        showSkipButton
+        styles={{
+          options: { zIndex: 1000 },
+        }}
+        callback={(data) => {
+          if (data.status === "finished" || data.status === "skipped") {
+            handleTourComplete();
+          }
+        }}
+      />
+      <Disclosure as="header" className="bg-[#0B284C] shadow">
+        {({ open }) => (
+          <>
+            <div className="mx-auto ">
+              <div className="relative flex h-16 justify-between  px-2 sm:px-4  lg:px-24">
+                <div className="relative z-10 flex px-2 lg:px-0">
+                  <div className="flex shrink-0 items-center">
+                    <Link href={"/"}>
+                      <Image src={logo} width={50} alt="" height={50} />
+                    </Link>
+                  </div>
+                </div>
+                <div className="relative z-0  flex flex-1 items-center justify-center px-2  sm:absolute sm:inset-0 client-step">
+                  <Search />
+                </div>
+                <div className="relative z-10 flex items-center lg:hidden">
+                  {/* Mobile menu button */}
+                  <DisclosureButton className="group relative inline-flex items-center justify-center p-2 ">
+                    <span className="absolute -inset-0.5" />
+                    <span className="sr-only">Open menu</span>
+                    <Bars3Icon
+                      aria-hidden="true"
+                      className={`block text-white size-6 transition-transform duration-300 ${
+                        open ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
+                      }`}
+                    />
+                    <XMarkIcon
+                      aria-hidden="true"
+                      className={`absolute text-white size-6 transition-transform duration-300 ${
+                        open ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
+                      }`}
+                    />
+                  </DisclosureButton>
+                </div>
+                <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
+                  <LawyerRegistrationModal className="lawyer-step" />
+                  <a
+                    href="#"
+                    className="ml-3 inline-flex  items-center rounded-xl bg-[#2461E2] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Contact Us
+                  </a>
+                  <LocaleSwitcher />
                 </div>
               </div>
-              <div className="relative z-0 hidden md:flex flex-1 items-center justify-center px-2  sm:absolute sm:inset-0">
-                <Search />
-              </div>
-              <div className="relative z-10 flex items-center lg:hidden">
-                {/* Mobile menu button */}
-                <DisclosureButton className="group relative inline-flex items-center justify-center p-2 ">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open menu</span>
-                  <Bars3Icon
-                    aria-hidden="true"
-                    className={`block text-white size-6 transition-transform duration-300 ${
-                      open ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
-                    }`}
-                  />
-                  <XMarkIcon
-                    aria-hidden="true"
-                    className={`absolute text-white size-6 transition-transform duration-300 ${
-                      open ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
-                    }`}
-                  />
-                </DisclosureButton>
-              </div>
-              <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
-                <LawyerRegistrationModal />
-                <a
-                  href="#"
-                  className="ml-6 inline-flex  items-center rounded-xl bg-[#2461E2] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Contact Us
-                </a>
-                <LocaleSwitcher />
-              </div>
-            </div>
-            <nav
-              aria-label="Global"
-              className="hidden lg:flex lg:space-x-8 lg:py-2 px-2 sm:px-4  lg:px-8 bg-[#f5f5f5] justify-center"
-            >
-              {navigation.map((item) => {
-                if (item.name === "Services") {
-                  return (
-                    <Popover
-                      className="relative"
-                      key={item.name}
-                      style={{ zIndex: 2 }}
-                    >
-                      <PopoverButton
-                        className={classNames(
-                          pathname.includes("service")
-                            ? "text-blue-500"
-                            : "text-blue-900 hover:text-blue-500",
-                          "inline-flex items-center rounded-md px-3 py-2 text-sm font-medium"
-                        )}
+              <nav
+                aria-label="Global"
+                className="hidden lg:flex lg:space-x-8 lg:py-2 px-2 sm:px-4  lg:px-8 bg-[#f5f5f5] justify-center"
+              >
+                {navigation.map((item) => {
+                  if (item.name === "Services") {
+                    return (
+                      <Popover
+                        className="relative"
+                        key={item.name}
+                        style={{ zIndex: 2 }}
                       >
-                        <span>{item.name}</span>
-                        <ChevronDownIcon
-                          aria-hidden="true"
-                          className="size-5"
-                        />
-                      </PopoverButton>
+                        <PopoverTrigger
+                          className={classNames(
+                            pathname.includes("service")
+                              ? "text-blue-500"
+                              : "text-blue-900 hover:text-blue-500",
+                            "inline-flex items-center rounded-md px-3 py-2 text-sm font-medium"
+                          )}
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDownIcon
+                            aria-hidden="true"
+                            className="size-5"
+                          />
+                        </PopoverTrigger>
 
-                      <PopoverPanel
-                        transition
-                        className="absolute left-1/2  z-10 mt-5 flex w-screen max-w-7xl -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-                      >
-                        <div className="flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5 ">
+                        <PopoverContent
+                          transition
+                          className=" z-10 mt-4 w-screen max-w-7xl px-4 "
+                        >
+                          {/* <div className="flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5 "> */}
                           <div className="grid grid-cols-1 gap-x-2 gap-y-1 p-4 lg:grid-cols-3 text-[#0B284C]">
                             {solutions.map((item) => (
                               <div
                                 key={item.heading}
                                 className="group relative flex flex-col gap-y-2 rounded-lg p-4"
                               >
-                                <div className="font-semibold">
+                                <div className="font-semibold ">
                                   {item.heading}
                                 </div>
                                 <div className="flex flex-col gap-y-1">
@@ -199,7 +245,7 @@ function NavBar() {
                                     <Link
                                       href={el.url}
                                       key={el.title}
-                                      className="font-light cursor-pointer hover:underline text-blue-950"
+                                      className="font-light text-sm cursor-pointer hover:underline text-blue-950"
                                     >
                                       {el.title}
                                     </Link>
@@ -208,125 +254,126 @@ function NavBar() {
                               </div>
                             ))}
                           </div>
-                        </div>
-                      </PopoverPanel>
-                    </Popover>
-                  );
-                }
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? "page" : undefined}
-                    className={classNames(
-                      item.href === pathname
-                        ? "text-blue-500"
-                        : "text-blue-900 hover:text-blue-500",
-                      "inline-flex items-center rounded-md px-3 py-2 text-sm font-medium"
-                    )}
-                  >
-                    {item.name}
-                  </a>
-                );
-              })}
-            </nav>
-          </div>
-
-          <DisclosurePanel
-            as="nav"
-            aria-label="Global"
-            className="lg:hidden bg-white transition-ease"
-            style={{
-              transition: "all 1s ease-out",
-            }}
-          >
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => {
-                if (item.name === "Services") {
+                          {/* </div> */}
+                        </PopoverContent>
+                      </Popover>
+                    );
+                  }
                   return (
-                    <Popover className="relative" key={item.name}>
-                      <PopoverButton
-                        className={classNames(
-                          pathname.includes("service")
-                            ? "text-blue-500"
-                            : "text-blue-900 hover:bg-gray-50 hover:text-gray-900",
-                          "flex items-center  rounded-md px-3 py-2 text-base font-light"
-                        )}
-                      >
-                        <span>Services</span>
-                        {/* <ChevronDownIcon
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      aria-current={item.current ? "page" : undefined}
+                      className={classNames(
+                        item.href === pathname
+                          ? "text-blue-500"
+                          : "text-blue-900 hover:text-blue-500",
+                        "inline-flex items-center rounded-md px-3 py-2 text-sm font-medium"
+                      )}
+                    >
+                      {item.name}
+                    </a>
+                  );
+                })}
+              </nav>
+            </div>
+
+            <DisclosurePanel
+              as="nav"
+              aria-label="Global"
+              className="lg:hidden bg-white transition-ease"
+              style={{
+                transition: "all 1s ease-out",
+              }}
+            >
+              <div className="space-y-1 px-2 pb-3 pt-2">
+                {navigation.map((item) => {
+                  if (item.name === "Services") {
+                    return (
+                      <Popover className="relative" key={item.name}>
+                        <PopoverTrigger
+                          className={classNames(
+                            pathname.includes("service")
+                              ? "text-blue-500"
+                              : "text-blue-900 hover:bg-gray-50 hover:text-gray-900",
+                            "flex items-center  rounded-md px-3 py-2 text-base font-light"
+                          )}
+                        >
+                          <span>Services</span>
+                          {/* <ChevronDownIcon
                           aria-hidden="true"
                           className="size-5"
                         /> */}
-                      </PopoverButton>
+                        </PopoverTrigger>
 
-                      <PopoverPanel
-                        transition
-                        className="flex  px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-                      >
-                        <div className="flex overflow-hidden text-sm/6">
-                          <div className="grid grid-cols-1 gap-y-1 lg:grid-cols-3 text-[#0B284C]">
-                            {solutions.map((item) => (
-                              <div
-                                key={item.heading}
-                                className=" flex flex-col gap-y-2 rounded-lg py-2"
-                              >
-                                <div className="font-semibold">
-                                  {item.heading}
+                        <PopoverContent
+                          transition
+                          className="flex  px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                        >
+                          <div className="flex overflow-hidden text-sm/6">
+                            <div className="grid grid-cols-1 gap-y-1 lg:grid-cols-3 text-[#0B284C]">
+                              {solutions.map((item) => (
+                                <div
+                                  key={item.heading}
+                                  className=" flex flex-col gap-y-2 rounded-lg py-2"
+                                >
+                                  <div className="font-semibold">
+                                    {item.heading}
+                                  </div>
+                                  <div className="flex flex-col  gap-y-1">
+                                    {item.items.map((el) => (
+                                      <Link
+                                        href={el.url}
+                                        key={el.title}
+                                        className="font-light cursor-pointer hover:underline text-blue-950"
+                                      >
+                                        {el.title}
+                                      </Link>
+                                    ))}
+                                  </div>
                                 </div>
-                                <div className="flex flex-col  gap-y-1">
-                                  {item.items.map((el) => (
-                                    <Link
-                                      href={el.url}
-                                      key={el.title}
-                                      className="font-light cursor-pointer hover:underline text-blue-950"
-                                    >
-                                      {el.title}
-                                    </Link>
-                                  ))}
-                                </div>
-                              </div>
-                            ))}
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      </PopoverPanel>
-                    </Popover>
+                        </PopoverContent>
+                      </Popover>
+                    );
+                  }
+                  return (
+                    <DisclosureButton
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      aria-current={item.current ? "page" : undefined}
+                      className={classNames(
+                        item.href === pathname
+                          ? "text-blue-500"
+                          : "text-blue-900 hover:bg-gray-50 hover:text-gray-900",
+                        "block rounded-md px-3 py-2 text-base font-light"
+                      )}
+                    >
+                      {item.name}
+                    </DisclosureButton>
                   );
-                }
-                return (
-                  <DisclosureButton
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    aria-current={item.current ? "page" : undefined}
-                    className={classNames(
-                      item.href === pathname
-                        ? "text-blue-500"
-                        : "text-blue-900 hover:bg-gray-50 hover:text-gray-900",
-                      "block rounded-md px-3 py-2 text-base font-light"
-                    )}
-                  >
-                    {item.name}
-                  </DisclosureButton>
-                );
-              })}
-            </div>
-            <div className="pb-3 pt-2">
-              <div className="flex flex-col items-start justify-start px-4 gap-y-3">
-                <LawyerRegistrationModal />
-
-                <a
-                  href="#"
-                  className=" inline-flex  items-center rounded-xl bg-[#2461E2] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Contact Us
-                </a>
+                })}
               </div>
-            </div>
-          </DisclosurePanel>
-        </>
-      )}
-    </Disclosure>
+              <div className="pb-3 pt-2  lawyer-step">
+                <div className="flex flex-col items-start justify-start px-4 gap-y-3">
+                  <LawyerRegistrationModal />
+
+                  <a
+                    href="#"
+                    className=" inline-flex  items-center rounded-xl bg-[#2461E2] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </DisclosurePanel>
+          </>
+        )}
+      </Disclosure>
+    </>
   );
 }
 

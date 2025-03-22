@@ -4,8 +4,10 @@ import Image from "next/image";
 import telephone from "../../assets/telephone.png";
 import location from "../../assets/location.png";
 import { Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 function Information() {
+  const t = useTranslations("contactInformation");
   return (
     <div>
       <div id="information" className="section-contact-content">
@@ -16,34 +18,14 @@ function Information() {
                 <div id="w-node-_8d9ddff1-129c-9c2b-dca2-a28b694bc4f1-4497f351">
                   <div className="margin-bottom margin-small">
                     <div className="text-size-large text-style-muted">
-                      The B P Law Firm has fought and won verdicts and
-                      settlements for clients in cases involving civil rights
-                      violations such as police brutality, protection of
-                      prisoners’ rights against cruel and inhumane treatment,
-                      and employment discrimination.
-                      <br />
-                      <br />
-                      In addition, we work for justice on a broader scale
-                      through class-action and whistle-blower Qui Tam lawsuits.
+                      {t("description")}
                     </div>
                   </div>
                   <div className="margin-bottom margin-large">
-                    <div>
-                      This perspective arises from not only our many years of
-                      dedication and our breadth of casework, but also by
-                      working as a multi-faceted team—our attorneys ranging in
-                      legal focus and experiences.
-                      <br />
-                      <br />
-                      We dedicate ourselves to each person’s case with
-                      creativity and persistence to achieve justice for clients
-                      faced with emotional, physical, and mental harm. We
-                      believe that your story deserves to be heard, and fought
-                      for.
-                    </div>
+                    <div>{t("commitment")}</div>
                   </div>
                   <div className="margin-bottom margin-xsmall">
-                    <div className="heading-small">B P Law</div>
+                    <div className="heading-small"> {t("lawFirmName")}</div>
                   </div>
                   <dl className="mt-10 space-y-4 text-base/7 text-gray-300">
                     <div className="flex gap-x-4">
@@ -57,7 +39,7 @@ function Information() {
                       </dt>
                       <dd>
                         <a className="text-black hover:text-black">
-                          A-13, Ansa Plaza, RBSS Sahay Road, Bhagalpur- 812001
+                          {t("addresses1")}
                         </a>
                       </dd>
                     </div>
@@ -72,8 +54,7 @@ function Information() {
                       </dt>
                       <dd>
                         <a className="text-black hover:text-black">
-                          C/o ABDICO LLP, 1st Floor, Anand Tower, Exhibition
-                          Road, Patna-800001
+                          {t("addresses2")}
                         </a>
                       </dd>
                     </div>
@@ -88,7 +69,7 @@ function Information() {
                       </dt>
                       <dd>
                         <a className="text-black hover:text-black">
-                          C/o B/147,Part 1,Lajpat Nagar,New Delhi
+                          {t("address3")}
                         </a>
                       </dd>
                     </div>

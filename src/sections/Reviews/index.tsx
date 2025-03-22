@@ -2,38 +2,36 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import "./index.css";
+import { useTranslations } from "next-intl";
 
 interface Testimonial {
   id: number;
-  content: string;
-  author: string;
-  role: string;
+  contentKey: string;
+  authorKey: string;
+  roleKey: string;
   rating: number;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    content:
-      "I cannot rate the firm any higher! we are extremely happy with the service we received from Brad, Chris and the team. We are northern Irish citizens and as such had no experience of the US justice system, Chris and Brad helped us navigate this and made sure we understood every step of the process and we were kept informed of what would",
-    author: "LEANNE MONTGOMERY",
-    role: "Citizen",
+    contentKey: "testimonial1.content",
+    authorKey: "testimonial1.author",
+    roleKey: "testimonial1.role",
     rating: 5,
   },
   {
     id: 2,
-    content:
-      "Exceptional service from start to finish. The teams expertise and professionalism made a complex process feel straightforward and manageable. Their attention to detail and constant communication gave us complete peace of mind.",
-    author: "MICHAEL ANDERSON",
-    role: "Business Owner",
+    contentKey: "testimonial2.content",
+    authorKey: "testimonial2.author",
+    roleKey: "testimonial2.role",
     rating: 5,
   },
   {
     id: 3,
-    content:
-      "Working with this team has been transformative for our business. Their strategic approach and dedication to client success sets them apart. Theyre not just service providers, they're trusted partners in our growth journey.",
-    author: "SARAH JENKINS",
-    role: "CEO",
+    contentKey: "testimonial3.content",
+    authorKey: "testimonial3.author",
+    roleKey: "testimonial3.role",
     rating: 5,
   },
 ];
@@ -42,6 +40,7 @@ export default function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
   const [isAnimating, setIsAnimating] = useState(false);
+  const t = useTranslations("reviewsSection");
 
   const nextSlide = () => {
     if (isAnimating) return;
@@ -68,9 +67,7 @@ export default function Reviews() {
       <div className="testimonial-grid">
         <div className="content-section">
           <div className="cases__title">
-            <h2 className="section-title section-title_509">
-              {`Our Client's Reviews`}
-            </h2>
+            <h2 className="section-title section-title_509">{t("title")}</h2>
           </div>
 
           <div className="carousel-container">
@@ -86,7 +83,7 @@ export default function Reviews() {
               <div className="testimonial-content">
                 <div className="testimonial-text-container custom-scrollbar">
                   <p className="testimonial-text">
-                    {testimonials[currentIndex].content}
+                    {t(testimonials[currentIndex].contentKey)}
                   </p>
                 </div>
                 <div className="reviews-starslist">
@@ -107,10 +104,10 @@ export default function Reviews() {
 
                   <div className="author-info">
                     <p className="author-name">
-                      {testimonials[currentIndex].author}
+                      {t(testimonials[currentIndex].authorKey)}
                     </p>
                     <p className="author-role">
-                      {testimonials[currentIndex].role}
+                      {t(testimonials[currentIndex].roleKey)}
                     </p>
                   </div>
                 </div>
@@ -122,7 +119,7 @@ export default function Reviews() {
                 onClick={prevSlide}
                 disabled={isAnimating}
                 className="nav-button"
-                aria-label="Previous testimonial"
+                aria-label={t("previous")}
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
@@ -130,7 +127,7 @@ export default function Reviews() {
                 onClick={nextSlide}
                 disabled={isAnimating}
                 className="nav-button"
-                aria-label="Next testimonial"
+                aria-label={t("next")}
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -141,7 +138,7 @@ export default function Reviews() {
         <div className="image-container">
           <img
             src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-            alt="Modern office workspace"
+            alt={t("title")}
             className="testimonial-image"
           />
         </div>

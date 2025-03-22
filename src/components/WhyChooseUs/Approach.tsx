@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 function Approach() {
+  const t = useTranslations("whyChooseUsApproach");
   return (
     <div>
       <section id="approach" className="section-us-intro">
@@ -17,18 +19,16 @@ function Approach() {
                           color: "#4285F46B",
                         }}
                       >
-                        {"OUR FIRM'S APPROACH"}
+                        {t("ourFirmsApproach")}
                       </div>
                     </div>
                     <div className="margin-bottom margin-small">
                       <div className="heading-large">
-                        Individual Attention Makes All the Difference
+                        {t("individualAttentionTitle")}
                       </div>
                     </div>
                     <div className="text-size-large text-style-muted">
-                      At the Jacob D. Fuchsberg Law firm, our team has the
-                      knowledge and expertise to give your case the level of
-                      individual attention it deserves.
+                      {t("individualAttentionDescription")}
                     </div>
                   </div>
                 </div>
@@ -36,50 +36,37 @@ function Approach() {
                   <div className="us-intro_content-left">
                     <div className="margin-bottom margin-medium">
                       <div>
-                        Are you curious if your case is a matter that we can
-                        help you with? Did you or a loved one suffer a serious
-                        injury or a violation of your rights, causing you a
-                        serious disability or impairing your ability to work?{" "}
+                        {t("curiousAboutCaseQuestion")}
                         <br />
                         <br />
-                        If so, was this injury caused by any of the following:
+                        {t("injuryCausedBy")}
                       </div>
                     </div>
                     <ul role="list">
-                      <li>
-                        The negligence of a medical care provider, physician,
-                        hospital or nursing home.
-                      </li>
-                      <li>
-                        Unsafe working or labor and construction conditions
-                      </li>
-                      <li>A motor vehicle accident</li>
-                      <li>Police misconduct resulting in serious injury</li>
-                      <li>
-                        Injury to a person in prison in violation of their
-                        constitutional rights through deliberate indifference,
-                        for example
-                      </li>
-                      <li>Employment discrimination</li>
+                      {t.raw("causesOfInjury").map((feature, index) => (
+                        <li
+                          key={index}
+                          style={{
+                            listStyleType: "disc",
+                          }}
+                        >
+                          {feature}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                   <div className="us-intro_content-right">
                     <div>
-                      If the answer to any of these questions is yes, please
-                      contact our office. You can reach us by either calling{" "}
+                      {t("contactUsPrompt")}
                       <a href="tel:212-869-3500" className="local">
                         212-869-3500
                       </a>{" "}
-                      or by submitting the details of your case through the Live
-                      Chat feature on our website. <br />
+                      {t("orBySubmitting")} <br />
                       <br />
-                      Once you do, someone from our office will promptly get
-                      back to you to introduce ourselves, get more details about
-                      your matter, and ask you to send over any records you may
-                      have. <br />
+                      {t("whatHappensNext")}
                       <br />
-                      If it sounds like a case to us, we will set up a time for
-                      you to meet with our team of experienced attorneys.
+                      <br />
+                      {t("meetingWithAttorneys")}
                     </div>
                   </div>
                 </div>

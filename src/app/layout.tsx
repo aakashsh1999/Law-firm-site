@@ -8,6 +8,8 @@ import TawkToIntegration from "@/components/TawkToIntegration";
 import { Toaster } from "react-hot-toast";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { ToastContainer } from "react-toastify";
+import Payment from "./payment";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,8 +44,20 @@ export default async function RootLayout({
         <TawkToIntegration />
         <NextIntlClientProvider messages={messages}>
           {children}
+          <ToastContainer
+            position="bottom-right"
+            autoClose={5000}
+            hideProgressBar={true}
+            newestOnTop={true}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
         </NextIntlClientProvider>
-        <Toaster position="bottom-center" />
+        <Payment />
       </body>
     </html>
   );

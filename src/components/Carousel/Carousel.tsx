@@ -5,6 +5,8 @@ import { PrevButton, NextButton, usePrevNextButtons } from "./CarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import "./index.css";
 import { EmblaOptionsType } from "embla-carousel";
+import { useTranslations } from "next-intl"; // Import the translation hook
+
 type PropType = {
   slides: number[];
   options?: EmblaOptionsType;
@@ -13,6 +15,7 @@ type PropType = {
 const EmblaCarousel = (props: PropType) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const t = useTranslations("emblaCarousel"); // Use the "emblaCarousel" namespace
 
   const {
     prevBtnDisabled,
@@ -34,23 +37,17 @@ const EmblaCarousel = (props: PropType) => {
                       <img
                         className="mx-auto size-20 rounded-full"
                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
+                        alt={t("namePlaceholder")} // Basic alt text
                       />
                       <div className="mt-4 flex flex-col items-center font-semibold justify-center space-x-3  text-3xl">
-                        <div className="">NAME</div>
-                        <div className="">Case Details</div>
+                        <div className="">{t("namePlaceholder")}</div>
+                        <div className="">{t("caseDetailsPlaceholder")}</div>
                       </div>
                     </figcaption>
                     <div className="flex mt-4">
                       <div className="text-4xl">"</div>
                       <p className="text-center font-light text-lg text-blue-900">
-                        Executive profiles – A company is only as strong as its
-                        executive leadership. This is a good <br /> place to
-                        show off who’s occupying the corner offices. Write a
-                        nice bio about each executive <br /> that includes what
-                        they do, how long they’ve been at it, and what got them
-                        to where they
-                        <br /> are.
+                        {t("testimonialText")}
                       </p>
                       <div className="text-4xl mt-auto">"</div>
                     </div>

@@ -10,10 +10,12 @@ import "swiper/css/navigation";
 import type { Attorney } from "./types";
 import AttorneyCard from "./AttornyCard";
 // Import attorneys data
-import { attorneys } from "./data";
+import { useTranslations } from "next-intl";
+import { getAttorneysWithTranslations } from "./data";
 
 export default function AttorneysSection() {
   const swiperRef = useRef<Swiper | null>(null);
+  const translatedAttorneys = getAttorneysWithTranslations();
 
   useEffect(() => {
     if (!swiperRef.current) {
@@ -34,6 +36,7 @@ export default function AttorneysSection() {
       }
     };
   }, []);
+  const t = useTranslations("attorneysSection");
 
   return (
     <section className="attorneys">
@@ -51,11 +54,11 @@ export default function AttorneysSection() {
         <div className="attorneys__content">
           <div className="attorneys__content-overlay"></div>
           <div className="section-subtitle section-subtitle_rel">
-            <p className="section-subtitle-text">attorneys</p>
+            <p className="section-subtitle-text">{t("attorneysSubtitle")}</p>
           </div>
           <div className="attorneys__block">
             <h2 className="section-title section-title_522">
-              Jacob D. Fuchsberg Law Firm Team
+              {t("teamTitle")}{" "}
             </h2>
           </div>
           <div className="attorneys__mobile-photo">
@@ -67,32 +70,21 @@ export default function AttorneysSection() {
               className="picture-item picture-item_attorneys"
             />
           </div>
-          <p className="upper-text upper-text_bottom">Managing Partner</p>
-          <h3 className="card-title">Alan Fuchsberg</h3>
-          <p className="attorneys__info">
-            Alan Fuchsberg is a skilled New York personal injury lawyer who is
-            part of a family of esteemed judges and attorneys and a son of the
-            founding partner of the legal firm. Alan is a nationally recognized
-            lawyer who collaborates on the {`firm's`} mass tort and class-action
-            lawsuits and advocates for individual plaintiffs.
+          <p className="upper-text upper-text_bottom">
+            {t("managingPartnerLabel")}
           </p>
+          <h3 className="card-title">{t("alanFuchsbergName")}</h3>
+          <p className="attorneys__info">{t("alanFuchsbergDescription")}</p>
           <Link
             href="/attorneys/alan-l-fuchsberg"
-            className="section-link w-inline-block local"
+            className="section-link w-inline-block items-center local"
           >
+            <p className="section-link__text">{t("aboutAlanFuchsbergLink")}</p>
             <Image
               src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
               alt="Arrow icon"
-              width={24}
-              height={24}
-              className="practice__list-before"
-            />
-            <p className="section-link__text">About Alan Fuchsberg</p>
-            <Image
-              src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-              alt="Arrow icon"
-              width={24}
-              height={24}
+              width={30}
+              height={30}
               className="practice__list-after"
             />
           </Link>
@@ -104,7 +96,7 @@ export default function AttorneysSection() {
               className="attorneys__wrapper swiper attornyes-swiper"
             >
               <div className="attorneys__list swiper-wrapper">
-                {attorneys.map((attorney: Attorney) => (
+                {translatedAttorneys.map((attorney: Attorney) => (
                   <AttorneyCard key={attorney.id} attorney={attorney} />
                 ))}
               </div>

@@ -1,24 +1,21 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 function Hero() {
+  const t = useTranslations("contact");
   return (
     <div className="contact-wrapper">
-      <div
-        className="section-header bottom-padding-0 contact-hero"
-        style={{
-          background: "white",
-        }}
-      >
+      <div className="section-header bottom-padding-0 contact-hero">
         <div className="page-padding">
           <div className="container-large">
             <div className="padding-vertical">
               <div className="header_top-wrapper">
                 <div>
                   <div className="margin-bottom margin-xxsmall">
-                    <h1>Contact</h1>
+                    <h1>{t("title")}</h1>
                   </div>
                   <div className="text-size-large text-style-muted">
-                    Consultations are free and confidential
+                    {t("subtitle")}
                   </div>
                 </div>
                 <a
@@ -29,7 +26,7 @@ function Hero() {
                     border: "3px solid #2461E2",
                   }}
                 >
-                  <div> Learn About Us</div>
+                  <div>{t("learnMore")}</div>
                 </a>
               </div>
               <img

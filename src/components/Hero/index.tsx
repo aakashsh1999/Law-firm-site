@@ -9,7 +9,19 @@ import { useTranslations } from "next-intl";
 function Hero() {
   const pathname = usePathname();
   const pathKey = pathname?.split("/").pop() as string;
-  const t = useTranslations("Hero");
+  const t = useTranslations(pathKey ? "practiceAreas" : "Hero");
+
+  const getTranslation = (key: string, fallback?: string) => {
+    try {
+      const translated = pathKey ? t(`${pathKey}.${key}`) : t(key);
+      return translated;
+    } catch (error) {
+      console.warn(
+        `Translation key '${pathKey}.${key}' not found. Falling back to: ${fallback}`
+      );
+      return fallback || "";
+    }
+  };
 
   return (
     <div className="section-home-hero max-w-7xl mx-auto">
@@ -18,14 +30,11 @@ function Hero() {
           <div className="hero__table md:w-2/3">
             <div className="hero__info ">
               <h1 className="hero__title">
-                {pathKey && heroData[pathKey]?.title
-                  ? heroData[pathKey]?.title
-                  : t("title")}
+                {getTranslation("title", "")}
+                {/* Fallback to a general title */}
               </h1>
               <p className="hero__intro hero__intro_dark">
-                {pathKey && heroData[pathKey]?.intro
-                  ? heroData[pathKey]?.intro
-                  : t("intro")}
+                {getTranslation("intro", "")}
               </p>
               <div className="section-button">
                 <a
@@ -37,7 +46,9 @@ function Hero() {
                     paddingBottom: "22px",
                   }}
                 >
-                  {t("cta")}
+                  {pathKey
+                    ? getTranslation("cta.text", "")
+                    : getTranslation("cta", "")}
                 </a>
               </div>
               <div className="hero__links hero__links_desktop">
@@ -122,7 +133,7 @@ function Hero() {
                   loading="eager"
                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 35vw, (max-width: 1279px) 188px, 251px"
                   srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter.webp 800w"
-                  alt={t("Hero:images.team")}
+                  alt={"heroimage"}
                   className="picture-item"
                   style={{
                     borderRadius: "16px",
@@ -156,10 +167,10 @@ function Hero() {
                       fontWeight: "bold",
                     }}
                   >
-                    {t("Hero:stars.five")}
+                    {/* {t("Hero:stars.five")} */}
                   </p>
                 </div>
-                <p className="hero__stars-text">{t("Hero:reviews.martindale")}</p>
+                <p className="hero__stars-text">{t("martindale")}</p>
               </a>
               <a
                 rel="nofollow noopener noreferrer"
@@ -180,9 +191,11 @@ function Hero() {
                     alt="Stars"
                     className="hero__stars-icon"
                   />
-                  <p className="hero__stars-text">{t("Hero:stars.fourPointEight")}</p>
+                  <p className="hero__stars-text">
+                    {/* {t("Hero:stars.fourPointEight")} */}
+                  </p>
                 </div>
-                <p className="hero__stars-text">{t("Hero:reviews.google")}</p>
+                <p className="hero__stars-text">{t("google")}</p>
               </a>
             </div>
           </div>

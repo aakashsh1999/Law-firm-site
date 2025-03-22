@@ -11,14 +11,13 @@ export default function LocaleSwitcher() {
       items={[
         {
           value: "en",
-          label: t("en"),
+          label: "English",
         },
         {
           value: "hi",
-          label: t("hi"),
+          label: "Hindi",
         },
       ]}
-      label={t("label")}
     />
   );
 }
