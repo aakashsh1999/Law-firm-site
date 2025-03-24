@@ -30,7 +30,6 @@ function Why() {
           </div>
           <h3 className="card-title">{t("item1.title")}</h3>
           <p className="why__info">{t("item1.info1")}</p>
-          <p className="why__info why__info_hide">{t("item1.info2")}</p>
           <div className="why__expand">
             <p className="why__expand-text why__expand-text_expand">
               {t("item1.expand")}
@@ -47,11 +46,8 @@ function Why() {
             />
           </div>
           <h3 className="card-title">{t("item2.title")}</h3>
-          <p className="why__info">
-            {t("item2.info1", { victims: t("common.victims") })}
-          </p>{" "}
+          <p className="why__info">{t("item3.info1")}</p>{" "}
           {/* Example of passing a variable */}
-          <p className="why__info why__info_hide">{t("item2.info2")}</p>
           <div className="why__expand">
             <p className="why__expand-text why__expand-text_expand">
               {t("item2.expand")}
@@ -69,7 +65,6 @@ function Why() {
           </div>
           <h3 className="card-title">{t("item3.title")}</h3>
           <p className="why__info">{t("item3.info1")}</p>
-          <p className="why__info why__info_hide">{t("item3.info2")}</p>
           <div className="why__expand">
             <p className="why__expand-text why__expand-text_expand">
               {t("item3.expand")}

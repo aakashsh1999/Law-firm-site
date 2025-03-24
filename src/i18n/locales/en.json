@@ -1,7 +1,7 @@
 {
   "Hero": {
-    "title": "India Personal Injury & Civil Rights Lawyers Who Help When the Unimaginable Happens",
-    "intro": "The Jacob D. Fuchsberg Law Firm team fights for the rights of victims of civil rights violations, medical malpractice, or those injured in a catastrophic accident. Our India personal injury attorneys are on your side to seek justice and help you get the compensation you deserve.",
+    "title": "Trusted Legal Experts for Individuals & Businesses Across India.\n Your Legal Needs, Handled with Care and Expertise",
+    "intro": "We offer reliable, efficient, and affordable legal services for individuals, startups, and established businesses. From personal injury claims to civil rights, property matters to business registrations, our experienced lawyers are here to support you at every step. With a client-first approach and transparent pricing, we simplify legal solutions so you can focus on what matters most.",
     "cta": "Get a Free Case Review",
     "google": "11 Reviews",
     "martindale": "11 Reviews"
@@ -12,8 +12,8 @@
     "learnMore": "Learn About Us"
   },
   "footer": {
-    "title": "Do You Need to File a Personal Injury Lawsuit in India?",
-    "subtitle": "To speak with an attorney immediately call (212) 869-3500 or fill out the form below and we'll get back to you within 24 hours. Your inquiry is always confidential.",
+    "title": "Do You Need to File a Legal Case in India?",
+    "subtitle": "To speak with an attorney immediately, call +91-8541814401 or fill out the form below. We’ll get back to you within 24 hours. Your inquiry is always confidential.",
     "features": [
       "We are available to you 24/7",
       "Compassionate in our approach",
@@ -42,7 +42,7 @@
   },
   "Hero2": {
     "title": "Our Promise to You: No Fee Unless We Win!",
-    "content": "We offer an initial consultation with an experienced personal injury attorney at no cost to you. Our firm works on a contingency basis, which means we only assess legal fees if we successfully secure a compensation award for you. Contact our India lawyers today!",
+    "content": "We offer a free initial consultation for both individuals and businesses. Whether you need legal support for personal matters or business solutions, our experienced lawyers are here to guide you. With transparent pricing and practical advice, we focus on results that matter to you. Contact our trusted legal team in India today!",
     "cta": "Get A FREE Case Review"
   },
   "carouselContent": {
@@ -92,8 +92,8 @@
     "buttonText": "Learn About Us"
   },
   "contactInformation": {
-    "description": "The B P Law Firm has fought and won verdicts and settlements for clients in cases involving civil rights violations such as police brutality, protection of prisoners’ rights against cruel and inhumane treatment, and employment discrimination.\n\nIn addition, we work for justice on a broader scale through class-action and whistle-blower Qui Tam lawsuits.",
-    "commitment": "This perspective arises from not only our many years of dedication and our breadth of casework, but also by working as a multi-faceted team—our attorneys ranging in legal focus and experiences.\n \n We dedicate ourselves to each person’s case with creativity and persistence to achieve justice for clients faced with emotional, physical, and mental harm. We believe that your story deserves to be heard, and fought for.",
+    "description": "BPLaw has successfully represented clients in civil rights cases, including matters involving police misconduct, protection of prisoner rights, and workplace discrimination. Our legal team also works for justice on a larger scale through class-action cases and whistle-blower (Qui Tam) actions.",
+    "commitment": "Our approach is built on years of experience, a wide range of case expertise, and a collaborative team of lawyers specializing in various areas of law. We commit ourselves to every case with determination and innovative legal strategies, aiming to secure justice for those who have suffered emotional, physical, or mental harm. \n At BPLaw, we believe every client’s voice matters—and we are here to ensure your story is heard and fought for.",
     "lawFirmName": "B P Law",
     "addresses1": "A-13, Ansa Plaza, RBSS Sahay Road, Bhagalpur- 812001",
     "addresses2": "C/o ABDICO LLP, 1st Floor, Anand Tower, Exhibition Road, Patna-800001",
@@ -471,21 +471,21 @@
   "whyChooseUsApproach": {
     "ourFirmsApproach": "OUR FIRM'S APPROACH",
     "individualAttentionTitle": "Individual Attention Makes All the Difference",
-    "individualAttentionDescription": "At the Jacob D. Fuchsberg Law firm, our team has the knowledge and expertise to give your case the level of individual attention it deserves.",
-    "curiousAboutCaseQuestion": "Are you curious if your case is a matter that we can help you with? Did you or a loved one suffer a serious injury or a violation of your rights, causing you a serious disability or impairing your ability to work?",
-    "injuryCausedBy": "If so, was this injury caused by any of the following:",
+    "individualAttentionDescription": "At BPLaw, we bring the knowledge, experience, and attention your case deserves. Our legal team is committed to providing individualized support for every client, ensuring your matter is handled with care and professionalism.",
+    "curiousAboutCaseQuestion": "Wondering if we can assist with your legal issue? Have you or a loved one faced a legal challenge, rights violation, or a dispute affecting your work or well-being?",
+    "injuryCausedBy": "Ask yourself — was this issue related to any of the following?",
     "causesOfInjury": [
-      "The negligence of a medical care provider, physician, hospital or nursing home.",
-      "Unsafe working or labor and construction conditions",
-      "A motor vehicle accident",
-      "Police misconduct resulting in serious injury",
-      "Injury to a person in prison in violation of their constitutional rights through deliberate indifference, for example",
-      "Employment discrimination"
+      "Negligence by a doctor, hospital, or healthcare provider",
+      "Unsafe work conditions or construction site hazards",
+      "Road or vehicle accidents",
+      "Police misconduct or abuse of power",
+      "Mistreatment while in custody or prison",
+      "Employment discrimination or workplace injustice"
     ],
-    "contactUsPrompt": "If the answer to any of these questions is yes, please contact our office. You can reach us by either calling",
-    "orBySubmitting": "or by submitting the details of your case through the Live Chat feature on our website.",
-    "whatHappensNext": "Once you do, someone from our office will promptly get back to you to introduce ourselves, get more details about your matter, and ask you to send over any records you may have.",
-    "meetingWithAttorneys": "If it sounds like a case to us, we will set up a time for you to meet with our team of experienced attorneys."
+    "contactUsPrompt": "If yes, we encourage you to contact us today. Call us at +91-8541814401",
+    "orBySubmitting": "or submit your case details through the Live Chat or Contact Form on our website.",
+    "whatHappensNext": "Once you reach out, a team member will promptly respond, learn more about your situation, and request any documents you may have.",
+    "meetingWithAttorneys": "If we can assist with your matter, we’ll arrange a time for you to meet with our experienced legal team at BPLaw."
   },
   "haveACase": {
     "attorneysTitle": "Attorneys",
@@ -503,7 +503,7 @@
   },
   "whyChooseUsHero": {
     "whyChooseUsTitle": "Why Choose Us",
-    "heroSubtitle": "ocates Dedicated To Achieving Our Clients Justice",
+    "heroSubtitle": "Advocates Dedicated To Achieving Our Clients Justice",
     "learnAboutUsButton": "Learn About Us",
     "heroImageAlt": "Jacob D. Fuchsberg lawyers and paralegals at India City office"
   },
@@ -570,11 +570,11 @@
   },
   "attorneysSection": {
     "attorneysSubtitle": "Attorneys",
-    "teamTitle": "Jacob D. Fuchsberg Law Firm Team",
-    "managingPartnerLabel": "Managing Partner",
-    "alanFuchsbergName": "Alan Fuchsberg",
-    "alanFuchsbergDescription": "Alan Fuchsberg is a skilled India personal injury lawyer who is part of a family of esteemed judges and attorneys and a son of the founding partner of the legal firm. Alan is a nationally recognized lawyer who collaborates on the firm's mass tort and class-action lawsuits and ocates for individual plaintiffs.",
-    "aboutAlanFuchsbergLink": "About Alan Fuchsberg"
+    "teamTitle": "BPLaw Legal Team",
+    "managingPartnerLabel": "Senior Advocate",
+    "alanFuchsbergName": "Sunil Kumar",
+    "alanFuchsbergDescription": "Senior Advocate Sunil Kumar is a highly respected legal expert practicing at the High Court of Bihar. With decades of experience, he leads the BPLaw team, providing trusted legal guidance in both civil and business matters. Known for his sharp legal acumen and dedication, Sunil Sir is a pillar of BPLaw, representing clients with integrity and excellence across various legal domains including personal injury, civil rights, property disputes, and business law.",
+    "aboutAlanFuchsbergLink": "About Sunil Kumar"
   },
 
   "reviewsSection": {
@@ -717,23 +717,20 @@
     }
   },
   "why": {
-    "title": "Empathy, Compassion, & Resilience: Here When You Need Us Most",
+    "title": "Empathy, Expertise & Results – Here When You Need Us Most",
     "item1": {
-      "title": "Difficult Cases, Extraordinary Results",
-      "info1": "We meet our clients after the unimaginable has happened — a loved one has been grievously injured in a car accident, a trusted physician has committed medical malpractice, or an injustice has threatened their livelihood or even their life.",
-      "info2": "We are your guide and legal advocate to help you seek justice, explaining your options for personal injury claims.",
+      "title": "Challenging Legal Issues, Practical Solutions",
+      "info1": "At BPLaw, we support our clients during some of the most difficult times — whether it's a complex legal dispute, a serious violation of rights, or a challenge affecting their business or personal life. We guide you through your legal options with clarity and care.",
       "expand": "Expand"
     },
     "item2": {
-      "title": "Compassionate, Experienced Lawyers",
-      "info1": "Empathy and resilience are trademark characteristics of the Jacob D. Fuchsberg attorneys. For more than 40 years, our firm has been fighting for {victims'} rights, helping your voice be heard against large corporations, hospitals, or even the government.",
-      "info2": "We approach personal injury lawsuits with individualized support and advice tailored to individual personal injury accident victims.",
+      "title": "Experienced Lawyers Who Care",
+      "info1": "We provide personalized legal advice tailored to your unique situation, whether it involves civil litigation, business law, or protecting your rights. Our focus is on achieving results while supporting you every step of the way.",
       "expand": "Expand"
     },
     "item3": {
-      "title": "Let Our Family Help Yours",
-      "info1": "If you need an attorney to help you pursue personal injury litigation, employment discrimination, civil rights, or medical malpractice, contact the experienced legal team at Jacob D. Fuchsberg.&nbsp;",
-      "info2": "Our offices are in Manhattan, and our attorneys work with clients throughout India, New Jersey, and Connecticut. Your initial free consultation is confidential, with no obligation afterward.",
+      "title": "Your Legal Support, Every Step of the Way",
+      "info1": "If you need an advocate for civil disputes, corporate matters, employment issues, or constitutional rights, the team at BPLaw is here for you. We serve clients across India and offer a free, confidential initial consultation — with no obligation. Let BPLaw be your trusted legal partner.",
       "expand": "Expand"
     }
   },

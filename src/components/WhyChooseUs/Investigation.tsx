@@ -44,12 +44,12 @@ function Investigation() {
                   <div className="margin-bottom">
                     <div className="margin-bottom margin-large">
                       <img
-                        src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%20(1).webp"
+                        src="https://placehold.co/600x400"
                         loading="lazy"
                         width="480"
                         sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
                         alt={t("investigationTitle")}
-                        srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-1600.webp 1600w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%20(1).webp 1640w"
+                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-1600.webp 1600w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%20(1).webp 1640w"
                         className="timeline_image"
                         style={{
                           borderRadius: "16px",
@@ -93,12 +93,12 @@ function Investigation() {
                   <div className="margin-bottom margin-huge">
                     <div className="margin-bottom margin-large">
                       <img
-                        src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a5351900a2_Fuchs2019_033%20(1).webp"
+                        src="https://placehold.co/600x400"
                         loading="lazy"
                         width="480"
                         sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
                         alt={t("lawsuitTitle")}
-                        srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a5351900a2_Fuchs2019_033%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a5351900a2_Fuchs2019_033%20(1).webp 1504w"
+                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a5351900a2_Fuchs2019_033%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a5351900a2_Fuchs2019_033%20(1).webp 1504w"
                         className="timeline_image"
                         style={{
                           borderRadius: "16px",
@@ -122,12 +122,12 @@ function Investigation() {
                   <div className="margin-bottom margin-huge">
                     <div className="margin-bottom margin-large">
                       <img
-                        src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600888521900a3_Fuchs2019_040%20(1).webp"
+                        src="https://placehold.co/600x400"
                         loading="lazy"
                         width="480"
                         sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
                         alt={t("lawsuitTitle")}
-                        srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600888521900a3_Fuchs2019_040%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600888521900a3_Fuchs2019_040%20(1).webp 1504w"
+                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600888521900a3_Fuchs2019_040%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600888521900a3_Fuchs2019_040%20(1).webp 1504w"
                         className="timeline_image"
                         style={{
                           borderRadius: "16px",
@@ -205,12 +205,12 @@ function Investigation() {
                   <div className="margin-bottom margin-huge">
                     <div className="margin-bottom margin-large">
                       <img
-                        src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%20(1).webp"
+                        src="https://placehold.co/600x400"
                         loading="lazy"
                         width="480"
                         sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
                         alt={t("resultsTitle")}
-                        srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%20(1).webp 1571w"
+                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%20(1).webp 1571w"
                         className="timeline_image"
                         style={{
                           borderRadius: "16px",
@@ -231,7 +231,7 @@ function Investigation() {
                   </div>
                   <div className="timeline_quote-wrapper">
                     <img
-                      src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600847f719009f_alan-fuchsberg.webp"
+                      src="https://placehold.co/600x400"
                       loading="lazy"
                       alt={t("quoteAuthor").split(",")[0]}
                       className="timeline_quote-image"

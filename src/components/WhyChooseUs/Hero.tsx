@@ -37,11 +37,11 @@ function Hero() {
                 </a>
               </div>
               <img
-                src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us.webp"
+                src="https://placehold.co/600x150"
                 loading="lazy"
                 alt="Jacob D. Fuchsberg lawyers and paralegals at India City office"
                 sizes="(max-width: 1439px) 90vw, 1280px"
-                srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us.webp 1460w"
+                // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us.webp 1460w"
                 className="header-image"
                 style={{
                   borderRadius: "16px",

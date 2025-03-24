@@ -104,10 +104,10 @@ function Hero() {
           <div className="hero__pictures md:absolute top-40 -right-10 ">
             <div className="hero__pictures-top">
               <img
-                src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited.webp"
+                src="https://placehold.co/600x400"
                 loading="eager"
                 sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 61vw, (max-width: 1279px) 400px, 526px"
-                srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited.webp 800w"
+                // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited.webp 800w"
                 alt={""}
                 className="picture-item"
                 style={{
@@ -118,7 +118,7 @@ function Hero() {
             <div className="hero__pictures-block">
               <div className="hero__pictures-item">
                 <img
-                  src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008bb5c190030_Rectangle%208.webp"
+                  src="https://placehold.co/600x400"
                   loading="eager"
                   alt={""}
                   className="picture-item"
@@ -129,10 +129,10 @@ function Hero() {
               </div>
               <div className="hero__pictures-item">
                 <img
-                  src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter.webp"
+                  src="https://placehold.co/600x400"
                   loading="eager"
                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 35vw, (max-width: 1279px) 188px, 251px"
-                  srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter.webp 800w"
+                  // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter.webp 800w"
                   alt={"heroimage"}
                   className="picture-item"
                   style={{

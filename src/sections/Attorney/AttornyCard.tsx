@@ -11,8 +11,8 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
     <div className="attorneys__item swiper-slide">
       <div className="attorneys__link">
         <div className="attorneys__photo">
-          <Image
-            src={attorney.image || "/placeholder.svg"}
+          <img
+            src={"https://placehold.co/600x400"}
             alt={attorney.name}
             width={300}
             height={400}

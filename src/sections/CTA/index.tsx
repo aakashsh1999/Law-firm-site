@@ -19,10 +19,10 @@ export default function CTASection() {
                 className="cta__photo-item "
               >
                 <img
-                  src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/644914b7649dfb49c40b8070_image%2012%20(1).webp"
+                  src="https://placehold.co/600x400"
                   loading="lazy"
                   sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 48vw, (max-width: 1439px) 47vw, 640px"
-                  srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/644914b7649dfb49c40b8070_image%2012%20(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/644914b7649dfb49c40b8070_image%2012%20(1).webp 636w"
+                  // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/644914b7649dfb49c40b8070_image%2012%20(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/644914b7649dfb49c40b8070_image%2012%20(1).webp 636w"
                   alt="Schedule a Free Consultation"
                   className="picture-item rounded-xl aspect-square absolute top-20"
                 />

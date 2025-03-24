@@ -42,8 +42,8 @@ export default function AttorneysSection() {
     <section className="attorneys">
       <div className="section-container section-container_full w-container">
         <div className="attorneys__back">
-          <Image
-            src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64491d0f15ea8a293199bf04_Mask%20group%20(2).webp"
+          <img
+            src="https://placehold.co/600x200"
             alt="Jacob D. Fuchsberg"
             width={1440}
             height={800}

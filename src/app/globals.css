@@ -6085,7 +6085,7 @@ figure {
 
 .picture-item.picture-item_attorney,
 .picture-item.left {
-  object-position: 100% 50%;
+  object-position: 100% 50% 0% 0%;
 }
 
 .hero__pictures-block {

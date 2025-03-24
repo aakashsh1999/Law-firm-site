@@ -36,7 +36,7 @@ const EmblaCarousel = (props: PropType) => {
                     <figcaption className="mt-10">
                       <img
                         className="mx-auto size-20 rounded-full"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://placehold.co/600x600"
                         alt={t("namePlaceholder")} // Basic alt text
                       />
                       <div className="mt-4 flex flex-col items-center font-semibold justify-center space-x-3  text-3xl">

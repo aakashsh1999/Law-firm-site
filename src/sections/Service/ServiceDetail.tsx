@@ -119,10 +119,7 @@ function ServiceDetail() {
                         >
                           <div>
                             <img
-                              src={getTranslation(
-                                ["mainContent", index, "image", "src"],
-                                section.image.src || "/placeholder.svg"
-                              )}
+                              src={"https://placehold.co/600x400"}
                               loading="lazy"
                               alt={getTranslation(
                                 ["mainContent", index, "image", "alt"],
