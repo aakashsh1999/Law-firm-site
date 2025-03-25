@@ -13,11 +13,11 @@ function Hero() {
                 Unimaginable Happens
               </h1>
               <p className="hero__intro hero__intro_dark">
-                The Jacob D. Fuchsberg Law Firm team fights for the rights of
-                victims of civil rights violations, medical malpractice, or
-                those injured in a catastrophic accident. Our India personal
-                injury attorneys are on your side to seek justice and help you
-                get the compensation you deserve.
+                The BP Law Law Firm team fights for the rights of victims of
+                civil rights violations, medical malpractice, or those injured
+                in a catastrophic accident. Our India personal injury attorneys
+                are on your side to seek justice and help you get the
+                compensation you deserve.
               </p>
               <div className="section-button">
                 <a
@@ -84,7 +84,7 @@ function Hero() {
                 loading="eager"
                 sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 61vw, (max-width: 1279px) 400px, 526px"
                 srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited.webp 800w"
-                alt="The Jacob D. Fuchsberg Law Firm team"
+                alt="The BP Law Law Firm team"
                 className="picture-item"
               />
             </div>
@@ -93,7 +93,7 @@ function Hero() {
                 <img
                   src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008bb5c190030_Rectangle%208.webp"
                   loading="eager"
-                  alt="The Jacob D. Fuchsberg Law Firm team"
+                  alt="The BP Law Law Firm team"
                   className="picture-item"
                 />
               </div>
@@ -103,7 +103,7 @@ function Hero() {
                   loading="eager"
                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 35vw, (max-width: 1279px) 188px, 251px"
                   srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter.webp 800w"
-                  alt="The Jacob D. Fuchsberg Law Firm team"
+                  alt="The BP Law Law Firm team"
                   className="picture-item"
                 />
               </div>

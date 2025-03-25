@@ -6085,8 +6085,11 @@ figure {
 
 .picture-item.picture-item_attorney,
 .picture-item.left {
-  object-position: 100% 50% 0% 0%;
+  /* object-position: 100% 50% 0% 0%; */
 }
+/* .picture-item_attorney{
+width: 200px;
+} */
 
 .hero__pictures-block {
   grid-column-gap: 24px;
@@ -8781,7 +8784,8 @@ figure {
   }
 
   .picture-item.picture-item_attorney {
-    object-position: 60% 50%;
+    width: 200px !important;
+    /* object-position: 60% 50%; */
   }
 
   .hero__pictures-block {
@@ -9755,7 +9759,7 @@ figure {
   }
 
   .picture-item.picture-item_attorneys {
-    object-position: 95% 50%;
+    /* object-position: 95% 50%; */
   }
 
   .hero__pictures-block {
@@ -10223,7 +10227,7 @@ figure {
 
   .picture-item.picture-item_attorneys,
   .picture-item.top {
-    object-position: 50% 0%;
+    /* object-position: 50% 0%; */
   }
 
   .cta__photo {

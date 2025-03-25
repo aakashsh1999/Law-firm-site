@@ -12,7 +12,9 @@ import AttorneyCard from "./AttornyCard";
 // Import attorneys data
 import { useTranslations } from "next-intl";
 import { getAttorneysWithTranslations } from "./data";
+import adv1 from "../../assets/advSunil Background Removed(1).png";
 
+console.log(adv1, "asdfdfsaf");
 export default function AttorneysSection() {
   const swiperRef = useRef<Swiper | null>(null);
   const translatedAttorneys = getAttorneysWithTranslations();
@@ -41,53 +43,56 @@ export default function AttorneysSection() {
   return (
     <section className="attorneys">
       <div className="section-container section-container_full w-container">
-        <div className="attorneys__back">
-          <img
-            src="https://placehold.co/600x200"
-            alt="Jacob D. Fuchsberg"
-            width={1440}
+        <div className="attorneys__back"></div>
+        <div className="attorneys__content flex items-center justify-between">
+          <div>
+            <div className="attorneys__content-overlay"></div>
+            <div className="section-subtitle section-subtitle_rel">
+              <p className="section-subtitle-text">{t("attorneysSubtitle")}</p>
+            </div>
+            <div className="attorneys__block">
+              <h2 className="section-title section-title_522">
+                {t("teamTitle")}{" "}
+              </h2>
+            </div>
+            <div className="block md:hidden">
+              <Image
+                src={adv1}
+                alt="BP Law"
+                width={644}
+                height={400}
+                className=""
+              />
+            </div>
+
+            <p className="upper-text upper-text_bottom">
+              {t("managingPartnerLabel")}
+            </p>
+            <h3 className="card-title">{t("alanFuchsbergName")}</h3>
+            <p className="attorneys__info">{t("alanFuchsbergDescription")}</p>
+            <Link
+              href="/attorneys/alan-l-fuchsberg"
+              className="section-link w-inline-block items-center local"
+            >
+              <p className="section-link__text">
+                {t("aboutAlanFuchsbergLink")}
+              </p>
+              <Image
+                src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
+                alt="Arrow icon"
+                width={30}
+                height={30}
+                className="practice__list-after"
+              />
+            </Link>
+          </div>
+          <Image
+            src={adv1}
+            alt="BP Law"
+            width={500}
             height={800}
-            className="picture-item picture-item_attorney"
+            className="hidden md:block transform scale-x-[-1]"
           />
-          <div className="attorneys__overlay"></div>
-        </div>
-        <div className="attorneys__content">
-          <div className="attorneys__content-overlay"></div>
-          <div className="section-subtitle section-subtitle_rel">
-            <p className="section-subtitle-text">{t("attorneysSubtitle")}</p>
-          </div>
-          <div className="attorneys__block">
-            <h2 className="section-title section-title_522">
-              {t("teamTitle")}{" "}
-            </h2>
-          </div>
-          <div className="attorneys__mobile-photo">
-            <Image
-              src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64492cfc0c7aed036a402e98_main.webp"
-              alt="Jacob D. Fuchsberg"
-              width={644}
-              height={400}
-              className="picture-item picture-item_attorneys"
-            />
-          </div>
-          <p className="upper-text upper-text_bottom">
-            {t("managingPartnerLabel")}
-          </p>
-          <h3 className="card-title">{t("alanFuchsbergName")}</h3>
-          <p className="attorneys__info">{t("alanFuchsbergDescription")}</p>
-          <Link
-            href="/attorneys/alan-l-fuchsberg"
-            className="section-link w-inline-block items-center local"
-          >
-            <p className="section-link__text">{t("aboutAlanFuchsbergLink")}</p>
-            <Image
-              src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-              alt="Arrow icon"
-              width={30}
-              height={30}
-              className="practice__list-after"
-            />
-          </Link>
         </div>
         <div className="px-12">
           <div className="attorneys__wrap">

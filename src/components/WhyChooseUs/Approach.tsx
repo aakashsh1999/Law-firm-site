@@ -58,9 +58,9 @@ function Approach() {
                   <div className="us-intro_content-right">
                     <div>
                       {t("contactUsPrompt")}
-                      <a href="tel:212-869-3500" className="local">
+                      {/* <a href="tel:212-869-3500" className="local">
                         212-869-3500
-                      </a>{" "}
+                      </a>{" "} */}{" "}
                       {t("orBySubmitting")} <br />
                       <br />
                       {t("whatHappensNext")}

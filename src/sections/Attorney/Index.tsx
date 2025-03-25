@@ -41,7 +41,7 @@ export default function Attorney() {
         <div className="attorneys__back">
           <Image
             src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64491d0f15ea8a293199bf04_Mask%20group%20(2).webp"
-            alt="Jacob D. Fuchsberg"
+            alt="BP Law"
             width={1440}
             height={800}
             className="picture-item picture-item_attorney"
@@ -55,13 +55,13 @@ export default function Attorney() {
           </div>
           <div className="attorneys__block">
             <h2 className="section-title section-title_522">
-              Jacob D. Fuchsberg Law Firm Team
+              BP Law Law Firm Team
             </h2>
           </div>
           <div className="attorneys__mobile-photo">
             <Image
               src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64492cfc0c7aed036a402e98_main.webp"
-              alt="Jacob D. Fuchsberg"
+              alt="BP Law"
               width={644}
               height={400}
               className="picture-item picture-item_attorneys"
