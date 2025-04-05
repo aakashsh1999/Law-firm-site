@@ -151,10 +151,13 @@ export const barCouncils = [
   { value: "bar_council_of_india", label: "Bar Council of India" },
   { value: "bar_council_of_delhi", label: "Bar Council of Delhi" },
   {
-    value: "bar_council_of_maharashtra",
+    value: "bar_council_of_maharashtra_and_goa",
     label: "Bar Council of Maharashtra & Goa",
   },
-  { value: "bar_council_of_tamil_nadu", label: "Bar Council of Tamil Nadu" },
+  {
+    value: "bar_council_of_tamil_nadu_and_puducherry",
+    label: "Bar Council of Tamil Nadu and Puducherry",
+  },
   { value: "bar_council_of_kerala", label: "Bar Council of Kerala" },
   { value: "bar_council_of_karnataka", label: "Bar Council of Karnataka" },
   { value: "bar_council_of_west_bengal", label: "Bar Council of West Bengal" },
@@ -164,7 +167,7 @@ export const barCouncils = [
   },
   {
     value: "bar_council_of_punjab_and_haryana",
-    label: "Bar Council of Punjab & Haryana",
+    label: "Bar Council of Punjab and Haryana",
   },
   { value: "bar_council_of_gujarat", label: "Bar Council of Gujarat" },
   { value: "bar_council_of_rajasthan", label: "Bar Council of Rajasthan" },
@@ -173,7 +176,23 @@ export const barCouncils = [
     label: "Bar Council of Andhra Pradesh",
   },
   { value: "bar_council_of_telangana", label: "Bar Council of Telangana" },
-  { value: "bar_council_of_assam", label: "Bar Council of Assam" },
+  {
+    value: "bar_council_of_assam_and_ne",
+    label:
+      "Bar Council of Assam, Nagaland, Meghalaya, Manipur, Tripura, Mizoram, Arunachal Pradesh and Sikkim",
+  },
+  {
+    value: "bar_council_of_madhya_pradesh",
+    label: "Bar Council of Madhya Pradesh",
+  },
+  { value: "bar_council_of_orissa", label: "Bar Council of Orissa" },
+  { value: "bar_council_of_bihar", label: "Bar Council of Bihar" },
+  {
+    value: "bar_council_of_himachal_pradesh",
+    label: "Bar Council of Himachal Pradesh",
+  },
+  { value: "bar_council_of_jharkhand", label: "Bar Council of Jharkhand" },
+  { value: "bar_council_of_uttarakhand", label: "Bar Council of Uttarakhand" },
 ];
 
 export const indianStates = [
@@ -183,6 +202,7 @@ export const indianStates = [
   { value: "bihar", label: "Bihar" },
   { value: "chhattisgarh", label: "Chhattisgarh" },
   { value: "goa", label: "Goa" },
+  { value: "delhi", label: "Delhi" },
   { value: "gujarat", label: "Gujarat" },
   { value: "haryana", label: "Haryana" },
   { value: "himachal_pradesh", label: "Himachal Pradesh" },
@@ -205,7 +225,6 @@ export const indianStates = [
   { value: "uttar_pradesh", label: "Uttar Pradesh" },
   { value: "uttarakhand", label: "Uttarakhand" },
   { value: "west_bengal", label: "West Bengal" },
-  { value: "delhi", label: "Delhi" },
 ];
 
 export const indianLanguages = [
