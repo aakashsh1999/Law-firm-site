@@ -31,11 +31,9 @@ export default function Home() {
       <NavBar />
       <Hero />
       <BrandMaqrquee />
-      <PracticeAreasSection />
       <CTASection />
       <AttorneysSection />
       <Why />
-      <Reviews />
       <Map />
       <Footer />
     </div>
