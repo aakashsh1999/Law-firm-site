@@ -7,58 +7,43 @@ export const getAttorneysWithTranslations = (): Attorney[] => {
   return [
     {
       id: 1,
-      name: t("eliFuchsberg.name"),
-      position: t("eliFuchsberg.position"),
-      image:
-        "https://cdn.prod.website-files.com/63a4a6b4b160085eef18fffe/65afb735d2b69e7d29405adf_c_Eli.webp",
-      description: t("eliFuchsberg.description"),
-      slug: "eli-fuchsberg",
+      name: t("sunilKumar.name"),
+      position: t("sunilKumar.position"),
+      image: "/images/attorneys/sunil-kumar.webp",
+      description: t("sunilKumar.description"),
+      slug: "sunil-kumar",
     },
     {
       id: 2,
-      name: t("bradleyZimmerman1.name"),
-      position: t("bradleyZimmerman1.position"),
-      image:
-        "https://cdn.prod.website-files.com/63a4a6b4b160085eef18fffe/65afb62b155e9a0502907181_Bradley%20Zimmerman.webp",
-      description: t("bradleyZimmerman1.description"),
-      slug: "bradley-s-zimmerman",
-    },
-    {
-      id: 7,
-      name: t("bradleyZimmerman2.name"),
-      position: t("bradleyZimmerman2.position"),
-      image:
-        "https://cdn.prod.website-files.com/63a4a6b4b160085eef18fffe/65afb62b155e9a0502907181_Bradley%20Zimmerman.webp",
-      description: t("bradleyZimmerman2.description"),
-      slug: "bradley-s-zimmerman",
+      name: t("babluSingh.name"),
+      position: t("babluSingh.position"),
+      image: "/images/attorneys/bablu-kumar-singh.webp",
+      description: t("babluSingh.description"),
+      slug: "bablu-kumar-singh",
     },
     {
       id: 3,
-      name: t("bradleyZimmerman3.name"),
-      position: t("bradleyZimmerman3.position"),
-      image:
-        "https://cdn.prod.website-files.com/63a4a6b4b160085eef18fffe/65afb62b155e9a0502907181_Bradley%20Zimmerman.webp",
-      description: t("bradleyZimmerman3.description"),
-      slug: "bradley-s-zimmerman",
+      name: t("sjVedant.name"),
+      position: t("sjVedant.position"),
+      image: "/images/attorneys/sj-vedant.webp",
+      description: t("sjVedant.description"),
+      slug: "sj-vedant",
     },
     {
       id: 4,
-      name: t("bradleyZimmerman4.name"),
-      position: t("bradleyZimmerman4.position"),
-      image:
-        "https://cdn.prod.website-files.com/63a4a6b4b160085eef18fffe/65afb62b155e9a0502907181_Bradley%20Zimmerman.webp",
-      description: t("bradleyZimmerman4.description"),
-      slug: "bradley-s-zimmerman",
+      name: t("antraShukla.name"),
+      position: t("antraShukla.position"),
+      image: "/images/attorneys/antra-shukla.webp",
+      description: t("antraShukla.description"),
+      slug: "antra-shukla",
     },
     {
-      id: 6,
-      name: t("bradleyZimmerman5.name"),
-      position: t("bradleyZimmerman5.position"),
-      image:
-        "https://cdn.prod.website-files.com/63a4a6b4b160085eef18fffe/65afb62b155e9a0502907181_Bradley%20Zimmerman.webp",
-      description: t("bradleyZimmerman5.description"),
-      slug: "bradley-s-zimmerman",
-    },
-    // Add translations for the rest of the attorneys here...
+      id: 5,
+      name: t("pujaDubey.name"),
+      position: t("pujaDubey.position"),
+      image: "/images/attorneys/puja-dubey.webp",
+      description: t("pujaDubey.description"),
+      slug: "puja-dubey",
+    }, // Add translations for the rest of the attorneys here...
   ] as Attorney[];
 };

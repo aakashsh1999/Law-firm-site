@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import Form from "./Form";
 import telephone from "../../assets/telephone.png";
 import location from "../../assets/location.png";
+import { DesignByFooter } from "../DesignBy";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -95,6 +96,7 @@ export default function Footer() {
           <Form classes="" />
         </div>
       </div>
+      <DesignByFooter variant="designed" link="https://oneggy.com" />
     </footer>
   );
 }

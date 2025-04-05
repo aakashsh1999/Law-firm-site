@@ -30,7 +30,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
           <p>{attorney.description}</p>
         </div>
         <Link
-          href={`/attorneys/${attorney.slug}`}
+          href={`/`}
           className="section-link section-link_top w-inline-block local"
         >
           <p className="section-link__text">About {attorney.name}</p>

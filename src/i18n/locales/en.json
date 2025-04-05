@@ -685,35 +685,30 @@
     "hi": "Hindi"
   },
   "attorneys": {
-    "eliFuchsberg": {
-      "name": "Eli Fuchsberg",
-      "position": "Partner",
-      "description": "Eli Fuchsberg is a formidable trial lawyer and negotiator who represents plaintiffs across India, New Jersey and in federal courts nationwide. He is skilled at obtaining substantial recoveries for clients while avoiding the uncertainty of trial when possible through savvy negotiation."
+    "sunilKumar": {
+      "name": "Adv. Sunil Kumar",
+      "position": "Senior Advocate | Specialist – Taxation, CBI & ED Matters",
+      "description": "Advocate Sunil Kumar is a highly respected legal expert with deep experience in handling complex taxation disputes and high-profile CBI/ED investigations. Known for his strategic legal thinking and courtroom command, he represents clients across India in sensitive and high-stakes matters."
     },
-    "bradleyZimmerman1": {
-      "name": "Bradley Zimmerman",
-      "position": "Managing Partner",
-      "description": "Bradley Zimmerman is the Managing Partner at the B P Law Firm in India. He has extensive experience in medical malpractice cases, including failures to diagnose or prevent heart attacks, strokes, amputations, and vision loss."
+    "babluSingh": {
+      "name": "Adv. Bablu Kumar Singh",
+      "position": "Advocate | Specialisation – Taxation Law",
+      "description": "Advocate Bablu Kumar Singh brings a focused approach to taxation law, advising both individuals and businesses on direct and indirect tax matters. His precision and problem-solving ability make him a reliable counsel in resolving complex tax disputes efficiently."
     },
-    "bradleyZimmerman2": {
-      "name": "Bradley Zimmerman",
-      "position": "Managing Partner",
-      "description": "Bradley Zimmerman is the Managing Partner at the B P Law Firm in India. He has extensive experience in medical malpractice cases, including failures to diagnose or prevent heart attacks, strokes, amputations, and vision loss."
+    "sjVedant": {
+      "name": "Adv. SJ Vedant",
+      "position": "Advocate | Criminal Law",
+      "description": "Advocate SJ Vedant is a dynamic criminal law practitioner with a track record of defending clients in serious criminal cases across trial and appellate courts. His sharp advocacy and thorough case preparation make him a strong legal ally in criminal defence matters."
     },
-    "bradleyZimmerman3": {
-      "name": "Bradley Zimmerman",
-      "position": "Managing Partner",
-      "description": "Bradley Zimmerman is the Managing Partner at the B P Law Firm in India. He has extensive experience in medical malpractice cases, including failures to diagnose or prevent heart attacks, strokes, amputations, and vision loss."
+    "antraShukla": {
+      "name": "Adv. Antra Shukla",
+      "position": "Advocate | Corporate Law",
+      "description": "Advocate Antra Shukla specialises in corporate legal advisory, assisting clients with compliance, regulatory matters, and commercial structuring. She works closely with startups and enterprises to ensure smooth legal operations and business growth."
     },
-    "bradleyZimmerman4": {
-      "name": "Bradley Zimmerman",
-      "position": "Managing Partner",
-      "description": "Bradley Zimmerman is the Managing Partner at the B P Law Firm in India. He has extensive experience in medical malpractice cases, including failures to diagnose or prevent heart attacks, strokes, amputations, and vision loss."
-    },
-    "bradleyZimmerman5": {
-      "name": "Bradley Zimmerman",
-      "position": "Managing Partner",
-      "description": "Bradley Zimmerman is the Managing Partner at the B P Law Firm in India. He has extensive experience in medical malpractice cases, including failures to diagnose or prevent heart attacks, strokes, amputations, and vision loss."
+    "pujaDubey": {
+      "name": "Adv. Puja Dubey",
+      "position": "Advocate | Mergers & Acquisitions",
+      "description": "Advocate Puja Dubey is a skilled corporate lawyer focusing on mergers, acquisitions, and business restructuring. She advises clients through every stage of deal-making, from due diligence to closing, ensuring transactions are smooth, compliant, and strategically sound."
     }
   },
   "why": {

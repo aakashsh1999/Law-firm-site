@@ -13,6 +13,7 @@ import React from "react";
 import telephone from "../../assets/telephone.png";
 import location from "../../assets/location.png";
 import { useTranslations } from "next-intl"; // Import the translation hook
+import Head from "next/head";
 
 function Testimonials() {
   const pathname = usePathname();
@@ -20,6 +21,17 @@ function Testimonials() {
 
   return (
     <div>
+      <Head>
+        <title>Client Testimonials – What Clients Say About BPLaw</title>
+        <meta
+          name="description"
+          content="Read real client reviews and testimonials about their experience working with BPLaw. Trusted legal advisors across India."
+        />
+        <meta
+          name="keywords"
+          content="BPLaw reviews, client testimonials India, lawyer feedback, legal service experience, law firm trust India"
+        />
+      </Head>
       <NavBar />
       <div
         className="section-header bottom-padding-0 bg-white"
