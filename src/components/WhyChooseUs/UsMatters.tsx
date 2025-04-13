@@ -1,17 +1,9 @@
+"use client";
 import { useTranslations } from "next-intl";
 import React from "react";
 
-function UsMatters() {
-  const t = useTranslations("usMatters");
-  // const examplesData = [
-  //   t("examplesSection.example1.description"),
-  //   t("example2.description"),
-  //   t("example3.description"),
-  //   t("example4.description"),
-  //   t("example5.description"),
-  //   t("example6.description"),
-  //   t("example7.description"),
-  // ];
+function usMatters() {
+  const t = useTranslations("usMatters"); // Adjust namespace if you renamed it
 
   return (
     <div>
@@ -26,7 +18,7 @@ function UsMatters() {
                 >
                   <div className="margin-bottom margin-small">
                     <div className="heading-large" style={{ color: "white" }}>
-                      {t("notSureIfCaseTitle")}{" "}
+                      {t("notSureIfCaseTitle")}
                     </div>
                   </div>
                   <div
@@ -39,166 +31,131 @@ function UsMatters() {
                   </div>
                 </div>
                 <div>
+                  {/* 1. Land or Property Disputes */}
                   <div className="matter_content">
                     <div>
                       <strong>
+                        {/* Using the key you provided */}
                         {t(
-                          "examplesSection.exampleData.matter_content_cancer_diagnosis"
+                          "examplesSection.exampleData.matter_content_land_property_title"
                         )}
                       </strong>
-                      ,
-                      {t(
-                        "examplesSection.exampleData.matter_content_cancer_complaints"
-                      )}{" "}
                       <br />
-                      <br />
+                      {/* Using the key you provided */}
                       {t(
-                        "examplesSection.exampleData.matter_content_cancer_screening"
+                        "examplesSection.exampleData.matter_content_land_property_description"
                       )}
                     </div>
                   </div>
+
+                  {/* 2. Marriage, Divorce & Family Matters */}
                   <div
                     className="matter_content"
-                    style={{
-                      background: "#2461E2",
-                      color: "white",
-                    }}
+                    style={{ background: "#2461E2", color: "white" }}
                   >
                     <div>
                       <strong>
+                        {/* Using the key you provided */}
                         {t(
-                          "examplesSection.exampleData.matter_content_emergency_room_title"
+                          "examplesSection.exampleData.matter_content_marriage_family_title"
                         )}
-                      </strong>{" "}
+                      </strong>
+                      <br />
+                      {/* Using the key you provided */}
                       {t(
-                        "examplesSection.exampleData.matter_content_emergency_room_discharge"
-                      )}
-                      .{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_emergency_room_second_opinion"
+                        "examplesSection.exampleData.matter_content_marriage_family_description"
                       )}
                     </div>
                   </div>
+
+                  {/* 3. Employment & Labour Issues */}
                   <div className="matter_content">
                     <div>
                       <strong>
+                        {/* Using the key you provided */}
                         {t(
-                          "examplesSection.exampleData.matter_content_labor_monitoring"
+                          "examplesSection.exampleData.matter_content_employment_labour_title"
                         )}
-                      </strong>{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_labor_complaints"
-                      )}
-                      . <br />
+                      </strong>
                       <br />
+                      {/* Using the key you provided */}
                       {t(
-                        "examplesSection.exampleData.matter_content_labor_injury"
-                      )}{" "}
-                      <br />
-                      <br />
-                      {t(
-                        "examplesSection.exampleData.matter_content_labor_explanation"
+                        "examplesSection.exampleData.matter_content_employment_labour_description"
                       )}
                     </div>
                   </div>
+
+                  {/* 4. Accidents, Injuries & Compensation Claims */}
                   <div
                     className="matter_content"
-                    style={{
-                      background: "#2461E2",
-                      color: "white",
-                    }}
+                    style={{ background: "#2461E2", color: "white" }}
                   >
                     <div>
                       <strong>
+                        {/* Using the key you provided */}
                         {t(
-                          "examplesSection.exampleData.matter_content_incarceration_title"
+                          "examplesSection.exampleData.matter_content_accidents_compensation_title"
                         )}
-                      </strong>{" "}
-                      <strong>
-                        {t(
-                          "examplesSection.exampleData.matter_content_incarceration_assault"
-                        )}
-                      </strong>{" "}
+                      </strong>
+                      <br />
+                      {/* Using the key you provided */}
                       {t(
-                        "examplesSection.exampleData.matter_content_incarceration_comments"
-                      )}{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_incarceration_grievances"
-                      )}
-                      .{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_incarceration_civil_claim"
+                        "examplesSection.exampleData.matter_content_accidents_compensation_description"
                       )}
                     </div>
                   </div>
+
+                  {/* 5. Police Misuse, Illegal Detention, or Wrongful FIR */}
                   <div className="matter_content">
                     <div>
                       <strong>
+                        {/* Using the key you provided */}
                         {t(
-                          "examplesSection.exampleData.matter_content_car_accident_title"
+                          "examplesSection.exampleData.matter_content_police_misuse_title"
                         )}
-                      </strong>{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_car_accident_police_report"
-                      )}
-                      ,{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_car_accident_mother_belief"
-                      )}
-                      .{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_car_accident_child_injury"
-                      )}{" "}
+                      </strong>
                       <br />
-                      <br />‍
-                      <em>
-                        {t(
-                          "examplesSection.exampleData.matter_content_car_accident_investigation"
-                        )}
-                      </em>
+                      {/* Using the key you provided */}
+                      {t(
+                        "examplesSection.exampleData.matter_content_police_misuse_description"
+                      )}
                     </div>
                   </div>
+
+                  {/* 6. Consumer Complaints & Builder Delays */}
                   <div
                     className="matter_content"
-                    style={{
-                      background: "#2461E2",
-                      color: "white",
-                    }}
+                    style={{ background: "#2461E2", color: "white" }}
                   >
                     <div>
                       <strong>
+                        {/* Using the key you provided */}
                         {t(
-                          "examplesSection.exampleData.matter_content_construction_title"
+                          "examplesSection.exampleData.matter_content_consumer_builder_title"
                         )}
-                      </strong>{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_construction_openings"
-                      )}{" "}
+                      </strong>
                       <br />
-                      <br />
+                      {/* Using the key you provided */}
                       {t(
-                        "examplesSection.exampleData.matter_content_construction_boss_remark"
+                        "examplesSection.exampleData.matter_content_consumer_builder_description"
                       )}
-                      .{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_construction_coworker_fall"
-                      )}{" "}
-                      {t(
-                        "examplesSection.exampleData.matter_content_construction_permanent_disability"
-                      )}
-                      .
                     </div>
                   </div>
+
+                  {/* 7. Cheque Bounce, Loan Defaults & Financial Fraud */}
                   <div className="matter_content last-item">
                     <div>
-                      {t(
-                        "examplesSection.exampleData.matter_content_hostile_workplace_title"
-                      )}
                       <strong>
+                        {/* Using the key you provided */}
                         {t(
-                          "examplesSection.exampleData.matter_content_hostile_workplace_description"
+                          "examplesSection.exampleData.matter_content_cheque_loan_fraud_title"
                         )}
                       </strong>
+                      <br />
+                      {/* Using the key you provided */}
+                      {t(
+                        "examplesSection.exampleData.matter_content_cheque_loan_fraud_description"
+                      )}
                     </div>
                   </div>
                 </div>
@@ -211,4 +168,4 @@ function UsMatters() {
   );
 }
 
-export default UsMatters;
+export default usMatters;

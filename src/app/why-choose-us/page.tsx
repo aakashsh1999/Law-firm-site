@@ -32,7 +32,7 @@ function Page() {
       <UsMatters />
       <Investigation />
       <HaveACase />
-      <BrandMaqrquee />
+      {/* <BrandMaqrquee /> */}
       <Map />
       <Footer />
     </div>

@@ -26,7 +26,7 @@ function ContacUs() {
       <NavBar />
       <Hero />
       <Information />
-      <BrandMaqrquee />
+      {/* <BrandMaqrquee /> */}
       <Map />
       <Footer />
     </div>

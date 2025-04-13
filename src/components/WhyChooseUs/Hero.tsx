@@ -1,6 +1,8 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React from "react";
+import about from "../../assets/about.jpeg";
+import Image from "next/image";
 
 function Hero() {
   const t = useTranslations("whyChooseUsHero");
@@ -15,7 +17,7 @@ function Hero() {
         <div className="page-padding">
           <div className="container-large">
             <div className="padding-vertical">
-              <div className="header_top-wrapper">
+              <div className="">
                 <div>
                   <div className="margin-bottom margin-xxsmall">
                     <h1>{t("whyChooseUsTitle")}</h1>
@@ -36,13 +38,11 @@ function Hero() {
                   <div>{t("learnAboutUsButton")}</div>
                 </a>
               </div>
-              <img
-                src="https://placehold.co/600x150"
+              <Image
+                src={about}
                 loading="lazy"
                 alt="BP Law lawyers and paralegals at India City office"
-                sizes="(max-width: 1439px) 90vw, 1280px"
-                // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008b35c19003a_Why-Choose-Us.webp 1460w"
-                className="header-image"
+                className="header-image mt-6 md:mt-20 max-h-[150px]  md:max-h-[400px]"
                 style={{
                   borderRadius: "16px",
                 }}

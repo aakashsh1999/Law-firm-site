@@ -70,21 +70,6 @@ export default function AttorneysSection() {
             </p>
             <h3 className="card-title">{t("alanFuchsbergName")}</h3>
             <p className="attorneys__info">{t("alanFuchsbergDescription")}</p>
-            <Link
-              href="/attorneys/alan-l-fuchsberg"
-              className="section-link w-inline-block items-center local"
-            >
-              <p className="section-link__text">
-                {t("aboutAlanFuchsbergLink")}
-              </p>
-              <Image
-                src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447de0caf01e102efd6c3b7_material-symbols_arrow-back%20(1).svg"
-                alt="Arrow icon"
-                width={30}
-                height={30}
-                className="practice__list-after"
-              />
-            </Link>
           </div>
           <Image
             src={adv1}

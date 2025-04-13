@@ -14,6 +14,7 @@ import telephone from "../../assets/telephone.png";
 import location from "../../assets/location.png";
 import { useTranslations } from "next-intl"; // Import the translation hook
 import Head from "next/head";
+import testimonal from "../../assets/testimonials.jpeg";
 
 function Testimonials() {
   const pathname = usePathname();
@@ -93,6 +94,8 @@ function Testimonials() {
                       <br />
                       <br />
                       {t("achievingJustice")}
+                      <br />
+                      {t("achievingJustice2")}
                     </div>
                   </div>
                   <div className="margin-bottom margin-xsmall">
@@ -176,8 +179,8 @@ function Testimonials() {
                   </dl>
                 </div>
                 <div className="bg-color-grey sticky tablet-no-sticky">
-                  <img
-                    src="https://placehold.co/600x400"
+                  <Image
+                    src={testimonal}
                     loading="lazy"
                     alt={t("consultationFree")} // Added alt text translation
                     sizes="(max-width: 1439px) 90vw, 1280px"
@@ -198,7 +201,6 @@ function Testimonials() {
       </div>
       <Features />
       <TestimonialsCarousel />
-      <BrandMaqrquee />
       <Map />
       <Footer />
     </div>

@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <Hero />
-      <BrandMaqrquee />
+      {/* <BrandMaqrquee /> */}
       <CTASection />
       <AttorneysSection />
       <Why />

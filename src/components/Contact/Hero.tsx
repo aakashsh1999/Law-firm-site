@@ -30,7 +30,7 @@ function Hero() {
                 </a>
               </div>
               <img
-                src="https://placehold.co/600x200"
+                src="https://t3.ftcdn.net/jpg/05/30/96/04/360_F_530960431_c8fPd3HansYvrSJ4fJxZqp9OhjQmYoll.jpg"
                 loading="lazy"
                 alt=""
                 sizes="(max-width: 1439px) 90vw, 1280px"

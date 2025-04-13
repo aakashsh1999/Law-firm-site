@@ -39,17 +39,15 @@ function Investigation() {
                 <div
                   id="w-node-_27e95e9d-e786-34ec-fd26-79caaccb9b85-4497f3d5"
                   className="timeline_right"
-                  //   style={{ willChange: "opacity", opacity: 0.69595 }}
                 >
                   <div className="margin-bottom">
                     <div className="margin-bottom margin-large">
                       <img
-                        src="https://placehold.co/600x400"
+                        src="https://www.thebluediamondgallery.com/legal/images/investigation.jpg"
                         loading="lazy"
                         width="480"
                         sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
                         alt={t("investigationTitle")}
-                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%2520(1)-p-1600.webp 1600w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600848981900a1_JacobFuchsbergLaw-9922%20(1).webp 1640w"
                         className="timeline_image"
                         style={{
                           borderRadius: "16px",
@@ -59,6 +57,29 @@ function Investigation() {
                     <div>
                       <div className="timeline_text">{t("step1Question")}</div>
                       <div>{t("step1Description")}</div>
+                      <br />
+                      <div>{t("step1Description1")}</div>
+                      <br />
+                      <div>{t("step1Description2")}</div>
+                      <br />
+                      <div>
+                        <ul
+                          role="list"
+                          style={{
+                            listStyleType: "disc",
+                          }}
+                        >
+                          <li>
+                            <div> {t("step1point1")}</div>
+                          </li>
+                          <li>
+                            <div> {t("step1point2")}</div>
+                          </li>
+                          <li>
+                            <div> {t("step1point3")}</div>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -70,7 +91,6 @@ function Investigation() {
                 <div
                   id="w-node-_27e95e9d-e786-34ec-fd26-79caaccb9b8c-4497f3d5"
                   className="timeline_left"
-                  //   style={{ willChange: "opacity", opacity: 0.25 }}
                 >
                   <div className="timeline_date-text">{t("lawsuitTitle")}</div>
                 </div>
@@ -86,19 +106,15 @@ function Investigation() {
                     }}
                   ></div>
                 </div>
-                <div
-                  className="timeline_right"
-                  //   style={{ willChange: "opacity", opacity: 0.25 }}
-                >
+                <div className="timeline_right">
                   <div className="margin-bottom margin-huge">
                     <div className="margin-bottom margin-large">
                       <img
-                        src="https://placehold.co/600x400"
+                        src="https://bsmedia.business-standard.com/_media/bs/img/article/2017-03/18/full/1489789485-514.jpg?im=FeatureCrop,size=(826,465)"
                         loading="lazy"
                         width="480"
                         sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
                         alt={t("lawsuitTitle")}
-                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a5351900a2_Fuchs2019_033%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008a5351900a2_Fuchs2019_033%20(1).webp 1504w"
                         className="timeline_image"
                         style={{
                           borderRadius: "16px",
@@ -106,70 +122,164 @@ function Investigation() {
                       />
                     </div>
                     <div>
-                      <div className="timeline_text">{t("step2Question")}</div>
+                      <div className="timeline_text">{t("step2Title")}</div>
                       <div>
-                        {t("step2Description1")}
+                        <div>{t("step2Description1")}</div>
                         <br />
+                        <div> {t("step2Description2")}</div>
                         <br />
-                        {t("step2Description2")}
+                        <div className="font-bold">
+                          {t("step2ProcessTitleA")}
+                        </div>
+                        <div>{t("step2ProcessDescriptionA1")}</div>
                         <br />
-                        <br />
-                        {t("step2Description3")}
-                        <br />
+                        <div>{t("step2ProcessListTitleA")}</div>
+                        <ul role="list">
+                          <li>
+                            <div>{t("step2ProcessListItemA1")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemA2")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemA3")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemA4")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemA5")}</div>
+                          </li>
+                        </ul>
                       </div>
-                    </div>
-                  </div>
-                  <div className="margin-bottom margin-huge">
-                    <div className="margin-bottom margin-large">
-                      <img
-                        src="https://placehold.co/600x400"
-                        loading="lazy"
-                        width="480"
-                        sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
-                        alt={t("lawsuitTitle")}
-                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600888521900a3_Fuchs2019_040%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600888521900a3_Fuchs2019_040%20(1).webp 1504w"
-                        className="timeline_image"
-                        style={{
-                          borderRadius: "16px",
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <div className="timeline_text">
-                        {t("step2SummaryTitle")}
-                      </div>
-                      <div className="margin-bottom margin-small">
-                        <div>{t("step2SummaryPoint1")}</div>
-                      </div>
-                      <ul role="list">
-                        <li>
-                          <div>
-                            {t("step2SummarySubPoint1")}
-                            <br />
-                          </div>
-                        </li>
-                        <li>
-                          <div>{t("step2SummarySubPoint2")}</div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="margin-bottom">
-                    <div>
                       <div>
-                        {t("step2SummaryPoint2")}
                         <br />
+                        <div className="font-bold">
+                          {t("step2ProcessTitleB")}
+                        </div>
+                        <div>{t("step2ProcessDescriptionB1")}</div>
                         <br />
-                        {t("step2SummaryPoint3")}
+                        <div>{t("step2ProcessListTitleB1")}</div>
+                        <ul role="list">
+                          <li>
+                            <div>{t("step2ProcessListItemB1_1")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB1_2")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB1_3")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB1_4")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB1_5")}</div>
+                          </li>
+                        </ul>
                         <br />
+                        <div>{t("step2ProcessDescriptionB2")}</div>
                         <br />
-                        {t("step2SummaryPoint4")}
+                        <div>{t("step2ProcessListTitleB2")}</div>
+                        <ul role="list">
+                          <li>
+                            <div>{t("step2ProcessListItemB2_1")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB2_2")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB2_3")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB2_4")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemB2_5")}</div>
+                          </li>
+                        </ul>
                         <br />
+                        <div className="font-bold">
+                          {t("step2ProcessTitleC")}
+                        </div>
+                        <div>{t("step2ProcessDescriptionC1")}</div>
                         <br />
-                        {t("step2SummaryPoint5")}
+                        <div>{t("step2ProcessListTitleC1")}</div>
+                        <ul role="list">
+                          <li>
+                            <div>{t("step2ProcessListItemC1_1")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC1_2")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC1_3")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC1_4")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC1_5")}</div>
+                          </li>
+                        </ul>
                         <br />
+                        <div>{t("step2ProcessListTitleC2")}</div>
+                        <ul role="list">
+                          <li>
+                            <div>{t("step2ProcessListItemC2_1")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC2_2")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC2_3")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC2_4")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC2_5")}</div>
+                          </li>
+                        </ul>
                         <br />
-                        {t("step2SummaryPoint6")}
+                        <div>{t("step2ProcessDescriptionC2")}</div>
+                        <br />
+                        <ul role="list">
+                          <li>
+                            <div>{t("step2ProcessListItemC3_1")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC3_2")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC3_3")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemC3_4")}</div>
+                          </li>
+                        </ul>
+                        <br />
+                        <div className="font-bold">
+                          {t("step2ProcessTitleD")}
+                        </div>
+                        <div>{t("step2ProcessDescriptionD1")}</div>
+                        <br />
+                        <ul role="list">
+                          <li>
+                            <div>{t("step2ProcessListItemD1")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemD2")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemD3")}</div>
+                          </li>
+                          <li>
+                            <div>{t("step2ProcessListItemD4")}</div>
+                          </li>
+                        </ul>
+                        <br />
+                        <div>{t("step2ProcessDescriptionD2")}</div>
                       </div>
                     </div>
                   </div>
@@ -182,7 +292,6 @@ function Investigation() {
                 <div
                   id="w-node-_27e95e9d-e786-34ec-fd26-79caaccb9b9f-4497f3d5"
                   className="timeline_left"
-                  //   style={{ willChange: "opacity", opacity: 0.25 }}
                 >
                   <div className="timeline_date-text">{t("resultsTitle")}</div>
                 </div>
@@ -198,19 +307,15 @@ function Investigation() {
                     }}
                   ></div>
                 </div>
-                <div
-                  className="timeline_right"
-                  //   style={{ willChange: "opacity", opacity: 0.25 }}
-                >
+                <div className="timeline_right">
                   <div className="margin-bottom margin-huge">
                     <div className="margin-bottom margin-large">
                       <img
-                        src="https://placehold.co/600x400"
+                        src="https://media.istockphoto.com/id/155149843/photo/judge-in-traditional-court-robes-using-the-gavel.jpg?s=612x612&w=0&k=20&c=eWgGUugF-ielFbj0uFfH3r3RiSQfZAGofXVzLJZVPzg="
                         loading="lazy"
                         width="480"
                         sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, (max-width: 991px) 36vw, (max-width: 1439px) 38vw, 550px"
                         alt={t("resultsTitle")}
-                        // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%2520(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b16008cc781900a0_JacobFuchsbergLaw-9832a%20(1).webp 1571w"
                         className="timeline_image"
                         style={{
                           borderRadius: "16px",
@@ -224,26 +329,37 @@ function Investigation() {
                           lineHeight: "34px",
                         }}
                       >
-                        {t("resultsDescription1")}
+                        {t("resulTitle")}
                       </div>
+                      <div>{t("resultsDescription1")}</div>
+                      <br />
                       <div>{t("resultsDescription2")}</div>
-                    </div>
-                  </div>
-                  <div className="timeline_quote-wrapper">
-                    <img
-                      src="https://placehold.co/600x400"
-                      loading="lazy"
-                      alt={t("quoteAuthor").split(",")[0]}
-                      className="timeline_quote-image"
-                      style={{
-                        borderRadius: "16px",
-                      }}
-                    />
-                    <div className="timeline_quote-text-wrapper">
-                      <p>{t("quote")}</p>
-                      <p className="text-size-regular text-weight-medium text-color-primary">
-                        {t("quoteAuthor")}
-                      </p>
+                      <br />
+                      <div>{t("resultsDescription3")}</div>
+                      <br />
+                      <ul role="list">
+                        <li>
+                          <div>{t("resultsDescription3Point1")}</div>
+                        </li>
+                        <li>
+                          <div>{t("resultsDescription3Point2")}</div>
+                        </li>
+                        <li>
+                          <div>{t("resultsDescription3Point3")}</div>
+                        </li>
+                        <li>
+                          <div>{t("resultsDescription3Point4")}</div>
+                        </li>
+                        <li>
+                          <div>{t("resultsDescription3Point5")}</div>
+                        </li>
+                      </ul>
+                      <br />
+                      <div>{t("resultsDescription4")}</div>
+                      <br />
+                      <div>{t("resultsDescription5")}</div>
+                      <br />
+                      <div>{t("resultsDescription6")}</div>
                     </div>
                   </div>
                 </div>

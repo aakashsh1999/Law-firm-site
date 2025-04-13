@@ -50,7 +50,7 @@ export default function VideoItem({ video, index }: VideoItemProps) {
                 "type": "video"
               }
             ],
-            "group": "Success Stories"
+            "group": "w"
           }
         `}</script>
       </a>

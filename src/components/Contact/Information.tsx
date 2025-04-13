@@ -20,9 +20,15 @@ function Information() {
                     <div className="text-size-large text-style-muted">
                       {t("description")}
                     </div>
+                    <div className="text-size-large text-style-muted">
+                      {t("description2")}
+                    </div>
                   </div>
                   <div className="margin-bottom margin-large">
                     <div>{t("commitment")}</div>
+                  </div>
+                  <div className="margin-bottom margin-large">
+                    <div>{t("commitment2")}</div>
                   </div>
                   <div className="margin-bottom margin-xsmall">
                     <div className="heading-small"> {t("lawFirmName")}</div>

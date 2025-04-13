@@ -5,11 +5,16 @@ import "./hero.css";
 import heroData from "../../sections/Service/hero.json";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import heroImage from "../../assets/hero1.jpg";
+import hero2 from "../../assets/hero2.jpg";
+import Image from "next/image";
+import hero3 from "../../assets/horo3.jpg";
 
 function Hero() {
   const pathname = usePathname();
   const pathKey = pathname?.split("/").pop() as string;
-  const t = useTranslations(pathKey ? "practiceAreas" : "Hero");
+  const t = useTranslations(pathKey ? "services" : "Hero");
+  const s = useTranslations(pathKey ? "practiceAreas" : "Hero");
 
   const getTranslation = (key: string, fallback?: string) => {
     try {
@@ -23,6 +28,17 @@ function Hero() {
     }
   };
 
+  const getTranslationS = (key: string, fallback?: string) => {
+    try {
+      const translated = pathKey ? s(`${pathKey}.${key}`) : s(key);
+      return translated;
+    } catch (error) {
+      console.warn(
+        `Translation key '${pathKey}.${key}' not found. Falling back to: ${fallback}`
+      );
+      return fallback || "";
+    }
+  };
   return (
     <div className="section-home-hero max-w-7xl mx-auto">
       <div className="section-container w-container">
@@ -30,7 +46,9 @@ function Hero() {
           <div className="hero__table md:w-2/3">
             <div className="hero__info ">
               <h1 className="hero__title">
-                {getTranslation("title", "")}
+                {pathKey === ""
+                  ? getTranslation("title", "")
+                  : getTranslation("service_title", "")}
                 {/* Fallback to a general title */}
               </h1>
               <p className="hero__intro hero__intro_dark">
@@ -47,19 +65,17 @@ function Hero() {
                   }}
                 >
                   {pathKey
-                    ? getTranslation("cta.text", "")
-                    : getTranslation("cta", "")}
+                    ? getTranslationS("cta.text", "")
+                    : getTranslationS("cta", "")}
                 </a>
               </div>
               <div className="hero__links hero__links_desktop">
                 <a
                   rel="nofollow noopener noreferrer"
-                  href="https://www.martindale.com/organization/the-jacob-d-fuchsberg-law-firm-396211/"
-                  target="_blank"
-                  className="hero__link w-inline-block"
+                  className="hero__link w-inline-block cursor-pointer"
                 >
                   <img
-                    src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447cb1bae3ce3a5b12d6db1_martindale-logo.webp"
+                    src="https://assets.vakilsearch.com/live-images/home-page-assets/trustpilot.svg"
                     loading="lazy"
                     alt="Martindale"
                     className="hero__link-icon"
@@ -71,15 +87,13 @@ function Hero() {
                       alt="Stars"
                       className="hero__stars-icon"
                     />
-                    <p className="hero__stars-text">5.0</p>
+                    <p className="hero__stars-text">4.9</p>
                   </div>
-                  <p className="hero__stars-text">{t("martindale")}</p>
+                  <p className="hero__stars-text">{s("martindale", "")}</p>
                 </a>
                 <a
                   rel="nofollow noopener noreferrer"
-                  href="https://www.google.com/search?q=jacob+d+fuchsberg+law"
-                  target="_blank"
-                  className="hero__link w-inline-block"
+                  className="hero__link w-inline-block cursor-pointer"
                 >
                   <img
                     src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447cb1b45e771cc06aca39a_Group%201%20(4).svg"
@@ -96,18 +110,16 @@ function Hero() {
                     />
                     <p className="hero__stars-text">4.8</p>
                   </div>
-                  <p className="hero__stars-text">{t("google")}</p>
+                  <p className="hero__stars-text">{s("google")}</p>
                 </a>
               </div>
             </div>
           </div>
           <div className="hero__pictures md:absolute top-40 -right-10 ">
             <div className="hero__pictures-top">
-              <img
-                src="https://placehold.co/600x400"
+              <Image
+                src={heroImage}
                 loading="eager"
-                sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 61vw, (max-width: 1279px) 400px, 526px"
-                // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/648050192e801cea6a02f6d3_1partners%2C%20edited.webp 800w"
                 alt={""}
                 className="picture-item"
                 style={{
@@ -117,9 +129,8 @@ function Hero() {
             </div>
             <div className="hero__pictures-block">
               <div className="hero__pictures-item">
-                <img
-                  src="https://placehold.co/600x400"
-                  loading="eager"
+                <Image
+                  src={hero2}
                   alt={""}
                   className="picture-item"
                   style={{
@@ -128,8 +139,8 @@ function Hero() {
                 />
               </div>
               <div className="hero__pictures-item">
-                <img
-                  src="https://placehold.co/600x400"
+                <Image
+                  src={hero3}
                   loading="eager"
                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 35vw, (max-width: 1279px) 188px, 251px"
                   // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/64805065f32d469e9cceb16b_Attorney%20chatter.webp 800w"
@@ -144,8 +155,6 @@ function Hero() {
             <div className="hero__links">
               <a
                 rel="nofollow noopener noreferrer"
-                href="https://www.martindale.com/organization/the-jacob-d-fuchsberg-law-firm-396211/"
-                target="_blank"
                 className="hero__link w-inline-block"
               >
                 <img
@@ -166,16 +175,15 @@ function Hero() {
                     style={{
                       fontWeight: "bold",
                     }}
-                  >
-                    {/* {t("Hero:stars.five")} */}
-                  </p>
+                  ></p>
                 </div>
-                <p className="hero__stars-text">{t("martindale")}</p>
+                <p className="hero__stars-text">
+                  {getTranslation("martindale", "")}
+                </p>
               </a>
               <a
                 rel="nofollow noopener noreferrer"
                 href="https://www.google.com/search?q=jacob+d+fuchsberg+"
-                target="_blank"
                 className="hero__link w-inline-block"
               >
                 <img
@@ -195,7 +203,9 @@ function Hero() {
                     {/* {t("Hero:stars.fourPointEight")} */}
                   </p>
                 </div>
-                <p className="hero__stars-text">{t("google")}</p>
+                <p className="hero__stars-text">
+                  {getTranslation("google", "")}
+                </p>
               </a>
             </div>
           </div>

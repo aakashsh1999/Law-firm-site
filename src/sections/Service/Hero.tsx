@@ -30,8 +30,6 @@ function Hero() {
               <div className="hero__links hero__links_desktop">
                 <a
                   rel="nofollow noopener noreferrer"
-                  href="https://www.martindale.com/organization/the-jacob-d-fuchsberg-law-firm-396211/"
-                  target="_blank"
                   className="hero__link w-inline-block"
                 >
                   <img
@@ -53,8 +51,6 @@ function Hero() {
                 </a>
                 <a
                   rel="nofollow noopener noreferrer"
-                  href="https://www.google.com/search?q=jacob+d+fuchsberg+law"
-                  target="_blank"
                   className="hero__link w-inline-block"
                 >
                   <img
@@ -111,12 +107,10 @@ function Hero() {
             <div className="hero__links">
               <a
                 rel="nofollow noopener noreferrer"
-                href="https://www.martindale.com/organization/the-jacob-d-fuchsberg-law-firm-396211/"
-                target="_blank"
                 className="hero__link w-inline-block"
               >
                 <img
-                  src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447cb1bae3ce3a5b12d6db1_martindale-logo.webp"
+                  src="https://assets.vakilsearch.com/live-images/home-page-assets/trustpilot.svg"
                   loading="lazy"
                   alt="Martindale"
                   className="hero__link-icon"
@@ -134,8 +128,6 @@ function Hero() {
               </a>
               <a
                 rel="nofollow noopener noreferrer"
-                href="https://www.google.com/search?q=jacob+d+fuchsberg+"
-                target="_blank"
                 className="hero__link w-inline-block"
               >
                 <img

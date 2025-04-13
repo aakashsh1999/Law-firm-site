@@ -6,6 +6,9 @@ import {
 } from "@heroicons/react/24/outline";
 import Form from "../Footer/Form";
 import { useTranslations } from "next-intl";
+import telephone from "../../assets/telephone.png";
+import location from "../../assets/location.png";
+import Image from "next/image";
 
 export default function HaveACase() {
   const t = useTranslations("haveACase");
@@ -43,32 +46,61 @@ export default function HaveACase() {
               <dl className="mt-10 space-y-4 text-base/7 text-gray-300">
                 <div className="flex gap-x-4">
                   <dt className="flex-none">
-                    <span className="sr-only">Address</span>
-                    <PhoneIcon
-                      aria-hidden="true"
-                      className="h-7 w-6 text-gray-400"
+                    <span className="sr-only">{t("addresses1")}</span>
+                    <Image
+                      src={location}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
                     />
                   </dt>
                   <dd>
                     <a className="text-white hover:text-white">
-                      {t("address")}
+                      {t("addresses1")}
                     </a>
                   </dd>
                 </div>
                 <div className="flex gap-x-4">
                   <dt className="flex-none">
-                    <span className="sr-only ">Telephone</span>
-                    <EnvelopeIcon
-                      aria-hidden="true"
-                      className="h-7 w-6 text-gray-400"
+                    <span className="sr-only">{t("addresses1")}</span>
+                    <Image
+                      src={location}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
                     />
                   </dt>
                   <dd>
-                    <a
-                      href="mailto:hello@example.com"
-                      className="hover:text-white text-white"
-                    >
-                      91-8541814401
+                    <a className="text-white hover:text-white">
+                      {t("addresses2")}
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">{t("addresses1")}</span>
+                    <Image
+                      src={location}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
+                    />
+                  </dt>
+                  <dd>
+                    <a className="text-white hover:text-white">
+                      {t("address3")}
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">{t("telephoneNumber")}</span>
+                    <Image
+                      src={telephone}
+                      alt=""
+                      className="h-8 w-8 text-gray-400"
+                    />
+                  </dt>
+                  <dd>
+                    <a className="text-white hover:text-white">
+                      {t("telephoneNumber")}
                     </a>
                   </dd>
                 </div>

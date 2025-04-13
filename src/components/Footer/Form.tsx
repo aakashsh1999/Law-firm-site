@@ -14,7 +14,7 @@ export default function Form({ classes }: { classes: string }) {
         <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
           <h1 className="text-black text-2xl font-semibold">{t("title")}</h1>
           <form
-            action="https://formsubmit.co/akash@gethelium.co"
+            action="https://formsubmit.co/bplaw@yahoo.com"
             method="POST"
             className="space-y-3"
           >

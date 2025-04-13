@@ -11,7 +11,7 @@ function Page() {
     <div>
       <NavBar />
       <Hero />
-      <BrandMaqrquee />
+      {/* <BrandMaqrquee /> */}
       <ServiceDetail />
       <Reviews />
       <Footer />

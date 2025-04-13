@@ -6127,6 +6127,7 @@ width: 200px;
   text-decoration: none;
   transition: all 0.3s;
   display: flex;
+  background-color: #d3d3d3;
 }
 
 .hero__link-icon {

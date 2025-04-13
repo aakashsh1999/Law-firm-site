@@ -4,7 +4,7 @@ import React from "react";
 function Approach() {
   const t = useTranslations("whyChooseUsApproach");
   return (
-    <div>
+    <div className="mt-36 md:mt-0">
       <section id="approach" className="section-us-intro">
         <div className="page-padding">
           <div className="container-large">
