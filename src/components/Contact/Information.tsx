@@ -17,7 +17,7 @@ function Information() {
               <div className="w-layout-grid contact-content_component">
                 <div id="w-node-_8d9ddff1-129c-9c2b-dca2-a28b694bc4f1-4497f351">
                   <div className="margin-bottom margin-small">
-                    <div className="text-size-large text-style-muted">
+                    <div className="text-size-large text-style-muted mt-[180px] md:mt-0">
                       {t("description")}
                     </div>
                     <div className="text-size-large text-style-muted">

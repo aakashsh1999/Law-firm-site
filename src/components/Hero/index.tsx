@@ -155,10 +155,10 @@ function Hero() {
             <div className="hero__links">
               <a
                 rel="nofollow noopener noreferrer"
-                className="hero__link w-inline-block"
+                className="hero__link w-inline-block cursor-pointer"
               >
                 <img
-                  src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447cb1bae3ce3a5b12d6db1_martindale-logo.webp"
+                  src="https://assets.vakilsearch.com/live-images/home-page-assets/trustpilot.svg"
                   loading="lazy"
                   alt="Martindale"
                   className="hero__link-icon"
@@ -177,14 +177,11 @@ function Hero() {
                     }}
                   ></p>
                 </div>
-                <p className="hero__stars-text">
-                  {getTranslation("martindale", "")}
-                </p>
+                <p className="hero__stars-text">{s("martindale", "")}</p>
               </a>
               <a
                 rel="nofollow noopener noreferrer"
-                href="https://www.google.com/search?q=jacob+d+fuchsberg+"
-                className="hero__link w-inline-block"
+                className="hero__link w-inline-block cursor-pointer"
               >
                 <img
                   src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447cb1b45e771cc06aca39a_Group%201%20(4).svg"
@@ -203,9 +200,7 @@ function Hero() {
                     {/* {t("Hero:stars.fourPointEight")} */}
                   </p>
                 </div>
-                <p className="hero__stars-text">
-                  {getTranslation("google", "")}
-                </p>
+                <p className="hero__stars-text">{s("google", "")}</p>
               </a>
             </div>
           </div>

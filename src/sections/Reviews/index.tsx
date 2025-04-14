@@ -1,146 +1,106 @@
 "use client";
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./index.css";
 import { useTranslations } from "next-intl";
-
-interface Testimonial {
-  id: number;
-  contentKey: string;
-  authorKey: string;
-  roleKey: string;
-  rating: number;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    contentKey: "testimonial1.content",
-    authorKey: "testimonial1.author",
-    roleKey: "testimonial1.role",
-    rating: 5,
-  },
-  {
-    id: 2,
-    contentKey: "testimonial2.content",
-    authorKey: "testimonial2.author",
-    roleKey: "testimonial2.role",
-    rating: 5,
-  },
-  {
-    id: 3,
-    contentKey: "testimonial3.content",
-    authorKey: "testimonial3.author",
-    roleKey: "testimonial3.role",
-    rating: 5,
-  },
-];
+import useEmblaCarousel from "embla-carousel-react";
+import { usePrevNextButtons } from "@/components/Carousel/CarouselButtons";
 
 export default function Reviews() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
-  const [isAnimating, setIsAnimating] = useState(false);
   const t = useTranslations("reviewsSection");
+  const s = useTranslations("emblaCarousel");
 
-  const nextSlide = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setDirection(1);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-    setTimeout(() => setIsAnimating(false), 500);
+  const options = {
+    align: "center",
+    containScroll: "keepSnaps",
+    dragFree: false,
+    loop: true,
+    slidesToScroll: "auto",
+    slidesToShow: 1,
+    skipSnaps: false,
   };
 
-  const prevSlide = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setDirection(-1);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-    setTimeout(() => setIsAnimating(false), 500);
-  };
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="testimonial-container">
-      <div className="testimonial-grid">
-        <div className="content-section">
-          <div className="cases__title">
-            <h2 className="section-title section-title_509">{t("title")}</h2>
-          </div>
-
-          <div className="carousel-container">
-            <div
-              className={`carousel-content ${
-                isAnimating
-                  ? direction > 0
-                    ? "slide-right"
-                    : "slide-left"
-                  : ""
-              }`}
-            >
-              <div className="testimonial-content">
-                <div className="testimonial-text-container custom-scrollbar">
-                  <p className="testimonial-text">
-                    {t(testimonials[currentIndex].contentKey)}
-                  </p>
-                </div>
-                <div className="reviews-starslist">
-                  <div className="stars-container animate-bounce-in">
-                    {[...Array(testimonials[currentIndex].rating)].map(
-                      (_, i) => (
-                        <Star
-                          key={i}
-                          className="star-icon"
-                          style={{
-                            animationDelay: `${i * 100}ms`,
-                            animation: "starPop 0.5s ease-out forwards",
-                          }}
-                        />
-                      )
-                    )}
-                  </div>
-
-                  <div className="author-info">
-                    <p className="author-name">
-                      {t(testimonials[currentIndex].authorKey)}
-                    </p>
-                    <p className="author-role">
-                      {t(testimonials[currentIndex].roleKey)}
-                    </p>
-                  </div>
+    <div className="bg-[#2563eb] py-12 md:py-16 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="my-4 text-white font-light text-5xl">
+          Our Client's Review
+        </h2>
+        <div className="flex flex-col md:flex-row md:items-center md:gap-x-12">
+          <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <section className="embla">
+              <div className="overflow-hidden" ref={emblaRef}>
+                <div className="embla__container flex">
+                  {s.raw("review").map((x, index) => (
+                    <div
+                      className="embla__slide flex-shrink-0 w-full md:w-[500px] lg:w-[600px]"
+                      key={index}
+                    >
+                      <section className="relative isolate overflow-hidden px-4 py-8 sm:py-12 rounded-lg shadow-sm">
+                        <figure>
+                          <div className="flex">
+                            <p className="text-left text-white font-light text-lg text-blue-900">
+                              {x.review}
+                            </p>
+                          </div>
+                          <div>
+                            <img
+                              src="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/6447cbb1d1b57df734457a9b_Frame%202%20(1).svg"
+                              loading="lazy"
+                              alt="Stars"
+                              className="hero__stars-icon"
+                            />
+                            <div className="text-left text-lg font-semibold text-white">
+                              {x.name}
+                            </div>
+                            <div className="text-left text-sm font-semibold text-white">
+                              {x.location}
+                            </div>
+                          </div>
+                        </figure>
+                      </section>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
 
-            <div className="nav-buttons">
-              <button
-                onClick={prevSlide}
-                disabled={isAnimating}
-                className="nav-button"
-                aria-label={t("previous")}
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={nextSlide}
-                disabled={isAnimating}
-                className="nav-button"
-                aria-label={t("next")}
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
+              <div className="embla__controls mt-6">
+                <div className="embla__buttons flex justify-center space-x-6">
+                  <button
+                    onClick={onPrevButtonClick}
+                    disabled={prevBtnDisabled}
+                    className="text-white hover:text-gray-700 disabled:opacity-50"
+                    aria-label="Previous slide"
+                  >
+                    <ChevronLeft className="w-8 h-8" />
+                  </button>
+                  <button
+                    onClick={onNextButtonClick}
+                    disabled={nextBtnDisabled}
+                    className="text-white hover:text-gray-700 disabled:opacity-50"
+                    aria-label="Next slide"
+                  >
+                    <ChevronRight className="w-8 h-8" />
+                  </button>
+                </div>
+              </div>
+            </section>
           </div>
-        </div>
-
-        <div className="image-container">
-          <img
-            src="https://placehold.co/600x400"
-            alt={t("title")}
-            className="testimonial-image"
-          />
+          <div className="w-full md:w-1/2">
+            <img
+              src="https://t3.ftcdn.net/jpg/05/76/54/72/360_F_576547272_KvcnWC0wI438UxBZ9x1aI5JKh16VueBh.jpg"
+              alt={t("title")}
+              className="aspect-[4/3] rounded-2xl bg-gray-50 object-cover shadow-lg"
+            />
+          </div>
         </div>
       </div>
     </div>

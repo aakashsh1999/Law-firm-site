@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Attorney } from "./types";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-
+import sunilImage from "../../assets/advt-sunil-kumar.png";
+import vedantImage from "../../assets/advt-vedant.png";
+import babluImage from "../../assets/advt-bablu.png";
 interface AttorneyCardProps {
   attorney: Attorney;
 }
@@ -13,6 +15,7 @@ const data = {
     twitter: "https://twitter.com/SunilKumarBPL?t=_vHL8D00Pd-yEyEGNkMkNQ&s=08",
     instagram: "https://instagram.com/sunilkumarbpl?utm_medium=copy_link",
     linkedin: "https://www.linkedin.com/in/adv-sunil-kumar-706821205",
+    img: sunilImage,
   },
   "Jyoti Verma": {
     facebook: "https://www.facebook.com/bodhitreetrust",
@@ -26,6 +29,7 @@ const data = {
     twitter: "https://twitter.com/VedantSj?t=1yARjobcZmB__bD5zE1WaQ&s=08",
     instagram: "https://www.instagram.com/sj.ved",
     linkedin: "https://www.linkedin.com/in/sj-vedant-5154079a",
+    img: vedantImage,
   },
   Chitransha: {
     facebook: "https://www.facebook.com/chitransha.sinha.35",
@@ -40,18 +44,18 @@ const data = {
     instagram: "https://www.instagram.com/bodhitreefoundation",
     linkedin:
       "https://www.linkedin.com/in/bodhitree-foundation-trust-709923ab/?originalSubdomain=in",
+    img: babluImage,
   },
 };
 
 export default function AttorneyCard({ attorney }: AttorneyCardProps) {
   const socialLinks = data[attorney?.name] || null;
-  console.log(socialLinks, attorney, "asdfdfs");
   return (
-    <div className="attorneys__item swiper-slide">
+    <div className="attorneys__item  swiper-slide">
       <div className="attorneys__link">
         <div className="attorneys__photo">
-          <img
-            src={"https://placehold.co/600x400"}
+          <Image
+            src={data[attorney?.name]?.img || "https://placehold.co/600x400"}
             alt={attorney.name}
             width={300}
             height={400}

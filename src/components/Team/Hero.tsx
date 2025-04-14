@@ -1,7 +1,7 @@
 import React from "react";
-import advSunilImg from "../../assets/advSunil Background Removed(1).png";
-import advVedent from "../../assets/advVedant Background Removed.png";
-import advBablu from "../../assets/advBablu Background Removed.png";
+import advSunilImg from "../../assets/advt-sunil-kumar.png";
+import advVedent from "../../assets/advt-vedant.png";
+import advBablu from "../../assets/advt-bablu.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -76,8 +76,6 @@ function Hero() {
                     <Image
                       alt="imagAlt"
                       src={people[index].imageUrl}
-                      width={250}
-                      height={250}
                       className="aspect-[14/13] w-full rounded-2xl object-cover shadow-lg "
                     />
                     <h3 className="mt-6 text-lg/6 font-semibold tracking-tight text-black">

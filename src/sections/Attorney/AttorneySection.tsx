@@ -12,32 +12,34 @@ import AttorneyCard from "./AttornyCard";
 // Import attorneys data
 import { useTranslations } from "next-intl";
 import { getAttorneysWithTranslations } from "./data";
-import adv1 from "../../assets/advSunil Background Removed(1).png";
-
+import adv1 from "../../assets/advt-sunil-kumar.png";
+import useEmblaCarousel from "embla-carousel-react";
+import { usePrevNextButtons } from "@/components/Carousel/CarouselButtons";
+import "../../components/Carousel/index.css";
 console.log(adv1, "asdfdfsaf");
 export default function AttorneysSection() {
-  const swiperRef = useRef<Swiper | null>(null);
   const translatedAttorneys = getAttorneysWithTranslations();
+  const options = {
+    align: "center",
+    containScroll: "keepSnaps",
+    dragFree: true,
+    draggable: true,
+    gap: 0,
+    loop: false,
+    // scrollSnap: true,
+    // scrollSnapAlign: "start",
+    // scrollSnapDestination: "0% 50%",
+    // scrollSnapPointsX: ["0%", "50%"],
+    // scrollSnapStop: "always",
+  };
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
-  useEffect(() => {
-    if (!swiperRef.current) {
-      swiperRef.current = new Swiper(".attornyes-swiper", {
-        modules: [Navigation],
-        slidesPerView: "auto",
-        spaceBetween: 24,
-        navigation: {
-          nextEl: ".attornyes-btn-next",
-          prevEl: ".attornyes-btn-prev",
-        },
-      });
-    }
-
-    return () => {
-      if (swiperRef.current) {
-        swiperRef.current.destroy();
-      }
-    };
-  }, []);
   const t = useTranslations("attorneysSection");
 
   return (
@@ -79,20 +81,15 @@ export default function AttorneysSection() {
             className="hidden md:block transform scale-x-[-1]"
           />
         </div>
-        <div className="px-12">
-          <div className="attorneys__wrap">
-            <div
-              id="swiper-attorny"
-              className="attorneys__wrapper swiper attornyes-swiper"
-            >
-              <div className="attorneys__list swiper-wrapper">
-                {translatedAttorneys.map((attorney: Attorney) => (
-                  <AttorneyCard key={attorney.id} attorney={attorney} />
-                ))}
-              </div>
+        <section className="embla px-4 md:px-0">
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__container relative gap-16 px-12">
+              {translatedAttorneys.map((attorney: Attorney) => (
+                <AttorneyCard key={attorney.id} attorney={attorney} />
+              ))}
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );
