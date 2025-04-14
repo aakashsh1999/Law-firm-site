@@ -16,12 +16,20 @@ export function DesignByFooter({
 
   return (
     <div className={`w-full border-t bg-white py-2 ${className}`}>
-      <div className="container flex items-center justify-center">
-        <p className="text-sm text-muted-foreground flex items-center gap-1.5">
+      <div className="px-4 md:px-12 md:mt-0 mt-2 flex md:flex-row flex-col md:items-center justify-between gap-4">
+        <div className="text-sm">
+          <Link
+            href={link}
+            className="font-medium text-foreground hover:underline underline-offset-4 transition-colors  flex items-center gap-1.5"
+          >
+            Savitroday Technologies
+          </Link>
+        </div>
+        <p className="text-xs text-muted-foreground flex items-center gap-1.5  md:text-sm ">
           {text}
           <Link
             href={link}
-            className="font-medium text-foreground hover:underline underline-offset-4 transition-colors flex items-center gap-1.5"
+            className="font-medium text-foreground hover:underline underline-offset-4 transition-colors flex text-xs md:text-sm items-center gap-1.5"
           >
             OnEggy Technologies
             <Heart className="h-3.5 w-3.5 text-rose-500" />
