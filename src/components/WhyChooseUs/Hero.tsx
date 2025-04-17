@@ -9,17 +9,23 @@ function Hero() {
   return (
     <div>
       <div
-        className="section-header bottom-padding-0 about-hero"
+        className=" bottom-padding-0 about-hero overflow-x-hidden"
         style={{
           background: "white",
+          overflowX: "hidden",
         }}
       >
         <div className="page-padding">
           <div className="container-large">
-            <div className="padding-vertical">
+            <div
+              className="padding-vertical "
+              style={{
+                marginTop: "24px !important",
+              }}
+            >
               <div className="">
                 <div>
-                  <div className="margin-bottom margin-xxsmall">
+                  <div className="margin-bottom margin-xxsmall ">
                     <h1>{t("whyChooseUsTitle")}</h1>
                   </div>
                   <div className="text-size-large text-style-muted">

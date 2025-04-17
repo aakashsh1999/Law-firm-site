@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 function ContacUs() {
   return (
-    <div>
+    <div className="">
       <NavBar />
       <Hero />
       <Information />

@@ -23,7 +23,7 @@ function TestimonialsComponent() {
     <div>
       <NavBar />
       <div
-        className="section-header bottom-padding-0 bg-white"
+        className=" bottom-padding-0 bg-white"
         style={{
           background: "none",
         }}
@@ -31,9 +31,14 @@ function TestimonialsComponent() {
         <div className="page-padding bg-white">
           <div className="container-large">
             <div className="padding-vertical">
-              <div className="header_top-wrapper">
+              <div
+                className="header_top-wrapper"
+                style={{
+                  marginTop: "24px !important",
+                }}
+              >
                 <div>
-                  <div className="margin-bottom margin-xxsmall">
+                  <div className="margin-bottom margin-xxsmall ">
                     <h1>{t("title")}</h1>
                   </div>
                   <div className="text-size-large text-style-muted">
@@ -166,14 +171,14 @@ function TestimonialsComponent() {
                     </div>
                   </dl>
                 </div>
-                <div className="bg-color-grey sticky tablet-no-sticky">
+                <div className="bg-color-grey md:sticky tablet-no-sticky">
                   <Image
                     src={testimonal}
                     loading="lazy"
                     alt={t("consultationFree")} // Added alt text translation
                     sizes="(max-width: 1439px) 90vw, 1280px"
                     // srcSet="https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%2520(1)-p-500.webp 500w, https://cdn.prod.website-files.com/63a4a6b4b1600866f3190000/63a4a6b4b1600861c319004e_Free-Lawyer-Consultation-on-the-Phone-NYC%20(1).webp 1460w"
-                    className="header-image rounded-xl"
+                    className="md:header-image rounded-xl"
                   />
                   <div
                     id="cr-form-FOR8a92fc4c319343728fa1df06164b9f51"

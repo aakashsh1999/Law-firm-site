@@ -30,14 +30,19 @@ function Hero() {
   return (
     <div className="contact-wrapper">
       <div
-        className="section-header bottom-padding-0 contact-hero"
+        className=" bottom-padding-0 contact-hero"
         style={{
           background: "white",
         }}
       >
         <div className="page-padding">
           <div className="container-large">
-            <div className="padding-vertical">
+            <div
+              className="padding-vertical"
+              style={{
+                marginTop: "24px !important",
+              }}
+            >
               <div className="header_top-wrapper">
                 <div>
                   <div className="margin-bottom margin-xxsmall">
@@ -76,7 +81,7 @@ function Hero() {
                     <Image
                       alt="imagAlt"
                       src={people[index].imageUrl}
-                      className="aspect-[14/13] w-full rounded-2xl object-cover shadow-lg "
+                      className="rounded-2xl object-cover shadow-lg "
                     />
                     <h3 className="mt-6 text-lg/6 font-semibold tracking-tight text-black">
                       {t("lawyerPrefix")} {person.name}

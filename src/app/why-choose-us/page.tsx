@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 function Page() {
   return (
-    <div>
+    <div className="">
       <NavBar />
       <Hero />
       <Approach />

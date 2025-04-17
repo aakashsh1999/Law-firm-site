@@ -39,6 +39,7 @@ const navigation = [
   { name: "Services", href: "/service", current: false },
   { name: "Testimonials", href: "/testimonials", current: false },
   { name: "Our Team", href: "/our-team", current: false },
+  { name: "Our Joinees", href: "/our-joinees", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
 

@@ -4,12 +4,17 @@ import React from "react";
 function Hero() {
   const t = useTranslations("contact");
   return (
-    <div className="contact-wrapper">
-      <div className="section-header bottom-padding-0 contact-hero">
+    <div className="contact-wrapper overflow-hidden bg-white">
+      <div className=" bottom-padding-0 contact-hero bg-white">
         <div className="page-padding">
           <div className="container-large">
             <div className="padding-vertical">
-              <div className="header_top-wrapper">
+              <div
+                className="header_top-wrapper"
+                style={{
+                  marginTop: "24px !important",
+                }}
+              >
                 <div>
                   <div className="margin-bottom margin-xxsmall">
                     <h1>{t("title")}</h1>

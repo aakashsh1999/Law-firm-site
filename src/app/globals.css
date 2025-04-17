@@ -5144,6 +5144,11 @@ figure {
 .section-header.bottom-padding-0 {
   padding-bottom: 0;
 }
+.bottom-padding-0 {
+  padding-bottom: 0;
+  z-index: -1;
+  overflow-x: hidden;
+}
 
 .section-header.section-header--success {
   overflow: hidden;
