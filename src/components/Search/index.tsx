@@ -37,7 +37,7 @@ export default function LocationSearch() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
     null
   );
-  const [searchType, setSearchType] = useState<string>("location");
+  const [searchType, setSearchType] = useState<string>("");
   const debounceTimeout = useRef<NodeJS.Timeout>();
   const router = useRouter();
 
@@ -152,23 +152,25 @@ export default function LocationSearch() {
   const handleLawyerSelect = (lawyer: Lawyer) => {
     setQuery(lawyer.fullName);
     setSuggestions([]);
-    // Navigate to the lawyer's profile page or search results
     router.push(`/lawyers?id=${lawyer.id}`);
   };
 
   return (
-    <div className="client-step w-full max-w-md flex items-center gap-1 relative">
+    <div className="client-step w-full max-w-md flex  items-center gap-1 relative">
       <div>
         <div className="grid grid-cols-1">
           <select
             id="location"
             name="location"
-            defaultValue="location"
-            className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+            defaultValue=""
+            className="col-start-1 text-xs  row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 md:text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
             onChange={(e) => setSearchType(e.target.value)}
           >
-            <option value={"location"}>Location</option>
-            <option value={"lawyer"}>Advocate</option>
+            <option value={""} disabled>
+              Find a lawyer
+            </option>
+            <option value={"location"}>By Location</option>
+            <option value={"lawyer"}>By Advocate</option>
           </select>
           <ChevronDown
             aria-hidden="true"
@@ -187,7 +189,8 @@ export default function LocationSearch() {
               ? "Search for a location..."
               : "Search for an advocate..."
           }
-          className="w-full pl-10 pr-4  text-sm py-1 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          disabled={searchType === ""}
+          className="  w-full bg-white pl-10 pr-4  text-sm py-1 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         {loading && (
           <Loader2 className="absolute right-3 top-[12px] translate-y-1/2 h-5 w-5 animate-spin text-gray-400" />
