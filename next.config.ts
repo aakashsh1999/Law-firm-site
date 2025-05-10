@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
 
   /* config options here */
   images: {
-    domains: ["cdn.prod.website-files.com", "placehold.co"],
+    domains: ["cdn.prod.website-files.com", "placehold.co", "trilegal.com"],
   },
 };
 

@@ -1,4 +1,10 @@
 {
+  "newHero": {
+    "title1": "Welcome To",
+    "title2": "BP Law",
+    "intro": "Legal support built on trust, strategy, and success. From consultation to resolution, we’ve got you covered. Confident advocacy. Reliable outcomes.",
+    "cta":"About the Firm"
+  },
   "Hero": {
     "title": "Trusted Legal Experts Providing Solutions with Care & Expertise Across India.\n",
     "intro": "We provide reliable, efficient, and cost-effective legal solutions for individuals, startups, and businesses. Whether you need assistance with corporate law, civil rights, property disputes, business registrations, or litigation, our experienced legal team is here to guide you at every step.",

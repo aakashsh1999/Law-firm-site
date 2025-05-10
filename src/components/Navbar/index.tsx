@@ -126,62 +126,29 @@ export const solutions = [
 ];
 function NavBar() {
   const pathname = usePathname();
-  const [run, setRun] = useState(false); // Controls whether the tour runs
-  const [isClient, setIsClient] = useState(false);
-
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (isClient) {
-  //     const hasSeenTour =
-  //       typeof window !== "undefined" && localStorage.getItem("hasSeenTour");
-  //     if (!hasSeenTour) {
-  //       setRun(true); // Run the tour only if not seen
-  //     }
-  //   }
-  // }, [isClient]); //
-
-  // const handleTourComplete = () => {
-  //   if (typeof window !== "undefined") {
-  //     localStorage.setItem("hasSeenTour", "true"); // Store flag to prevent re-running
-  //   }
-  //   setRun(false);
-  // };
-
-  // if (!isClient) return null; // Prevent SSR rendering
 
   return (
     <>
-      {/* <JoyRide
-        steps={joyRideSteps}
-        run={run}
-        continuous
-        showProgress
-        showSkipButton
-        styles={{
-          options: { zIndex: 1000 },
-        }}
-        callback={(data) => {
-          if (data.status === "finished" || data.status === "skipped") {
-            handleTourComplete();
-          }
-        }}
-      /> */}
       <Disclosure as="header" className="bg-[#0B284C] shadow">
         {({ open }) => (
           <>
             <div className="mx-auto ">
-              <div className="relative flex h-16 justify-between  px-2 sm:px-4  lg:px-24">
+              <div className="relative flex justify-between py-4 px-2 sm:px-4 lg:px-24">
                 <div className="relative z-10 flex px-2 lg:px-0">
                   <div className="flex shrink-0 items-center">
                     <Link href={"/"}>
-                      <Image src={logo} width={50} alt="" height={50} />
+                      <Image
+                        src={logo}
+                        width={50}
+                        alt=""
+                        height={50}
+                        className="w-16 h-16 md:w-16 md:h-16"
+                      />
                     </Link>
                   </div>
                 </div>
-                <div className="relative z-0  flex flex-1 items-center justify-center px-2  sm:absolute sm:inset-0 client-step">
+
+                <div className="relative z-0 flex flex-1 items-center justify-center px-2  sm:absolute sm:inset-0 client-step">
                   <Search />
                 </div>
                 <div className="relative z-10 flex items-center lg:hidden">
@@ -372,7 +339,7 @@ function NavBar() {
                   );
                 })}
               </div>
-              <div className="pb-3 pt-2  lawyer-step">
+              <div className="pb-3 pt-2 lawyer-step">
                 <div className="flex flex-col items-start justify-start px-4 gap-y-3">
                   <LawyerRegistrationModal />
 
