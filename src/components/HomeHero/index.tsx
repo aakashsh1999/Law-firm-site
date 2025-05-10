@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import newHero from "../../assets/newHero.png";
+import newHero from "../../assets/neweroLogo.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
