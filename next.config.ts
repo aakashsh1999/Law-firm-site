@@ -12,7 +12,12 @@ const nextConfig: NextConfig = {
 
   /* config options here */
   images: {
-    domains: ["cdn.prod.website-files.com", "placehold.co", "trilegal.com"],
+    domains: [
+      "cdn.prod.website-files.com",
+      "placehold.co",
+      "trilegal.com",
+      "firebasestorage.googleapis.com/v0/b/bp-law-llp.firebasestorage.app",
+    ],
   },
 };
 

@@ -18,6 +18,7 @@ export interface AdvocateProps {
 }
 
 export const AdvocateCard2: React.FC<AdvocateProps> = ({ props }) => {
+  console.log(props, "propsss");
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => {
       if (i < Math.floor(rating)) {
@@ -61,15 +62,27 @@ export const AdvocateCard2: React.FC<AdvocateProps> = ({ props }) => {
             <h3 className="text-blue-700 font-semibold text-sm truncate">
               {props?.fullName || "Advocate Name"}
             </h3>
-            <div className="flex items-center justify-center sm:justify-start text-gray-600 text-xs mt-1">
-              <MapPin className="h-3 w-3 mr-1 flex-shrink-0" />
-              <span className="truncate">
-                {capitalizeWords(props?.addressDetails?.city || "City")},
-                {capitalizeWords(
-                  props?.addressDetails?.state?.split("_").join(" ") || "State"
-                )}
-              </span>
-            </div>
+            {props?.addressDetails?.city ? (
+              <div className="flex items-center justify-center sm:justify-start text-gray-600 text-xs mt-1">
+                <MapPin className="h-3 w-3 mr-1 flex-shrink-0" />
+                <span className="truncate">
+                  {capitalizeWords(props?.addressDetails?.city || "")},
+                  {capitalizeWords(
+                    props?.addressDetails?.state?.split("_").join(" ") || ""
+                  )}
+                </span>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center sm:justify-start text-gray-600 text-xs mt-1">
+                <MapPin className="h-3 w-3 mr-1 flex-shrink-0" />
+
+                <span className="truncate">
+                  {capitalizeWords(
+                    props?.barCouncilEnrollment?.barCouncil || ""
+                  )}
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Rating */}
@@ -83,14 +96,16 @@ export const AdvocateCard2: React.FC<AdvocateProps> = ({ props }) => {
 
         {/* Experience Section */}
         <div className="flex flex-col items-center sm:items-end justify-center flex-shrink-0 mt-2 sm:mt-0">
-          <div className="space-y-1 text-center sm:text-right">
-            <div className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">
-              Exp.
+          {props?.yearsOfExperience && (
+            <div className="space-y-1 text-center sm:text-right">
+              <div className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">
+                Exp.
+              </div>
+              <div className="text-sm font-semibold whitespace-nowrap">
+                {props?.yearsOfExperience || Math}+ yrs
+              </div>
             </div>
-            <div className="text-sm font-semibold whitespace-nowrap">
-              {props?.yearsOfExperience || 5}+ yrs
-            </div>
-          </div>
+          )}
         </div>
       </div>
 

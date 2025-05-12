@@ -16,7 +16,7 @@ export default function Home() {
       <NavBar />
       <HomeHero />
       <Hero />
-      {/* <News /> */}
+      <News />
       <CTASection />
       <AttorneysSection />
       <Why />

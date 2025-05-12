@@ -1,49 +1,37 @@
-// News.tsx
+// all-news.tsx
+"use client";
 import { useEffect, useState } from "react";
-import { BlogPost } from "../Search/service";
 import Link from "next/link";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/config";
+import { getBlogPosts } from "@/components/News";
+import { BlogPost } from "@/components/Search/service";
+import { slugify } from "@/lib/utils"; // Assuming you have a slugify utility
 
-export const getBlogPosts = async (): Promise<BlogPost[]> => {
-  try {
-    const postsCollection = collection(db, "blogPosts");
-    const querySnapshot = await getDocs(postsCollection);
-    const posts: BlogPost[] = [];
-
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      posts.push({
-        id: doc.id,
-        title: data.title,
-        excerpt: data.excerpt,
-        content: data.content,
-        author: data.author,
-        tags: data.tags,
-        coverImage: data.coverImageUrl, // Assuming you store image URL here
-        publishedAt: data.createdAt.toDate().toISOString(),
-        readTime: data.readTime || 5, // Default to 5 min read if not provided
-      });
-    });
-
-    return posts;
-  } catch (error) {
-    console.error("Error fetching blog posts:", error);
-    throw error;
-  }
-};
-
-const News = () => {
+const AllNews = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
-
-  console.log(posts, "adsfsd");
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [sortBy, setSortBy] = useState("desc"); // Default sort by newest (descending created date)
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const data = await getBlogPosts();
-        setPosts(data.slice(0, 3)); // Show only first 3 posts
+        const sortedData = data.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return sortBy === "desc" ? dateB - dateA : dateA - dateB; // Changed to createdAt for sorting
+        });
+
+        const pageSize = 6; // Number of posts per page
+        const totalPosts = sortedData.length;
+        setTotalPages(Math.ceil(totalPosts / pageSize));
+
+        const paginatedPosts = sortedData.slice(
+          (page - 1) * pageSize,
+          page * pageSize
+        );
+        setPosts(paginatedPosts);
       } catch (error) {
         console.error("Failed to fetch blog posts:", error);
       } finally {
@@ -52,7 +40,7 @@ const News = () => {
     };
 
     fetchPosts();
-  }, []);
+  }, [page, sortBy]);
 
   const formatPublishDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -64,17 +52,21 @@ const News = () => {
   };
 
   return (
-    <div className="bg-gray-50 mt-12 md:mt-24">
+    <div className="bg-white mt-12 md:mt-16">
       <main className="flex-grow container max-w-6xl px-4 py-8">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-3 text-gray-900">
-            News Insights
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Your source for insightful articles on legal news, articles, and
-            legal blogs.
-          </p>
+          <h1 className="text-4xl font-bold mb-3 text-gray-900">All News</h1>
         </header>
+
+        {/* Sort by Created Date */}
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={() => setSortBy(sortBy === "asc" ? "desc" : "asc")}
+            className="bg-blue-500 text-white py-2 px-4 rounded-lg cursor-pointer"
+          >
+            Sort by {sortBy === "asc" ? "Oldest" : "Newest"}
+          </button>
+        </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {loading
@@ -85,7 +77,7 @@ const News = () => {
                 >
                   <div className="bg-gray-300 h-48 w-full rounded-md" />
                   <div className="h-6 bg-gray-300 rounded w-3/4" />
-                  <div className="h-4 bg-gray-300 rounded w-full" />
+                  <div className="h-4 bg-gray-300 roundew-full" />
                   <div className="h-4 bg-gray-300 rounded w-5/6" />
                   <div className="h-4 bg-gray-300 rounded w-1/2" />
                   <div className="h-8 bg-gray-300 rounded w-24 mt-4" />
@@ -93,7 +85,7 @@ const News = () => {
               ))
             : posts.map((post) => (
                 <Link
-                  href={`/blog/${post.id}`}
+                  href={`/news/${slugify(post.title)}?id=${post.id}`}
                   key={post.id}
                   className="bg-white rounded-lg shadow-md flex flex-col overflow-hidden hover:shadow-lg transition-shadow"
                 >
@@ -117,7 +109,10 @@ const News = () => {
                         </span>
                       ))}
                     </div>
-                    <Link href={`/blog/${post.id}`} className="hover:underline">
+                    <Link
+                      href={`/news/${slugify(post.title)}?id=${post.id}`}
+                      className="hover:underline"
+                    >
                       <h2 className="text-xl font-bold text-gray-900 line-clamp-2">
                         {post.title}
                       </h2>
@@ -126,22 +121,6 @@ const News = () => {
                       {post.excerpt}
                     </p>
                     <div className="border-t pt-4 mt-4 flex justify-between text-sm text-gray-500">
-                      <div className="flex items-center gap-2">
-                        <div className="h-7 w-7 rounded-full overflow-hidden bg-gray-200">
-                          {post.author.avatar ? (
-                            <img
-                              src={post.author.avatar}
-                              alt={post.author.name}
-                              className="h-full w-full object-cover"
-                            />
-                          ) : (
-                            <div className="bg-orange-100 text-orange-600 flex items-center justify-center h-full w-full font-semibold">
-                              {post.author.name[0]}
-                            </div>
-                          )}
-                        </div>
-                        <span>{post.author.name}</span>
-                      </div>
                       <span>
                         {formatPublishDate(post.publishedAt)} · {post.readTime}{" "}
                         min read
@@ -152,18 +131,26 @@ const News = () => {
               ))}
         </div>
 
-        {/* View All Button */}
-        <div className="text-center mt-8">
-          <Link
-            href="/all-news"
-            className="bg-blue-500 text-white py-2 px-4 rounded-full"
+        {/* Pagination */}
+        <div className="flex justify-center gap-4 mt-8">
+          <button
+            onClick={() => setPage(page > 1 ? page - 1 : 1)}
+            disabled={page === 1}
+            className="bg-blue-500 text-white py-2 px-4 rounded-lg cursor-pointer"
           >
-            View All News
-          </Link>
+            Previous
+          </button>
+          <button
+            onClick={() => setPage(page < totalPages ? page + 1 : totalPages)}
+            disabled={page === totalPages}
+            className="bg-blue-500 text-white py-2 px-4 rounded-lg cursor-pointer"
+          >
+            Next
+          </button>
         </div>
       </main>
     </div>
   );
 };
 
-export default News;
+export default AllNews;
