@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React from "react";
-import about from "../../assets/about.jpeg";
+import about from "../../assets/aboutimg.png";
 import Image from "next/image";
 
 function Hero() {
@@ -48,7 +48,7 @@ function Hero() {
                 src={about}
                 loading="lazy"
                 alt="BP Law lawyers and paralegals at India City office"
-                className="header-image mt-6 md:mt-20 max-h-[150px]  md:max-h-[400px]"
+                className="header-image mt-6 md:mt-30 max-h-[150px] object-cover object-center md:max-h-[470px]"
                 style={{
                   borderRadius: "16px",
                 }}

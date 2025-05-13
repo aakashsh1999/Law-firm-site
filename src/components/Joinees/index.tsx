@@ -85,7 +85,7 @@ function Joiness() {
                   key={person.id || index}
                   props={{
                     ...person,
-                    ratings: parseFloat((Math.random() * 4 + 1).toFixed(1)),
+                    ratings: Math.floor(Math.random() * 6) * 0.1 + 4.5,
                   }}
                 />
               </li>

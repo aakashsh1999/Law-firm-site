@@ -88,7 +88,7 @@ export const AdvocateCard2: React.FC<AdvocateProps> = ({ props }) => {
           {/* Rating */}
           <div className="flex items-center mt-2 justify-center sm:justify-start">
             <div className="bg-yellow-400 text-white rounded px-1.5 py-0.5 text-xs font-medium mr-2">
-              {props?.ratings || 4.5}
+              {props?.ratings === 5 ? "5.0" : props?.ratings}
             </div>
             <div className="flex">{renderStars(props?.ratings || 4.5)}</div>
           </div>
