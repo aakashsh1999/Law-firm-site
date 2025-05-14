@@ -4,6 +4,7 @@ import { BlogPost } from "../Search/service";
 import Link from "next/link";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/config";
+import { slugify } from "@/lib/utils";
 
 export const getBlogPosts = async (): Promise<BlogPost[]> => {
   try {
@@ -93,7 +94,7 @@ const News = () => {
               ))
             : posts.map((post) => (
                 <Link
-                  href={`/blog/${post.id}`}
+                  href={`/news/${slugify(post.title)}?id=${post.id}`}
                   key={post.id}
                   className="bg-white rounded-lg shadow-md flex flex-col overflow-hidden hover:shadow-lg transition-shadow"
                 >
@@ -117,7 +118,10 @@ const News = () => {
                         </span>
                       ))}
                     </div>
-                    <Link href={`/blog/${post.id}`} className="hover:underline">
+                    <Link
+                      href={`/news/${slugify(post.title)}?id=${post.id}`}
+                      className="hover:underline"
+                    >
                       <h2 className="text-xl font-bold text-gray-900 line-clamp-2">
                         {post.title}
                       </h2>
