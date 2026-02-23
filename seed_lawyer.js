@@ -10,6 +10,7 @@ const defaultProfileImageUrl =
 const initialLawyerList = [
   { name: "Mani Sinha", court: "Supreme Court of India" },
   { name: "Pranav Prakash", court: "Supreme Court of India" },
+  { name: "Ayushman", court: "Patna High Court" },
   { name: "Dr Bidhu Ranjan", court: "Patna High Court" },
   { name: "Ashok Sinha", court: "Delhi High Court" },
   { name: "Dhananjay Pandey", court: "Patna High Court" },

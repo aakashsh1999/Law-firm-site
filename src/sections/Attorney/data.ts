@@ -31,6 +31,15 @@ export const getAttorneysWithTranslations = (): Attorney[] => {
     },
     {
       id: 4,
+
+      name: t("ayushman.name"),
+      position: t("ayushman.position"),
+      image: "/images/attorneys/ayushman.webp",
+      description: t("ayushman.description"),
+      slug: "ayushman",
+    },
+    {
+      id: 5,
       name: t("antraShukla.name"),
       position: t("antraShukla.position"),
       image: "/images/attorneys/antra-shukla.webp",
@@ -38,7 +47,7 @@ export const getAttorneysWithTranslations = (): Attorney[] => {
       slug: "antra-shukla",
     },
     {
-      id: 5,
+      id: 6,
       name: t("pujaDubey.name"),
       position: t("pujaDubey.position"),
       image: "/images/attorneys/puja-dubey.webp",

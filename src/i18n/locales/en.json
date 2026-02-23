@@ -3,7 +3,7 @@
     "title1": "Welcome To",
     "title2": "BP Law",
     "intro": "Legal support built on trust, strategy, and success. From consultation to resolution, we’ve got you covered. Confident advocacy. Reliable outcomes.",
-    "cta":"About the Firm"
+    "cta": "About the Firm"
   },
   "Hero": {
     "title": "Trusted Legal Experts Providing Solutions with Care & Expertise Across India.\n",
@@ -806,6 +806,11 @@
       "name": "Adv. SJ Vedant",
       "position": "Advocate | Criminal Law",
       "description": "Advocate SJ Vedant is a dynamic criminal law practitioner with a track record of defending clients in serious criminal cases across trial and appellate courts. His sharp advocacy and thorough case preparation make him a strong legal ally in criminal defence matters."
+    },
+    "ayushman": {
+      "name": "Adv. Ayushman",
+      "position": "Advocate | Associate Partner - Patna High Court",
+      "description": "Advocate Ayushman is a practicing Advocate at the High Court, known for his strong command over criminal litigation, bail matters, property disputes, and constitutional remedies. With a detail-oriented approach and sound legal strategy, he represents clients in complex and sensitive matters, ensuring effective advocacy and thorough case preparation. His practice is marked by clarity, precision, and a commitment to protecting clients’ legal rights at every stage."
     },
     "antraShukla": {
       "name": "Adv. Antra Shukla",

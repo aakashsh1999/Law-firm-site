@@ -4,6 +4,7 @@ import type { Attorney } from "./types";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import sunilImage from "../../assets/advt-sunil-kumar.png";
 import vedantImage from "../../assets/advt-vedant.png";
+import ayushmanImage from "../../assets/adv_ayushman.png";
 import babluImage from "../../assets/advt-bablu.png";
 interface AttorneyCardProps {
   attorney: Attorney;
@@ -46,6 +47,14 @@ const data = {
       "https://www.linkedin.com/in/bodhitree-foundation-trust-709923ab/?originalSubdomain=in",
     img: babluImage,
   },
+  "Adv. Ayushman": {
+    // facebook: "https://www.facebook.com/www.bodhitreetrust.org",
+    // twitter: "https://www.twitter.com/Bodhitreef",
+    // instagram: "https://www.instagram.com/bodhitreefoundation",
+    // linkedin:
+    //   "https://www.linkedin.com/in/bodhitree-foundation-trust-709923ab/?originalSubdomain=in",
+    img: ayushmanImage,
+  },
 };
 
 export default function AttorneyCard({ attorney }: AttorneyCardProps) {
@@ -59,16 +68,16 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
             alt={attorney.name}
             width={300}
             height={400}
-            className="picture-item top"
+            className="picture-item top bg-[#D1CAC8]"
           />
         </div>
         <p className="upper-text upper-text_bottom">{attorney.position}</p>
-        <Link
-          href={`/attorneys/${attorney.slug}`}
+        <div
+          // href={`/attorneys/${attorney.slug}`}
           className="w-inline-block local"
         >
           <h3 className="card-title">{attorney.name}</h3>
-        </Link>
+        </div>
         <div className="rich-text-block w-richtext">
           <p>{attorney.description}</p>
         </div>
