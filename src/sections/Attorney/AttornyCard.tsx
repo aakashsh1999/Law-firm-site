@@ -6,40 +6,30 @@ import sunilImage from "../../assets/advt-sunil-kumar.png";
 import vedantImage from "../../assets/advt-vedant.png";
 import ayushmanImage from "../../assets/adv_ayushman.png";
 import babluImage from "../../assets/advt-bablu.png";
+import akritiImage from "../../assets/akriti.png";
 interface AttorneyCardProps {
   attorney: Attorney;
+  index: number;
 }
 
 const data = {
-  "Adv. Sunil Kumar": {
+  0: {
     facebook: "https://www.facebook.com/SunilKumarBPLaw",
     twitter: "https://twitter.com/SunilKumarBPL?t=_vHL8D00Pd-yEyEGNkMkNQ&s=08",
     instagram: "https://instagram.com/sunilkumarbpl?utm_medium=copy_link",
     linkedin: "https://www.linkedin.com/in/adv-sunil-kumar-706821205",
     img: sunilImage,
   },
-  "Jyoti Verma": {
-    facebook: "https://www.facebook.com/bodhitreetrust",
-    twitter: "https://twitter.com/JyotiVermaBPL?t=4ZKMFsiGr5FyeiqaXWWNmw&s=08",
-    instagram: "https://instagram.com/bodhitreetrust?utm_medium=copy_link",
-    linkedin:
-      "https://www.linkedin.com/in/bodhitree-foundation-trust-709923ab/?originalSubdomain=in",
-  },
-  "Adv. SJ Vedant": {
+
+  2: {
     facebook: "https://www.facebook.com/sj.vedant",
     twitter: "https://twitter.com/VedantSj?t=1yARjobcZmB__bD5zE1WaQ&s=08",
     instagram: "https://www.instagram.com/sj.ved",
     linkedin: "https://www.linkedin.com/in/sj-vedant-5154079a",
     img: vedantImage,
   },
-  Chitransha: {
-    facebook: "https://www.facebook.com/chitransha.sinha.35",
-    twitter: "https://twitter.com/Chitransha2210?t=9KvEom1cK6FkZ06hXsmjMw&s=08",
-    instagram: "https://www.instagram.com/chitransha_sinha",
-    linkedin:
-      "https://twitter.com/Chitransha2210?t=HSkr6WVt0sebvtX1pnvbvQ&s=08",
-  },
-  "Adv. Bablu Kumar Singh": {
+
+  1: {
     facebook: "https://www.facebook.com/www.bodhitreetrust.org",
     twitter: "https://www.twitter.com/Bodhitreef",
     instagram: "https://www.instagram.com/bodhitreefoundation",
@@ -47,7 +37,7 @@ const data = {
       "https://www.linkedin.com/in/bodhitree-foundation-trust-709923ab/?originalSubdomain=in",
     img: babluImage,
   },
-  "Adv. Ayushman": {
+  4: {
     // facebook: "https://www.facebook.com/www.bodhitreetrust.org",
     // twitter: "https://www.twitter.com/Bodhitreef",
     // instagram: "https://www.instagram.com/bodhitreefoundation",
@@ -55,16 +45,20 @@ const data = {
     //   "https://www.linkedin.com/in/bodhitree-foundation-trust-709923ab/?originalSubdomain=in",
     img: ayushmanImage,
   },
+  3: {
+    img: akritiImage,
+  },
+
 };
 
-export default function AttorneyCard({ attorney }: AttorneyCardProps) {
-  const socialLinks = data[attorney?.name] || null;
+export default function AttorneyCard({ attorney, index }: AttorneyCardProps) {
+  const socialLinks = data?.[index] || null;
   return (
     <div className="attorneys__item  swiper-slide">
       <div className="attorneys__link">
         <div className="attorneys__photo">
           <Image
-            src={data[attorney?.name]?.img || "https://placehold.co/600x400"}
+            src={data[index]?.img || "https://placehold.co/600x400"}
             alt={attorney.name}
             width={300}
             height={400}

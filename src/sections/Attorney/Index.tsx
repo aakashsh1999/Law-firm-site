@@ -116,8 +116,8 @@ export default function Attorney() {
               className="attorneys__wrapper swiper attornyes-swiper"
             >
               <div className="attorneys__list swiper-wrapper">
-                {attorneys.map((attorney: Attorney) => (
-                  <AttorneyCard key={attorney.id} attorney={attorney} />
+                {attorneys.map((attorney: Attorney, index: number) => (
+                  <AttorneyCard key={attorney.id} attorney={attorney} index={index} />
                 ))}
               </div>
             </div>

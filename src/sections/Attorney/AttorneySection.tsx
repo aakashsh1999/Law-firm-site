@@ -84,8 +84,8 @@ export default function AttorneysSection() {
         <section className="embla px-4 md:px-0">
           <div className="embla__viewport" ref={emblaRef}>
             <div className="embla__container relative gap-16 px-12">
-              {translatedAttorneys.map((attorney: Attorney) => (
-                <AttorneyCard key={attorney.id} attorney={attorney} />
+              {translatedAttorneys.map((attorney: Attorney, index: number) => (
+                <AttorneyCard key={attorney.id} attorney={attorney} index={index} />
               ))}
             </div>
           </div>

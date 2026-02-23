@@ -31,6 +31,14 @@ export const getAttorneysWithTranslations = (): Attorney[] => {
     },
     {
       id: 4,
+      name: t("akriti.name"),
+      position: t("akriti.position"),
+      image: "/images/attorneys/akriti.png",
+      description: t("akriti.description"),
+      slug: "akriti",
+    },
+    {
+      id: 5,
 
       name: t("ayushman.name"),
       position: t("ayushman.position"),
@@ -39,7 +47,7 @@ export const getAttorneysWithTranslations = (): Attorney[] => {
       slug: "ayushman",
     },
     {
-      id: 5,
+      id: 6,
       name: t("antraShukla.name"),
       position: t("antraShukla.position"),
       image: "/images/attorneys/antra-shukla.webp",
@@ -47,7 +55,7 @@ export const getAttorneysWithTranslations = (): Attorney[] => {
       slug: "antra-shukla",
     },
     {
-      id: 6,
+      id: 7,
       name: t("pujaDubey.name"),
       position: t("pujaDubey.position"),
       image: "/images/attorneys/puja-dubey.webp",
